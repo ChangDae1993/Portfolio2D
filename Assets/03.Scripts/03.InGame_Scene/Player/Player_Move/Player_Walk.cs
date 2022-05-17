@@ -7,7 +7,7 @@ public class Player_Walk : MonoBehaviour
     private Rigidbody2D rigid;
     private Player_Input p_input;
 
-    private float move_speed = 5.0f;
+    private float move_speed = 3.0f;
     private float crawl_speed = 2.0f;
 
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class Player_Walk : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
-        move_speed = 5.0f;
+        move_speed = 3.0f;
         crawl_speed = 2.0f;
     }
 
@@ -37,7 +37,7 @@ public class Player_Walk : MonoBehaviour
         }
         else
         {
-            move_speed = 5.0f;
+            move_speed = 3.0f;
         }
     }
 
