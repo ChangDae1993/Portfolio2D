@@ -6,6 +6,7 @@ public class Player_Walk : MonoBehaviour
 {
     private Rigidbody2D rigid;
     private Player_Input p_input;
+    Animator animator;
 
     private float move_speed = 3.0f;
     private float crawl_speed = 2.0f;
@@ -13,6 +14,7 @@ public class Player_Walk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
         move_speed = 3.0f;
@@ -26,9 +28,11 @@ public class Player_Walk : MonoBehaviour
         if(p_input.horizontal != 0)
         {
             P_Move_Walk();
+            animator.SetBool("IsWalk", true);
         }
         else
         {
+            animator.SetBool("IsWalk", false);
         }
 
         if (Input.GetKey(KeyCode.LeftControl))
