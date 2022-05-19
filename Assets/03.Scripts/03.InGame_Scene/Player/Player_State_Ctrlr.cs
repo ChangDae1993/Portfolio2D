@@ -22,14 +22,16 @@ public enum PlayerMoveState
     player_jump = 2,
     player_fall = 3,
     player_crawl = 4,
-    player_climb = 5
+    player_climb = 5,
+    player_noWalk = 6
 }
 
 public enum PlayerAttackState
 {
     player_handgun = 0,
     player_riflegun = 1,
-    player_sabor = 2
+    player_sabor = 2,
+    player_noAttack = 3
 }
 
 public enum PlayerAttack1   //handgun
@@ -66,11 +68,7 @@ public class Player_State_Ctrlr : MonoBehaviour
     {
         p_state = PlayerState.player_idle;
         p_Move_state = PlayerMoveState.player_walk;
+        p_Attack_state = PlayerAttackState.player_noAttack;
 
     }
-
-    // Update is called once per frame
-    //void Update()
-    //{
-    //}
 }
