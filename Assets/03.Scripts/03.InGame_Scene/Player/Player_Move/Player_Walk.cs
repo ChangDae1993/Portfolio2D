@@ -24,7 +24,7 @@ public class Player_Walk : MonoBehaviour
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
-        move_speed = 3.0f;
+        move_speed = 3.5f;
         crawl_speed = 2.0f;
     }
 
@@ -54,7 +54,7 @@ public class Player_Walk : MonoBehaviour
         }
         else
         {
-            move_speed = 3.0f;
+            move_speed = 3.5f;
         }
     }
 
