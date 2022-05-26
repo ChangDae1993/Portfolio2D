@@ -9,7 +9,7 @@ public class Player_Walk : MonoBehaviour
     private Player_State_Ctrlr P_State;
     Animator animator;
 
-    private float move_speed = 3.0f;
+    public float move_speed = 3.0f;
     private float crawl_speed = 2.0f;
 
     public int key = 0;

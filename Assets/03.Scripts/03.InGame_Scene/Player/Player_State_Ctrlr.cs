@@ -18,7 +18,7 @@ public enum PlayerState
 public enum PlayerMoveState
 {
     player_walk = 0,
-    player_dash = 1,
+    player_roll = 1,
     player_jump = 2,
     player_fall = 3,
     player_crawl = 4,
