@@ -10,6 +10,10 @@ public class Player_Attack : MonoBehaviour
     private Player_State_Ctrlr Player_State;
     Animator animator;
 
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -46,6 +50,15 @@ public class Player_Attack : MonoBehaviour
         if (a == 2)
         {
             animator.SetTrigger("Sword_Attack_3");
+        }
+
+        //Detect Enemy
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        //Damage Enemy
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("We hit" + enemy.name);
         }
     }
 }
