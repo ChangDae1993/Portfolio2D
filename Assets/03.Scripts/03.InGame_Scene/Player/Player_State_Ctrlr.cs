@@ -28,10 +28,8 @@ public enum PlayerMoveState
 
 public enum PlayerAttackState
 {
-    player_handgun = 0,
-    player_riflegun = 1,
-    player_sabor = 2,
-    player_noAttack = 3
+    player_Sword = 0,
+    player_noAttack = 1
 }
 
 public enum PlayerAttack1   //handgun
