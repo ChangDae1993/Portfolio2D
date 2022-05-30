@@ -12,7 +12,8 @@ public enum PlayerState
     player_idle = 4,
     player_talk = 5,
     player_map = 6,
-    player_takeDamage = 7
+    player_takeDamage = 7,
+    player_Shield = 8
 }
 
 public enum PlayerMoveState
@@ -23,35 +24,15 @@ public enum PlayerMoveState
     player_fall = 3,
     player_crawl = 4,
     player_climb = 5,
-    player_noWalk = 6
+    player_noWalk = 6,
+    player_ShieldOn = 7
 }
 
 public enum PlayerAttackState
 {
     player_Sword = 0,
-    player_noAttack = 1
-}
-
-public enum PlayerAttack1   //handgun
-{
-    player_att1_normal = 0,
-    player_att1_aim = 1,
-    player_att1_grenade = 2,
-    player_att1_skill = 3
-}
-public enum PlayerAttack2   //riflegun
-{
-    player_att2_normal = 0,
-    player_att2_aim = 1,
-    player_att2_grenade = 2,
-    player_att2_skill = 3
-}
-public enum PlayerAttack3   //sabor
-{
-    player_attS_normal = 0,
-    player_attS_block = 1,
-    player_attS_Grenade = 2,
-    player_attS_skill = 3
+    player_Shield = 1,
+    player_noAttack = 2
 }
 #endregion
 

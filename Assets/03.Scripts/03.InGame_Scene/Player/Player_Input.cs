@@ -5,8 +5,9 @@ using UnityEngine;
 public class Player_Input : MonoBehaviour
 {
 
-    public float horizontal { get; private set; }
+    private Player_State_Ctrlr Player_State;
 
+    public float horizontal { get; private set; }
     public float vertical { get; private set; }
 
     Animator animator;
@@ -17,6 +18,7 @@ public class Player_Input : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Player_State = GetComponent<Player_State_Ctrlr>();
         animator = GetComponent<Animator>();
     }
 
@@ -29,6 +31,17 @@ public class Player_Input : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             animator.SetTrigger("Sword_Attack_start");
+        }
+
+        if(Input.GetMouseButton(1))
+        {
+            Player_State.p_state = PlayerState.player_Shield;
+            animator.SetBool("ShieldOn", true);
+        }
+
+        if(Input.GetMouseButtonUp(1))
+        {
+            animator.SetBool("ShieldOn", false);
         }
     }
 }
