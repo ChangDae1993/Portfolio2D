@@ -35,6 +35,9 @@ public class Player_Roll : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            if (P_State.p_Defece_state == PlayerDefenceState.player_onShield)
+                return;
+
             if (P_State.p_Move_state == PlayerMoveState.player_crawl || P_State.p_Move_state == PlayerMoveState.player_jump)
             {
                 return;

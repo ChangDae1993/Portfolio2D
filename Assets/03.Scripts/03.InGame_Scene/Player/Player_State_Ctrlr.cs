@@ -34,6 +34,13 @@ public enum PlayerAttackState
     player_Shield = 1,
     player_noAttack = 2
 }
+
+public enum PlayerDefenceState
+{
+    player_noShield = 0,
+    player_onShield = 1,
+    player_ShieldActive =2
+}
 #endregion
 
 public class Player_State_Ctrlr : MonoBehaviour
@@ -41,6 +48,7 @@ public class Player_State_Ctrlr : MonoBehaviour
     public PlayerState p_state;
     public PlayerMoveState p_Move_state;
     public PlayerAttackState p_Attack_state;
+    public PlayerDefenceState p_Defece_state;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +56,7 @@ public class Player_State_Ctrlr : MonoBehaviour
         p_state = PlayerState.player_idle;
         p_Move_state = PlayerMoveState.player_walk;
         p_Attack_state = PlayerAttackState.player_noAttack;
+        p_Defece_state = PlayerDefenceState.player_noShield;
 
     }
 }

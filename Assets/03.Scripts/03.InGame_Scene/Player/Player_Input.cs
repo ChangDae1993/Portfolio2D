@@ -35,7 +35,6 @@ public class Player_Input : MonoBehaviour
 
         if(Input.GetMouseButton(1))
         {
-            Player_State.p_state = PlayerState.player_Shield;
             animator.SetBool("ShieldOn", true);
         }
 
