@@ -11,12 +11,15 @@ public class Enemy_Hp_Mgr : MonoBehaviour
     public float MaxHP = 100;
     private float CurHP;
 
+    Animator animator;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
     {
         enemy_State = GetComponent<Enemy_State_Ctrlr>();
         enemy_State.e_State = EnemyState.enemy_idle;
+        animator = GetComponent<Animator>();
 
         CurHP = MaxHP;
     }
@@ -25,7 +28,7 @@ public class Enemy_Hp_Mgr : MonoBehaviour
 
     private void UpdateFunc()
     {
-        
+
     }
 
     public void TakeDamage(int Damage)
@@ -33,19 +36,25 @@ public class Enemy_Hp_Mgr : MonoBehaviour
         CurHP -= Damage;
 
         //Play Hurt Anim
+        animator.SetTrigger("EnemyHit");
 
         if(CurHP <= 0.0f)
         {
             E_Die();
         }
     }
-
+        
     private void E_Die()
     {
         Debug.Log("enemy Dead");
+
         //Die Anim
+        animator.SetBool("IsDead", true);
 
         //Disable the Enmey
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().gravityScale = 0;
+        this.enabled = false;
 
     }
 }
