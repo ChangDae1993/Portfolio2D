@@ -46,6 +46,7 @@ public class Enemy_Hp_Mgr : MonoBehaviour
         
     private void E_Die()
     {
+        enemy_State.e_State = EnemyState.enemy_die;
         Debug.Log("enemy Dead");
 
         //Die Anim

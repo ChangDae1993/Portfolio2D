@@ -30,6 +30,9 @@ public class Enemy_Patrol : MonoBehaviour
 
     public void EnemyWalk(float w)
     {
+        if (enemy_State.e_State == EnemyState.enemy_die)
+            return;
+
         enemy_State.e_State = EnemyState.enemy_walk;
         int key = Random.Range(-1, 2);
         w = w - Time.deltaTime;
