@@ -15,7 +15,7 @@ public class Player_Attack : MonoBehaviour
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
 
-    public int attackDamage = 20;
+    public int attackDamage;
 
     private void Start() => StartFunc();
 
@@ -28,6 +28,7 @@ public class Player_Attack : MonoBehaviour
         enemy_Hp = GameObject.FindGameObjectWithTag("ENEMY").GetComponent<Enemy_Hp_Mgr>();
         Player_State.p_state = PlayerState.player_attack;
         Player_State.p_Attack_state = PlayerAttackState.player_noAttack;
+        attackDamage = 30;
     }
 
     private void Update() => UpdateFunc();

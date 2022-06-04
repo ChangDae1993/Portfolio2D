@@ -34,7 +34,7 @@ public class Enemy_Hp_Mgr : MonoBehaviour
     public void TakeDamage(int Damage)
     {
         CurHP -= Damage;
-
+        Hp_Bar.fillAmount -= Damage * 0.01f;
         //Play Hurt Anim
         animator.SetTrigger("EnemyHit");
 
