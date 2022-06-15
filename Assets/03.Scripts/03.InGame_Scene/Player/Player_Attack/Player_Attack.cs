@@ -28,7 +28,7 @@ public class Player_Attack : MonoBehaviour
         enemy_Hp = GameObject.FindGameObjectWithTag("ENEMY").GetComponent<Enemy_Hp_Mgr>();
         Player_State.p_state = PlayerState.player_attack;
         Player_State.p_Attack_state = PlayerAttackState.player_noAttack;
-        attackDamage = 30;
+        attackDamage = 20;
     }
 
     private void Update() => UpdateFunc();
