@@ -32,7 +32,7 @@ public class Enemy_Patrol : MonoBehaviour
     {
         if (enemy_State.e_State == EnemyState.enemy_die)
         {
-            walk_force = 0;
+            animator.enabled = false;
             return;
         }
 

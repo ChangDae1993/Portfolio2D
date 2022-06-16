@@ -55,7 +55,7 @@ public class Enemy_Hp_Mgr : MonoBehaviour
         //Disable the Enmey
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().gravityScale = 0;
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         this.enabled = false;
-
     }
 }
