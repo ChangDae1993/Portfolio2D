@@ -31,7 +31,10 @@ public class Enemy_Patrol : MonoBehaviour
     public void EnemyWalk(float w)
     {
         if (enemy_State.e_State == EnemyState.enemy_die)
+        {
+            walk_force = 0;
             return;
+        }
 
         enemy_State.e_State = EnemyState.enemy_walk;
         int key = Random.Range(-1, 2);
@@ -45,6 +48,7 @@ public class Enemy_Patrol : MonoBehaviour
         {
             if (key != 0)
             {
+
                 rigid.AddForce(transform.right * key * walk_force);
                 animator.SetTrigger("EnemyWalk");
                 transform.localScale = new Vector3(key * 3.0f, 3.0f, 1);
