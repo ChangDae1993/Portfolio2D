@@ -592,7 +592,7 @@ GameObject:
   - component: {fileID: 695104815}
   - component: {fileID: 695104817}
   - component: {fileID: 695104816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stage_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1685,7 +1685,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -2894,7 +2894,7 @@ GameObject:
   - component: {fileID: 2108793970}
   - component: {fileID: 2108793980}
   - component: {fileID: 2108793979}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}

@@ -60,7 +60,10 @@ public class Player_Roll : MonoBehaviour
         if (0.0f < roll_time)
         {
             P_Move_Roll();
+            this.gameObject.layer = 3;
         }
+        else
+            this.gameObject.layer = 7;
     }
 
     private void P_Move_Roll()
