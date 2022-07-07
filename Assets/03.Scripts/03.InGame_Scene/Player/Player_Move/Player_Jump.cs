@@ -43,7 +43,7 @@ public class Player_Jump : MonoBehaviour
     void FixedUpdate()
     {
         // Lending Platform
-        if (rigid.velocity.y < 0)
+        if (rigid.velocity.y <= 0)
         {
             Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0)); //에디터 상에서만 레이를 그려준다
             RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("PLATFORM"));
