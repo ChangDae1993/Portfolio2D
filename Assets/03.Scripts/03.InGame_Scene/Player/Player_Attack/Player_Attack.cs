@@ -8,7 +8,7 @@ public class Player_Attack : MonoBehaviour
     private Rigidbody2D rigid;
     private Player_Input p_input;
     private Player_State_Ctrlr Player_State;
-    private Enemy_Hp_Mgr enemy_Hp;
+    //private Enemy_Hp_Mgr enemy_Hp;
     Animator animator;
 
     public Transform attackPoint;
@@ -25,7 +25,7 @@ public class Player_Attack : MonoBehaviour
         animator = GetComponent<Animator>();
         Player_State = GetComponent<Player_State_Ctrlr>();
         p_input = GetComponent<Player_Input>();
-        enemy_Hp = GameObject.FindGameObjectWithTag("ENEMY").GetComponent<Enemy_Hp_Mgr>();
+        //enemy_Hp = GameObject.FindGameObjectWithTag("ENEMY").GetComponent<Enemy_Hp_Mgr>();
         Player_State.p_state = PlayerState.player_attack;
         Player_State.p_Attack_state = PlayerAttackState.player_noAttack;
         attackDamage = 20;
@@ -63,7 +63,7 @@ public class Player_Attack : MonoBehaviour
         //Damage Enemy
         foreach(Collider2D enemy in hitEnemies)
         {
-            enemy_Hp.TakeDamage(attackDamage);
+            //enemy_Hp.TakeDamage(attackDamage);
         }
     }
 
