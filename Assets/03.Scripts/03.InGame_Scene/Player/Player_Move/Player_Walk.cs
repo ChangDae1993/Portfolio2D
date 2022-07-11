@@ -98,7 +98,6 @@ public class Player_Walk : MonoBehaviour
             {
                 transform.localScale = new Vector3(key * 1.2f, 1.2f, 1);
             }
-            Debug.Log(key);
         }
     }
 

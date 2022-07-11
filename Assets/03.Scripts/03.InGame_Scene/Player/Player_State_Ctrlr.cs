@@ -57,6 +57,5 @@ public class Player_State_Ctrlr : MonoBehaviour
         p_Move_state = PlayerMoveState.player_walk;
         p_Attack_state = PlayerAttackState.player_noAttack;
         p_Defece_state = PlayerDefenceState.player_noShield;
-
     }
 }

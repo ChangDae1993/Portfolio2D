@@ -7,19 +7,28 @@ public abstract class Enemy : MonoBehaviour
     //플레이어 찾아두기
     protected GameObject player;
 
+    protected Enemy_State_Ctrlr E_State;
+
+    //애니메이션
+    protected Animator animator;
+
+    //체력
     protected float MaxHp;
     protected float CurHp;
 
+    //공격
     protected float Att;
     protected float Att_Range;
     protected float Att_Speed;
 
+    //스킬
     protected float Skill1;
     protected float Skill2;
     protected float Skill3;
     protected float Skill4;
 
-    //값 할당용 변수
+
+    //Awake에서 찾아두기
     protected abstract void InitData();
 
     //패트롤
