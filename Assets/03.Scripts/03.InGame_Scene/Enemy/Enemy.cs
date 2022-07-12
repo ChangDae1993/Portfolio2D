@@ -27,6 +27,9 @@ public abstract class Enemy : MonoBehaviour
     protected float Skill3;
     protected float Skill4;
 
+    //Patrol 범위
+
+
 
     //Awake에서 찾아두기
     protected abstract void InitData();
