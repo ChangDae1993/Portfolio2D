@@ -9,11 +9,13 @@ public class Player_Roll : MonoBehaviour
     private Player_State_Ctrlr P_State;
     private Player_Walk p_Walk;
     Animator animator;
-    bool isDash;
+    public bool isDash;
 
     private float roll_time;
 
-    private float roll_speed = 5.0f;
+    private float roll_speed;
+
+    private float roll_Cool;
 
     private void Start() => StartFunc();
 
@@ -26,6 +28,7 @@ public class Player_Roll : MonoBehaviour
         p_Walk = GetComponent<Player_Walk>();
         roll_speed = 5.0f;
         roll_time = 0.4f;
+        roll_Cool = 3.0f;
     }
 
     private void Update() => UpdateFunc();
@@ -33,7 +36,7 @@ public class Player_Roll : MonoBehaviour
     private void UpdateFunc()
     {
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && roll_Cool < 0.0f)
         {
             if (P_State.p_Defece_state == PlayerDefenceState.player_onShield)
                 return;
@@ -47,12 +50,14 @@ public class Player_Roll : MonoBehaviour
             P_State.p_state = PlayerState.player_move;
             P_State.p_Move_state = PlayerMoveState.player_roll;
             roll_time = 0.4f;
+            roll_Cool = 3.0f;
             animator.SetBool("IsDash", true);
         }
         else
         {
             roll_speed = p_Walk.move_speed;
             roll_time -= Time.deltaTime;
+            roll_Cool -= Time.deltaTime;
             animator.SetBool("IsDash", false);
             isDash = false;
         }
