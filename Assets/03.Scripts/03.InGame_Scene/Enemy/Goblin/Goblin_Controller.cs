@@ -26,12 +26,39 @@ public class Goblin_Controller : Enemy
     // Update is called once per frame
     void Update()
     {
-
+        M_Patrol();
     }
 
     protected override void M_Patrol()
     {
-        throw new System.NotImplementedException();
+        //m_Patrol_Time = Random.Range(0.0f, 5.0f);
+        //Debug.Log(m_Patrol_Time);
+
+        if (E_State.e_State == EnemyState.enemy_Idle)
+        {
+            patrol_Time -= Time.deltaTime;
+            if (patrol_Time <= 0.0f)
+            {
+                E_State.e_State = EnemyState.enemy_Patrol;
+                patrol_Time = Random.Range(2.0f, 3.0f);
+            }
+        }
+        else if (E_State.e_State == EnemyState.enemy_Patrol)
+        {
+            if (patrol_Time >= 0.0f)
+            {
+                patrol_Time -= Time.deltaTime;
+                animator.SetBool("IsPatrol", true);
+
+                if (patrol_Time < 0.0f)
+                {
+                    E_State.e_State = EnemyState.enemy_Idle;
+                    animator.SetBool("IsPatrol", false);
+                    patrol_Time = Random.Range(2.0f, 3.0f);
+                }
+            }
+
+        }
     }
     protected override void M_Chase()
     {
