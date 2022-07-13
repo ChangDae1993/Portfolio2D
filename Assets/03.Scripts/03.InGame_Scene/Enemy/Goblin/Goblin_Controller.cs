@@ -9,6 +9,7 @@ public class Goblin_Controller : Enemy
         player = GameObject.FindGameObjectWithTag("Player");
         E_State = GetComponent<Enemy_State_Ctrlr>();
         animator = GetComponent<Animator>();
+        patrol_Time = Random.Range(2.0f, 3.0f);
     }
 
     private void Awake()

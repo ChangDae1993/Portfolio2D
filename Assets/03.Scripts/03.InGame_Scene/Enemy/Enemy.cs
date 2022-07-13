@@ -27,7 +27,8 @@ public abstract class Enemy : MonoBehaviour
     protected float Skill3;
     protected float Skill4;
 
-    //Patrol 범위
+    //Patrol 타이머
+    protected float patrol_Time;
 
 
 
