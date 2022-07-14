@@ -84,6 +84,7 @@ public class Goblin_Controller : Enemy
     protected override void M_Chase()
     {
         throw new System.NotImplementedException();
+        //Collider »ç¿ë?
     }
 
     protected override void M_Attack()

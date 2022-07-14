@@ -33,6 +33,8 @@ public abstract class Enemy : MonoBehaviour
     protected int right;
     //0이면 오른쪽, 1이면 왼쪽으로 Random.Range를 사용해서 구현 예정
 
+    //Chase상태로 넘어가는 체크를 하기 위한 Vector.magnitude 변수 필요
+
     //이동속도
     protected float e_move_Speed;
 
