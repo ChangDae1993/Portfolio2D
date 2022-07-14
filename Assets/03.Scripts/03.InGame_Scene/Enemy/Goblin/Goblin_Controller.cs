@@ -10,6 +10,11 @@ public class Goblin_Controller : Enemy
         E_State = GetComponent<Enemy_State_Ctrlr>();
         animator = GetComponent<Animator>();
         patrol_Time = Random.Range(2.0f, 3.0f);
+
+        MaxHp = 100;
+        CurHp = MaxHp;
+        e_move_Speed = 3.0f;    //(임시)
+        e_Att = 4.0f;           //(임시)
     }
 
     private void Awake()
@@ -49,6 +54,9 @@ public class Goblin_Controller : Enemy
             {
                 patrol_Time -= Time.deltaTime;
                 animator.SetBool("IsPatrol", true);
+
+                //랜덤한 방향으로 움직이기?
+                //움직이는 방식은 transform.position? 아니면 vector2.forward?
 
                 if (patrol_Time < 0.0f)
                 {

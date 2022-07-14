@@ -17,9 +17,9 @@ public abstract class Enemy : MonoBehaviour
     protected float CurHp;
 
     //공격
-    protected float Att;
-    protected float Att_Range;
-    protected float Att_Speed;
+    protected float e_Att;
+    protected float e_Att_Range;
+    protected float e_Att_Speed;
 
     //스킬
     protected float Skill1;
@@ -29,6 +29,9 @@ public abstract class Enemy : MonoBehaviour
 
     //Patrol 타이머
     protected float patrol_Time;
+
+    //이동속도
+    protected float e_move_Speed;
 
 
 
