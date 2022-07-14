@@ -9,12 +9,13 @@ public class Goblin_Controller : Enemy
         player = GameObject.FindGameObjectWithTag("Player");
         E_State = GetComponent<Enemy_State_Ctrlr>();
         animator = GetComponent<Animator>();
-        patrol_Time = Random.Range(2.0f, 3.0f);
+        patrol_Time = Random.Range(1.0f, 3.0f);
 
         MaxHp = 100;
         CurHp = MaxHp;
         e_move_Speed = 3.0f;    //(임시)
         e_Att = 4.0f;           //(임시)
+        right = Random.Range(0, 2);
     }
 
     private void Awake()
@@ -45,7 +46,8 @@ public class Goblin_Controller : Enemy
             if (patrol_Time <= 0.0f)
             {
                 E_State.e_State = EnemyState.enemy_Patrol;
-                patrol_Time = Random.Range(2.0f, 3.0f);
+                patrol_Time = Random.Range(1.0f, 3.0f);
+                right = Random.Range(0, 2);
             }
         }
         else if (E_State.e_State == EnemyState.enemy_Patrol)
@@ -57,12 +59,23 @@ public class Goblin_Controller : Enemy
 
                 //랜덤한 방향으로 움직이기?
                 //움직이는 방식은 transform.position? 아니면 vector2.forward?
+                if (right == 1)
+                {
+                    //1이니까 왼쪽
+                    Debug.Log("Left");
+                }
+                else if (right == 0)
+                {
+                    //0이니까 오른쪽
+                    Debug.Log("Right");
+                }
 
                 if (patrol_Time < 0.0f)
                 {
                     E_State.e_State = EnemyState.enemy_Idle;
                     animator.SetBool("IsPatrol", false);
-                    patrol_Time = Random.Range(2.0f, 3.0f);
+                    patrol_Time = Random.Range(1.0f, 3.0f);
+                    right = Random.Range(0, 3);
                 }
             }
 

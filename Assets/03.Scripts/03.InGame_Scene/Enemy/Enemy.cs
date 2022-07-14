@@ -29,6 +29,9 @@ public abstract class Enemy : MonoBehaviour
 
     //Patrol 타이머
     protected float patrol_Time;
+    //Patrol 방향
+    protected int right;
+    //0이면 오른쪽, 1이면 왼쪽으로 Random.Range를 사용해서 구현 예정
 
     //이동속도
     protected float e_move_Speed;
