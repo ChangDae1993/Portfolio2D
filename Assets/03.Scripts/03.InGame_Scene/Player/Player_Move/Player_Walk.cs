@@ -11,7 +11,6 @@ public class Player_Walk : MonoBehaviour
     Animator animator;
 
     public float move_speed = 3.0f;
-    private float crawl_speed = 2.0f;
 
     public int key = 0;
 
@@ -27,7 +26,6 @@ public class Player_Walk : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
         move_speed = 3.5f;
-        crawl_speed = 2.0f;
     }
 
     // Update is called once per frame
@@ -46,17 +44,6 @@ public class Player_Walk : MonoBehaviour
             P_State.p_Move_state = PlayerMoveState.player_noWalk;
             animator.SetBool("IsWalk", false);
         }
-
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            P_State.p_state = PlayerState.player_move;
-            P_State.p_Move_state = PlayerMoveState.player_crawl;
-            P_Move_Crawl();
-        }
-        else
-        {
-            move_speed = 3.5f;
-        }
     }
 
     private void P_Move_Walk()
@@ -73,6 +60,7 @@ public class Player_Walk : MonoBehaviour
 
         if (P_State.p_Move_state != PlayerMoveState.player_noWalk && P_State.p_Defece_state == PlayerDefenceState.player_noShield)
         {
+            move_speed = 3.5f;
             if (key == 1)
                 this.transform.localEulerAngles = new Vector3(0, 0, 0);
             else if (key == -1)
@@ -82,23 +70,19 @@ public class Player_Walk : MonoBehaviour
 
         if (P_State.p_Defece_state == PlayerDefenceState.player_onShield)
         {
+            move_speed = 1.5f;
+
             if (this.transform.localEulerAngles.y == 0)
             {
                 this.transform.localEulerAngles = new Vector3(0, 0, 0);
-                Debug.Log("Shield right fix");
+                //Debug.Log("Shield right fix");
             }
             else if (this.transform.localEulerAngles.y == -180)
             {
                 this.transform.localEulerAngles = new Vector3(0, 0, 0);
-                Debug.Log("Shield left fix");
+                //Debug.Log("Shield left fix");
             }
-
-            Debug.Log("Shield On");
+            //Debug.Log("Shield On");
         }
-    }
-
-    private void P_Move_Crawl()
-    {
-        move_speed = crawl_speed;
     }
 }

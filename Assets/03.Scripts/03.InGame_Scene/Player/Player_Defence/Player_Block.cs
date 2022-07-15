@@ -8,7 +8,6 @@ public class Player_Block : MonoBehaviour
     private Player_Input p_input;
     private Player_State_Ctrlr Player_State;
     private BoxCollider2D def_area;
-    private Player_Walk p_walk;
     Animator animator;
 
     //쉴드 상태일때 scale 값 받아두기
@@ -22,7 +21,6 @@ public class Player_Block : MonoBehaviour
         Player_State = GetComponent<Player_State_Ctrlr>();
         p_input = GetComponent<Player_Input>();
         def_area = GetComponent<BoxCollider2D>();
-        p_walk = GetComponent<Player_Walk>();
         Player_State.p_state = PlayerState.player_idle;
         Player_State.p_Defece_state = PlayerDefenceState.player_noShield;
     }
@@ -35,7 +33,6 @@ public class Player_Block : MonoBehaviour
             Player_State.p_state = PlayerState.player_Shield;
             Player_State.p_Defece_state = PlayerDefenceState.player_onShield;
             def_area.enabled = true;
-            p_walk.move_speed = 2.0f;
             Shield_scale = this.transform.localScale.x;
             //if(0 < p_input.horizontal)
             //{
@@ -67,7 +64,6 @@ public class Player_Block : MonoBehaviour
         {
             Player_State.p_state = PlayerState.player_idle;
             Player_State.p_Defece_state = PlayerDefenceState.player_noShield;
-            p_walk.move_speed = 3.5f;
             def_area.enabled = false;
         }
     }
