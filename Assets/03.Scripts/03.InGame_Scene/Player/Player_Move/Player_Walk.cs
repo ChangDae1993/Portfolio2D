@@ -21,6 +21,7 @@ public class Player_Walk : MonoBehaviour
         P_State = GetComponent<Player_State_Ctrlr>();
         P_State.p_state = PlayerState.player_idle;
         P_State.p_Move_state = PlayerMoveState.player_noWalk;
+        P_State.p_Defece_state = PlayerDefenceState.player_noShield;
         P_block = GetComponent<Player_Block>();
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
@@ -56,28 +57,6 @@ public class Player_Walk : MonoBehaviour
         {
             move_speed = 3.5f;
         }
-
-        if (P_State.p_state == PlayerState.player_Shield)
-        {
-            if (key == 1)
-            {
-                if (p_input.horizontal < 0)
-                    transform.localScale = new Vector3(1.2f, 1.2f, 1);
-                else
-                    transform.localScale = new Vector3(1.2f, 1.2f, 1);
-                Debug.Log("Shield right fix");
-            }
-            else if (key == -1)
-            {
-                if (0 < p_input.horizontal)
-                    transform.localScale = new Vector3(-1.2f, 1.2f, 1);
-                else
-                    transform.localScale = new Vector3(-1.2f, 1.2f, 1);
-                Debug.Log("Shield left fix");
-            }
-
-            Debug.Log("Shield On");
-        }
     }
 
     private void P_Move_Walk()
@@ -92,12 +71,29 @@ public class Player_Walk : MonoBehaviour
         Vector2 p_move = p_vector * move_speed * Time.deltaTime;
         rigid.position += p_move;
 
-        if (P_State.p_Move_state != PlayerMoveState.player_noWalk/* && P_State.p_state != PlayerState.player_Shield*/)
+        if (P_State.p_Move_state != PlayerMoveState.player_noWalk && P_State.p_Defece_state == PlayerDefenceState.player_noShield)
         {
-            if (p_input.horizontal != 0)
+            if (key == 1)
+                this.transform.localEulerAngles = new Vector3(0, 0, 0);
+            else if (key == -1)
+                this.transform.localEulerAngles = new Vector3(0, 180, 0);
+        }
+
+
+        if (P_State.p_Defece_state == PlayerDefenceState.player_onShield)
+        {
+            if (this.transform.localEulerAngles.y == 0)
             {
-                transform.localScale = new Vector3(key * 1.2f, 1.2f, 1);
+                this.transform.localEulerAngles = new Vector3(0, 0, 0);
+                Debug.Log("Shield right fix");
             }
+            else if (this.transform.localEulerAngles.y == -180)
+            {
+                this.transform.localEulerAngles = new Vector3(0, 0, 0);
+                Debug.Log("Shield left fix");
+            }
+
+            Debug.Log("Shield On");
         }
     }
 

@@ -30,7 +30,7 @@ public class Player_Block : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
         {
             Player_State.p_state = PlayerState.player_Shield;
             Player_State.p_Defece_state = PlayerDefenceState.player_onShield;
@@ -65,6 +65,7 @@ public class Player_Block : MonoBehaviour
 
         if (Input.GetMouseButtonUp(1))
         {
+            Player_State.p_state = PlayerState.player_idle;
             Player_State.p_Defece_state = PlayerDefenceState.player_noShield;
             p_walk.move_speed = 3.5f;
             def_area.enabled = false;
