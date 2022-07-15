@@ -36,12 +36,22 @@ public class Goblin_Controller : Enemy
     {
         M_ChaseDist();
         M_Patrol();
+        //Debug.Log(patrol_Time);
     }
 
     protected override void M_Patrol()
     {
         //m_Patrol_Time = Random.Range(0.0f, 5.0f);
         //Debug.Log(m_Patrol_Time);
+        //if(E_State.e_State == EnemyState.enemy_StopChase)
+        //{
+        //    //patrol_Time = Random.Range(1.0f, 3.0f);
+        //    patrol_Time -= Time.deltaTime;
+        //    if (patrol_Time <= 0.0f)
+        //    {
+        //        E_State.e_State = EnemyState.enemy_Idle;
+        //    }
+        //}
 
         if (E_State.e_State == EnemyState.enemy_Idle)
         {
@@ -59,7 +69,6 @@ public class Goblin_Controller : Enemy
             {
                 patrol_Time -= Time.deltaTime;
                 animator.SetBool("IsPatrol", true);
-
 
                 //랜덤한 방향으로 움직이기?
                 //움직이는 방식은 this.transform.position += / -= Vector3.right * e_move_Speed * Time.deltaTime을 사용
@@ -87,7 +96,6 @@ public class Goblin_Controller : Enemy
                     right = Random.Range(0, 3);
                 }
             }
-
         }
     }
 
@@ -95,17 +103,32 @@ public class Goblin_Controller : Enemy
     protected override void M_ChaseDist()
     {
         chaseDist = Vector2.Distance(this.transform.position , player.transform.position);
-        if(chaseDist <= 7.0f)
+        if (chaseDist <= 7.0f)
         {
-            E_State.e_State = EnemyState.enemy_Chase;
+            //E_State.e_State = EnemyState.enemy_Chase;
+            //상태값을 바꾸면 고장난다ㅠㅠ
+
+            animator.SetBool("IsChase", true);
             M_Chase();
+        }
+        else
+        {
+            //Chase는 연출만 하고
+            //기능은 따로 구현해야겠다ㅠㅠ
+
+            animator.SetBool("IsChase", false);
         }
     }
 
     protected override void M_Chase()
     {
         Debug.Log("Chase!!");
-        //Vector3.magnitude 사용
+        //Chase 함수로 넘어오는거 확인
+        //이제 Chase 기능 구현 필요
+
+        //Vector3.magnitude 사용?
+
+
     }
 
     protected override void M_Attack()
