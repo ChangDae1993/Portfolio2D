@@ -116,6 +116,10 @@ public class Goblin_Controller : Enemy
                 //공격사거리 안에 들어오면 공격
                 M_Attack();
             }
+            else
+            {
+                animator.SetBool("IsAttack", false);
+            }
             animator.SetBool("IsChase", true);
             M_Chase();
             isChase = true;
@@ -132,15 +136,17 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Chase()
     {
-        Debug.Log("Chase!!");
+        //Debug.Log("Chase!!");
         //Chase 함수로 넘어오는거 확인
         //이제 Chase 기능 구현 필요
 
         //Vector3.magnitude 사용?
+        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, Time.deltaTime * 0.6f);
     }
 
     protected override void M_Attack()
     {
+        animator.SetBool("IsAttack", true);
         Debug.Log("Attack");
     }
 
