@@ -5,23 +5,23 @@ using UnityEngine;
 public class Player_Jump : MonoBehaviour
 {
     private Rigidbody2D rigid;
-    private Player_Input p_input;
-    private Player_State_Ctrlr P_State;
+    private Player_State_Ctrlr Player_State;
     Animator animator;
 
     private float jump_power = 600.0f;
 
-    bool isJumping;
+    public bool isJumping;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
-        p_input = GetComponent<Player_Input>();
-        P_State = GetComponent<Player_State_Ctrlr>();
+        Player_State = GetComponent<Player_State_Ctrlr>();
         jump_power = 8.0f;
         isJumping = false;
+        Player_State.p_state = PlayerState.player_idle;
+        Player_State.p_Move_state = PlayerMoveState.player_jump;
     }
 
     // Update is called once per frame
@@ -31,12 +31,14 @@ public class Player_Jump : MonoBehaviour
         {
             if (isJumping == false)
             {
+                Player_State.p_Move_state = PlayerMoveState.player_walk;
                 isJumping = true;
-                P_State.p_state = PlayerState.player_move;
-                P_State.p_Move_state = PlayerMoveState.player_jump;
                 P_Move_Jump();
             }
-
+            else
+            {
+                Player_State.p_Move_state = PlayerMoveState.player_jump;
+            }
         }
     }
 

@@ -22,10 +22,9 @@ public enum PlayerMoveState
     player_roll = 1,
     player_jump = 2,
     player_fall = 3,
-    player_crawl = 4,
-    player_climb = 5,
-    player_noWalk = 6,
-    player_ShieldOn = 7
+    player_climb = 4,
+    player_noWalk = 5,
+    player_ShieldOn = 6
 }
 
 public enum PlayerAttackState

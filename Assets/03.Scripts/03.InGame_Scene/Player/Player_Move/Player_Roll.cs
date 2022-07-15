@@ -29,6 +29,9 @@ public class Player_Roll : MonoBehaviour
         roll_speed = 5.0f;
         roll_time = 0.4f;
         roll_Cool = 3.0f;
+
+        P_State.p_state = PlayerState.player_move;
+        P_State.p_Move_state = PlayerMoveState.player_walk;
     }
 
     private void Update() => UpdateFunc();
@@ -41,20 +44,19 @@ public class Player_Roll : MonoBehaviour
             if (P_State.p_Defece_state == PlayerDefenceState.player_onShield)
                 return;
 
-            if (P_State.p_Move_state == PlayerMoveState.player_crawl || P_State.p_Move_state == PlayerMoveState.player_jump)
+            if (P_State.p_Move_state == PlayerMoveState.player_jump)
             {
                 return;
             }
 
             isDash = true;
-            P_State.p_state = PlayerState.player_move;
-            P_State.p_Move_state = PlayerMoveState.player_roll;
             roll_time = 0.4f;
             roll_Cool = 3.0f;
             animator.SetBool("IsDash", true);
         }
         else
         {
+            P_State.p_Move_state = PlayerMoveState.player_walk;
             roll_speed = p_Walk.move_speed;
             roll_time -= Time.deltaTime;
             roll_Cool -= Time.deltaTime;
@@ -64,6 +66,7 @@ public class Player_Roll : MonoBehaviour
 
         if (0.0f < roll_time)
         {
+            P_State.p_Move_state = PlayerMoveState.player_roll;
             P_Move_Roll();
             this.gameObject.layer = 3;
         }

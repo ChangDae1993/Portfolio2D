@@ -5,7 +5,6 @@ using UnityEngine;
 public class Player_Block : MonoBehaviour
 {
     private Rigidbody2D rigid;
-    private Player_Input p_input;
     private Player_State_Ctrlr Player_State;
     private BoxCollider2D def_area;
     Animator animator;
@@ -19,7 +18,6 @@ public class Player_Block : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         Player_State = GetComponent<Player_State_Ctrlr>();
-        p_input = GetComponent<Player_Input>();
         def_area = GetComponent<BoxCollider2D>();
         Player_State.p_state = PlayerState.player_idle;
         Player_State.p_Defece_state = PlayerDefenceState.player_noShield;
@@ -34,30 +32,6 @@ public class Player_Block : MonoBehaviour
             Player_State.p_Defece_state = PlayerDefenceState.player_onShield;
             def_area.enabled = true;
             Shield_scale = this.transform.localScale.x;
-            //if(0 < p_input.horizontal)
-            //{
-            //    Debug.Log("Forword");
-            //    if (p_walk.key == 1)
-            //        transform.localScale = new Vector3(1.2f, 1.2f, 1);
-            //    else if (p_walk.key == -1)
-            //        transform.localScale = new Vector3(-1.2f, 1.2f, 1);
-            //}
-            //else if(p_input.horizontal < 0)
-            //{
-            //    Debug.Log("Back");
-            //}
-
-            //if (p_walk.key == 1)
-            //{
-            //    Debug.Log("Forward");
-            //    if (Input.GetKey(KeyCode.A))
-            //        transform.localScale = new Vector3(1.2f, 1.2f, 1);
-            //}
-            //else if(p_walk.key == -1)
-            //{
-            //    Debug.Log("Back");
-            //}
-            //Debug.Log(Shield_scale);
         }
 
         if (Input.GetMouseButtonUp(1))
