@@ -49,6 +49,9 @@ public abstract class Enemy : MonoBehaviour
     //추적
     protected abstract void M_Chase();
 
+    //추적에 필요한 플레이어와 거리 체크 함수
+    protected abstract void M_ChaseDist();
+
     //공격
     protected abstract void M_Attack();
 

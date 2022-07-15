@@ -66,14 +66,14 @@ public class Goblin_Controller : Enemy
                     //1이니까 왼쪽
                     this.transform.position -= Vector3.right * e_move_Speed * Time.deltaTime;
                     this.transform.localEulerAngles = new Vector3(0, 0, 0);
-                    Debug.Log("Left");
+                    //Debug.Log("Left");
                 }
                 else if (right == 0)
                 {
                     //0이니까 오른쪽
                     this.transform.position += Vector3.right * e_move_Speed * Time.deltaTime;
                     this.transform.localEulerAngles = new Vector3(0, 180, 0);
-                    Debug.Log("Right");
+                    //Debug.Log("Right");
                 }
 
                 if (patrol_Time < 0.0f)
@@ -87,6 +87,13 @@ public class Goblin_Controller : Enemy
 
         }
     }
+
+    //플레이어와 거리 체크하는 함수
+    protected override void M_ChaseDist()
+    {
+        throw new System.NotImplementedException();
+    }
+
     protected override void M_Chase()
     {
         throw new System.NotImplementedException();
@@ -116,4 +123,5 @@ public class Goblin_Controller : Enemy
     {
         throw new System.NotImplementedException();
     }
+
 }
