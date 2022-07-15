@@ -13,7 +13,7 @@ public class Goblin_Controller : Enemy
 
         MaxHp = 100;
         CurHp = MaxHp;
-        e_move_Speed = 3.0f;    //(임시)
+        e_move_Speed = 1.0f;    //(임시)
         e_Att = 4.0f;           //(임시)
         right = Random.Range(0, 2);
     }
@@ -62,11 +62,13 @@ public class Goblin_Controller : Enemy
                 if (right == 1)
                 {
                     //1이니까 왼쪽
+                    this.transform.position -= Vector3.right * e_move_Speed * Time.deltaTime;
                     Debug.Log("Left");
                 }
                 else if (right == 0)
                 {
                     //0이니까 오른쪽
+                    this.transform.position += Vector3.right * e_move_Speed * Time.deltaTime;
                     Debug.Log("Right");
                 }
 
