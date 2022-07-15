@@ -19,6 +19,7 @@ public class Goblin_Controller : Enemy
         right = Random.Range(0, 2);
 
         chaseDist = 0.0f;
+        isChase = false;
     }
 
     private void Awake()
@@ -107,7 +108,7 @@ public class Goblin_Controller : Enemy
         //Debug.Log(chaseDist);
         if (chaseDist <= 7.0f)
         {
-            //E_State.e_State = EnemyState.enemy_Chase;
+            E_State.e_State = EnemyState.enemy_Chase;
             //상태값을 바꾸면 고장난다ㅠㅠ
 
             if (chaseDist <= e_Att_Range)
@@ -117,10 +118,12 @@ public class Goblin_Controller : Enemy
             }
             animator.SetBool("IsChase", true);
             M_Chase();
-
+            isChase = true;
         }
-        else
+        else if(7.0f < chaseDist && isChase == true)
         {
+            isChase = false;
+            E_State.e_State = EnemyState.enemy_Idle;
             //Chase는 연출만 하고
             //기능은 따로 구현해야겠다ㅠㅠ
             animator.SetBool("IsChase", false);
@@ -129,7 +132,7 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Chase()
     {
-        //Debug.Log("Chase!!");
+        Debug.Log("Chase!!");
         //Chase 함수로 넘어오는거 확인
         //이제 Chase 기능 구현 필요
 
@@ -138,7 +141,7 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Attack()
     {
-        //Debug.Log("Attack");
+        Debug.Log("Attack");
     }
 
     protected override void M_Hit()

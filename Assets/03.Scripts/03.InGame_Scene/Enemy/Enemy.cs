@@ -37,6 +37,7 @@ public abstract class Enemy : MonoBehaviour
 
     //Chase상태로 넘어가는 체크를 하기 위한 float (Vector2.Distance)를 위한 변수 필요
     protected float chaseDist;
+    protected bool isChase;
 
     //이동속도
     protected float e_move_Speed;
