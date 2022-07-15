@@ -13,9 +13,11 @@ public class Goblin_Controller : Enemy
 
         MaxHp = 100;
         CurHp = MaxHp;
-        e_move_Speed = 1.0f;    //(임시)
+        e_move_Speed = 1.0f;
         e_Att = 4.0f;           //(임시)
         right = Random.Range(0, 2);
+
+        chaseDist = 0.0f;
     }
 
     private void Awake()
@@ -32,6 +34,7 @@ public class Goblin_Controller : Enemy
     // Update is called once per frame
     void Update()
     {
+        M_ChaseDist();
         M_Patrol();
     }
 
@@ -91,12 +94,17 @@ public class Goblin_Controller : Enemy
     //플레이어와 거리 체크하는 함수
     protected override void M_ChaseDist()
     {
-        throw new System.NotImplementedException();
+        chaseDist = Vector2.Distance(this.transform.position , player.transform.position);
+        if(chaseDist <= 7.0f)
+        {
+            E_State.e_State = EnemyState.enemy_Chase;
+            M_Chase();
+        }
     }
 
     protected override void M_Chase()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Chase!!");
         //Vector3.magnitude 사용
     }
 

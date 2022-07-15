@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     //플레이어 찾아두기
+    //위치나 state 상태 체크
     protected GameObject player;
 
     protected Enemy_State_Ctrlr E_State;
@@ -33,7 +34,8 @@ public abstract class Enemy : MonoBehaviour
     protected int right;
     //0이면 오른쪽, 1이면 왼쪽으로 Random.Range를 사용해서 구현 예정
 
-    //Chase상태로 넘어가는 체크를 하기 위한 Vector.magnitude 변수 필요
+    //Chase상태로 넘어가는 체크를 하기 위한 float (Vector2.Distance)를 위한 변수 필요
+    protected float chaseDist;
 
     //이동속도
     protected float e_move_Speed;

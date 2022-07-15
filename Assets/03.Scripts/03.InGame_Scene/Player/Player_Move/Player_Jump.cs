@@ -31,7 +31,6 @@ public class Player_Jump : MonoBehaviour
         {
             if (isJumping == false)
             {
-                Player_State.p_Move_state = PlayerMoveState.player_walk;
                 isJumping = true;
                 P_Move_Jump();
             }
