@@ -17,9 +17,11 @@ public abstract class Enemy : MonoBehaviour
     protected float MaxHp;
     protected float CurHp;
 
-    //공격
+    //공격력
     protected float e_Att;
+    //공격 사거리
     protected float e_Att_Range;
+    //공격 속도
     protected float e_Att_Speed;
 
     //스킬
@@ -32,7 +34,6 @@ public abstract class Enemy : MonoBehaviour
     protected float patrol_Time;
     //Patrol 방향
     protected int right;
-    //0이면 오른쪽, 1이면 왼쪽으로 Random.Range를 사용해서 구현 예정
 
     //Chase상태로 넘어가는 체크를 하기 위한 float (Vector2.Distance)를 위한 변수 필요
     protected float chaseDist;

@@ -15,6 +15,7 @@ public class Goblin_Controller : Enemy
         CurHp = MaxHp;
         e_move_Speed = 1.0f;
         e_Att = 4.0f;           //(임시)
+        e_Att_Range = 1.0f;
         right = Random.Range(0, 2);
 
         chaseDist = 0.0f;
@@ -34,6 +35,7 @@ public class Goblin_Controller : Enemy
     // Update is called once per frame
     void Update()
     {
+        chaseDist = Vector2.Distance(this.transform.position, player.transform.position);
         M_ChaseDist();
         M_Patrol();
         //Debug.Log(patrol_Time);
@@ -102,38 +104,41 @@ public class Goblin_Controller : Enemy
     //플레이어와 거리 체크하는 함수
     protected override void M_ChaseDist()
     {
-        chaseDist = Vector2.Distance(this.transform.position , player.transform.position);
+        //Debug.Log(chaseDist);
         if (chaseDist <= 7.0f)
         {
             //E_State.e_State = EnemyState.enemy_Chase;
             //상태값을 바꾸면 고장난다ㅠㅠ
 
+            if (chaseDist <= e_Att_Range)
+            {
+                //공격사거리 안에 들어오면 공격
+                M_Attack();
+            }
             animator.SetBool("IsChase", true);
             M_Chase();
+
         }
         else
         {
             //Chase는 연출만 하고
             //기능은 따로 구현해야겠다ㅠㅠ
-
             animator.SetBool("IsChase", false);
         }
     }
 
     protected override void M_Chase()
     {
-        Debug.Log("Chase!!");
+        //Debug.Log("Chase!!");
         //Chase 함수로 넘어오는거 확인
         //이제 Chase 기능 구현 필요
 
         //Vector3.magnitude 사용?
-
-
     }
 
     protected override void M_Attack()
     {
-        throw new System.NotImplementedException();
+        //Debug.Log("Attack");
     }
 
     protected override void M_Hit()
