@@ -109,7 +109,6 @@ public class Goblin_Controller : Enemy
         if (chaseDist <= 7.0f)
         {
             E_State.e_State = EnemyState.enemy_Chase;
-            //상태값을 바꾸면 고장난다ㅠㅠ
 
             if (chaseDist <= e_Att_Range)
             {
@@ -128,8 +127,6 @@ public class Goblin_Controller : Enemy
         {
             isChase = false;
             E_State.e_State = EnemyState.enemy_Idle;
-            //Chase는 연출만 하고
-            //기능은 따로 구현해야겠다ㅠㅠ
             animator.SetBool("IsChase", false);
         }
     }
@@ -148,6 +145,12 @@ public class Goblin_Controller : Enemy
     {
         animator.SetBool("IsAttack", true);
         Debug.Log("Attack");
+    }
+
+    protected override void M_AttackFunc()
+    {
+        //플레이어의 TakeDamage를 가져와서
+        //Animation 상에 Add Event에다가 구현 한다.
     }
 
     protected override void M_Hit()
