@@ -57,18 +57,22 @@ public class Goblin_Controller : Enemy
                 patrol_Time -= Time.deltaTime;
                 animator.SetBool("IsPatrol", true);
 
+
                 //랜덤한 방향으로 움직이기?
-                //움직이는 방식은 transform.position? 아니면 vector2.forward?
+                //움직이는 방식은 this.transform.position += / -= Vector3.right * e_move_Speed * Time.deltaTime을 사용
+                //움직이는 회전은 this.transform.localEulerAngles 사용
                 if (right == 1)
                 {
                     //1이니까 왼쪽
                     this.transform.position -= Vector3.right * e_move_Speed * Time.deltaTime;
+                    this.transform.localEulerAngles = new Vector3(0, 0, 0);
                     Debug.Log("Left");
                 }
                 else if (right == 0)
                 {
                     //0이니까 오른쪽
                     this.transform.position += Vector3.right * e_move_Speed * Time.deltaTime;
+                    this.transform.localEulerAngles = new Vector3(0, 180, 0);
                     Debug.Log("Right");
                 }
 
@@ -86,7 +90,7 @@ public class Goblin_Controller : Enemy
     protected override void M_Chase()
     {
         throw new System.NotImplementedException();
-        //Collider 사용?
+        //Vector3.magnitude 사용
     }
 
     protected override void M_Attack()
