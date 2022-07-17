@@ -23,6 +23,7 @@ public class Player_TakeDamage : MonoBehaviour
 
     public void P_TakeDmage()
     {
+        P_State.p_state = PlayerState.player_takeDamage;
         animator.SetTrigger("TakeDamage");
     }
 }
