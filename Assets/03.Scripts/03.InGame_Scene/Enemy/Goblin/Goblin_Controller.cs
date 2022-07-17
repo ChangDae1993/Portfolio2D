@@ -7,6 +7,7 @@ public class Goblin_Controller : Enemy
     protected override void InitData()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        P_TakeDam = player.GetComponent<Player_TakeDamage>();
         E_State = GetComponent<Enemy_State_Ctrlr>();
         animator = GetComponent<Animator>();
         patrol_Time = Random.Range(1.0f, 3.0f);
@@ -151,6 +152,11 @@ public class Goblin_Controller : Enemy
     {
         //플레이어의 TakeDamage를 가져와서
         //Animation 상에 Add Event에다가 구현 한다.
+        if(player != null)
+        {
+            P_TakeDam.P_TakeDmage();
+        }
+
     }
 
     protected override void M_Hit()

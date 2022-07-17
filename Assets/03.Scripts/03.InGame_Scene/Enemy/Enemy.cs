@@ -8,6 +8,9 @@ public abstract class Enemy : MonoBehaviour
     //위치나 state 상태 체크
     protected GameObject player;
 
+    //플레이어 TakeDamage호출
+    protected Player_TakeDamage P_TakeDam;
+
     protected Enemy_State_Ctrlr E_State;
 
     //애니메이션
