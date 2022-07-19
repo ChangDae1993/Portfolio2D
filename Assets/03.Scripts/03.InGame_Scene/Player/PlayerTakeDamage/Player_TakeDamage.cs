@@ -23,7 +23,18 @@ public class Player_TakeDamage : MonoBehaviour
 
     public void P_TakeDmage()
     {
-        P_State.p_state = PlayerState.player_takeDamage;
-        animator.SetTrigger("TakeDamage");
+        if(P_State.p_Defece_state == PlayerDefenceState.player_onShield)
+        {
+            P_State.p_Defece_state = PlayerDefenceState.player_ShieldActive;
+            animator.SetTrigger("ShieldActive");
+        }
+        else
+        {
+            if (P_State.p_Defece_state == PlayerDefenceState.player_onShield)
+
+            P_State.p_state = PlayerState.player_takeDamage;
+            animator.SetTrigger("TakeDamage");
+        }
+
     }
 }

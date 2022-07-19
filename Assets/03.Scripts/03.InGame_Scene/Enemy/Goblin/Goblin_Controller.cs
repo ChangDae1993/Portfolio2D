@@ -16,7 +16,7 @@ public class Goblin_Controller : Enemy
         CurHp = MaxHp;
         e_move_Speed = 1.0f;
         e_Att = 4.0f;           //(юс╫ц)
-        e_Att_Range = 1.0f;
+        e_Att_Range = 1.3f;
         right = Random.Range(0, 2);
 
         chaseDist = 0.0f;
