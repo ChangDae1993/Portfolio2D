@@ -134,11 +134,21 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Chase()
     {
-        //Debug.Log("Chase!!");
-        //Chase 함수로 넘어오는거 확인
-        //이제 Chase 기능 구현 필요
+        //은범이가 알려준 아이디어
+        Vector2 playervec = player.transform.position - this.transform.position;
+        Debug.Log(playervec.x);
 
-        //Vector3.magnitude 사용?
+        if(playervec.x < 0)
+        {
+            this.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            this.transform.localEulerAngles = new Vector3(0, 180, 0);
+        }
+        //은범이가 알려준 아이디어
+
+        //추적 하기
         this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, Time.deltaTime * 0.6f);
     }
 
