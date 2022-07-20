@@ -75,6 +75,4 @@ public class Player_Attack : MonoBehaviour
 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-
-    /// 몬스터 재생을 코루틴으로 구현할 계획
 }

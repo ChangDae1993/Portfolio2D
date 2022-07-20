@@ -27,11 +27,10 @@ public class Player_TakeDamage : MonoBehaviour
         {
             P_State.p_Defece_state = PlayerDefenceState.player_ShieldActive;
             animator.SetTrigger("ShieldActive");
+            P_State.p_Defece_state = PlayerDefenceState.player_onShield;
         }
         else
         {
-            if (P_State.p_Defece_state == PlayerDefenceState.player_onShield)
-
             P_State.p_state = PlayerState.player_takeDamage;
             animator.SetTrigger("TakeDamage");
         }

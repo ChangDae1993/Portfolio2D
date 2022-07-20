@@ -6,7 +6,7 @@ public class Player_Block : MonoBehaviour
 {
     private Rigidbody2D rigid;
     private Player_State_Ctrlr Player_State;
-    private BoxCollider2D def_area;
+    public GameObject def_area;
     Animator animator;
 
     //쉴드 상태일때 scale 값 받아두기
@@ -18,7 +18,6 @@ public class Player_Block : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         Player_State = GetComponent<Player_State_Ctrlr>();
-        def_area = GetComponent<BoxCollider2D>();
         Player_State.p_state = PlayerState.player_idle;
         Player_State.p_Defece_state = PlayerDefenceState.player_noShield;
     }
@@ -30,7 +29,7 @@ public class Player_Block : MonoBehaviour
         {
             Player_State.p_state = PlayerState.player_Shield;
             Player_State.p_Defece_state = PlayerDefenceState.player_onShield;
-            def_area.enabled = true;
+            def_area.gameObject.SetActive(true);
             Shield_scale = this.transform.localScale.x;
         }
 
@@ -38,7 +37,7 @@ public class Player_Block : MonoBehaviour
         {
             Player_State.p_state = PlayerState.player_idle;
             Player_State.p_Defece_state = PlayerDefenceState.player_noShield;
-            def_area.enabled = false;
+            def_area.gameObject.SetActive(false);
         }
     }
 }
