@@ -28,7 +28,7 @@ public class Player_Roll : MonoBehaviour
         p_Walk = GetComponent<Player_Walk>();
         roll_speed = 5.0f;
         roll_time = 0.4f;
-        roll_Cool = 3.0f;
+        roll_Cool = 2.0f;
 
         P_State.p_state = PlayerState.player_move;
         P_State.p_Move_state = PlayerMoveState.player_walk;
@@ -51,7 +51,7 @@ public class Player_Roll : MonoBehaviour
 
             isDash = true;
             roll_time = 0.4f;
-            roll_Cool = 3.0f;
+            roll_Cool = 2.0f;
             animator.SetBool("IsDash", true);
         }
         else

@@ -8,7 +8,7 @@ public class Player_Jump : MonoBehaviour
     private Player_State_Ctrlr Player_State;
     Animator animator;
 
-    private float jump_power = 600.0f;
+    private float jump_power = 6.0f;
 
     public bool isJumping;
 
@@ -18,7 +18,7 @@ public class Player_Jump : MonoBehaviour
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         Player_State = GetComponent<Player_State_Ctrlr>();
-        jump_power = 8.0f;
+        jump_power = 6.0f;
         isJumping = false;
         Player_State.p_state = PlayerState.player_idle;
         Player_State.p_Move_state = PlayerMoveState.player_jump;
