@@ -22,8 +22,15 @@ public abstract class Enemy : MonoBehaviour
 
     //공격력
     protected float e_Att;
-    //공격 사거리
+    //공격 상태로 넘어가는 거리
     protected float e_Att_Range;
+    //공격 사거리
+    public float e_att_Range;
+    //공격 대상 체크
+    public Transform attack_Point;
+    public LayerMask playerLayer;
+    //private void OnDrawGizmosSelected()는 근접 공격에 한해서 몬스터 별로 따로 구현
+
     //공격 속도
     protected float e_Att_Speed;
 
@@ -62,8 +69,9 @@ public abstract class Enemy : MonoBehaviour
     //공격 애니메이션
     protected abstract void M_Attack();
 
+
     //실제 공격 판정
-    protected abstract void M_AttackFunc();
+    protected abstract void M_AttackFunc(); //공격 범위의 Layer 체크해서 Player일 때만 공격 들어가도록
 
     //후퇴
     protected abstract void M_Retreat();

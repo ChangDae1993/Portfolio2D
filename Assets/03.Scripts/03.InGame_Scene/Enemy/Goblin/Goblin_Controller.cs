@@ -17,6 +17,7 @@ public class Goblin_Controller : Enemy
         e_move_Speed = 1.0f;
         e_Att = 4.0f;           //(임시)
         e_Att_Range = 1.3f;
+        e_att_Range = 0.1f;
         right = Random.Range(0, 2);
 
         chaseDist = 0.0f;
@@ -162,11 +163,21 @@ public class Goblin_Controller : Enemy
     {
         //플레이어의 TakeDamage를 가져와서
         //Animation 상에 Add Event에다가 구현 한다.
-        if(player != null)
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attack_Point.position, e_att_Range, playerLayer);
+
+        foreach(Collider2D collider in hitPlayer)
         {
             P_TakeDam.P_TakeDmage();
-        }
 
+        }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attack_Point == null)
+            return;
+
+        Gizmos.DrawWireSphere(attack_Point.position, e_att_Range);
     }
 
     protected override void M_Hit()
