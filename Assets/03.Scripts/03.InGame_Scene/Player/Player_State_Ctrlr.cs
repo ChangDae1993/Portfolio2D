@@ -31,7 +31,10 @@ public enum PlayerAttackState
 {
     player_Sword = 0,
     player_Shield = 1,
-    player_noAttack = 2
+    player_noAttack = 2,
+    player_hook_aim=3,
+    player_hook_shoot=4,
+    player_hook_release = 5,
 }
 
 public enum PlayerDefenceState

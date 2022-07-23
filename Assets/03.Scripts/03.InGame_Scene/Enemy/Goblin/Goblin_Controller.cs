@@ -150,7 +150,7 @@ public class Goblin_Controller : Enemy
         //은범이가 알려준 아이디어
 
         //추적 하기
-        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, Time.deltaTime * 0.6f);
+        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, Time.deltaTime * 0.55f);
     }
 
     protected override void M_Attack()
@@ -182,10 +182,15 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Hit()
     {
-        throw new System.NotImplementedException();
+        animator.SetTrigger("E_TakeDamage");
+        //hp값 깎기
     }
     protected override void M_Retreat()
     {
+        if (CurHp < 20.0f)
+        {
+            
+        }
         throw new System.NotImplementedException();
     }
 
