@@ -25,7 +25,15 @@ public class Hook_Ctrl : MonoBehaviour
 
     private void UpdateFunc()
     {
-        if(hook_back_Dist <= 0.01f)
+
+        //aim_Ctrl.hook_Target_Pos를 목적지로 본인 위치부터 hook_Target_Pos까지 이동
+        this.transform.position = Vector3.Lerp(this.transform.position, aim_Ctrl.hook_Target_Pos, Time.deltaTime * hook_speed);
+        hook_back_Dist = Mathf.Abs(this.transform.position.x - aim_Ctrl.hook_Target_Pos.x);
+        //aim이랑 일정 거리 가까워 졌을 때 돌아오기 구현
+        //target_Vec = aim_Ctrl.hook_Target_Pos - this.transform.position;
+        //target_Dist = Vector3.Magnitude(target_Vec);
+
+        if (this.transform.position == aim_Ctrl.hook_Target_Pos)
         {
             Hook_Return();
         }
@@ -34,12 +42,6 @@ public class Hook_Ctrl : MonoBehaviour
         //    this.transform.position = Vector3.Lerp(this.transform.position, player_Pos.position, Time.deltaTime * hook_speed);
         //}
 
-        //aim_Ctrl.hook_Target_Pos를 목적지로 본인 위치부터 hook_Target_Pos까지 이동
-        this.transform.position = Vector3.Lerp(this.transform.position, aim_Ctrl.hook_Target_Pos, Time.deltaTime * hook_speed);
-        hook_back_Dist = Mathf.Abs(this.transform.position.x - aim_Ctrl.hook_Target_Pos.x);
-        //aim이랑 일정 거리 가까워 졌을 때 돌아오기 구현
-        //target_Vec = aim_Ctrl.hook_Target_Pos - this.transform.position;
-        //target_Dist = Vector3.Magnitude(target_Vec);
     }
 
     private void Hook_Return()
