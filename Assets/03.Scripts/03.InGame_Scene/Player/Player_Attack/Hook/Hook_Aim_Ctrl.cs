@@ -63,6 +63,7 @@ public class Hook_Aim_Ctrl : MonoBehaviour
                 //Prefab으로 hook 생성 후 hooj_Target_Pos로 날리기
                 //Prefab.Instantiate(GameObject)....etc;
                 GameObject hook_prefab = (GameObject)Instantiate(Resources.Load("Prefab/hook")) as GameObject;
+                hook_prefab.transform.parent = GameObject.FindGameObjectWithTag("Player").transform;
                 hook_prefab.transform.position = start_Pos;
                 //Vector3.Lerp 이용해서 날리기??
                 //player에서 hook까지 Line Renderer 생성
