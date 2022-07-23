@@ -14,25 +14,30 @@ public class Hook_Aim_Ctrl : MonoBehaviour
     //hook º¯¼ö
     public Vector3 hook_Target_Pos;
     private Vector2 start_Pos;
+    public bool isTouch;
+    private Player_Walk p_Walk;
 
     private void Start() => StartFunc();
 
     private void StartFunc()
     {
         P_State = GetComponent<Player_State_Ctrlr>();
+        p_Walk = GetComponent<Player_Walk>();
         P_State.p_state = PlayerState.player_attack;
         P_State.p_Attack_state = PlayerAttackState.player_noAttack;
         aim_shoot = false;
+        isTouch = false;
     }
 
     private void Update() => UpdateFunc();
 
     private void UpdateFunc()
     {
-        start_Pos = new Vector2(this.transform.position.x + 0.3f, this.transform.position.y + 1.0f);
+        start_Pos = new Vector2(this.transform.position.x + 1.0f, this.transform.position.y + 1.0f);
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
+            p_Walk.move_speed = 1.0f;
             aim_shoot = false;
             P_State.p_state = PlayerState.player_attack;
             P_State.p_Attack_state = PlayerAttackState.player_hook_aim;
@@ -54,6 +59,7 @@ public class Hook_Aim_Ctrl : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                isTouch = false;
                 aim_shoot = true;
                 P_State.p_Attack_state = PlayerAttackState.player_hook_shoot;
 

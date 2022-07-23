@@ -10,7 +10,7 @@ public class Player_Walk : MonoBehaviour
     private Player_Block P_block;
     Animator animator;
 
-    public float move_speed = 3.0f;
+    public float move_speed = 3.5f;
 
     public int key = 0;
 
