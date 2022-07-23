@@ -2963,6 +2963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aim_Img: {fileID: 1184273068}
+  aim_shoot: 0
 --- !u!114 &2108793980
 MonoBehaviour:
   m_ObjectHideFlags: 0

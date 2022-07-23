@@ -47,9 +47,6 @@ public class Player_Attack : MonoBehaviour
 
     public void Sword_Attack(int a)
     {
-        if (Player_State.p_Attack_state == PlayerAttackState.player_hook_aim)
-            return;
-
         if (a == 0)
         {
             animator.SetTrigger("Sword_Attack_1");
