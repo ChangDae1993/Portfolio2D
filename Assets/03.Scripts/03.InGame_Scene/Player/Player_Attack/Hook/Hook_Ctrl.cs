@@ -59,6 +59,12 @@ public class Hook_Ctrl : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            aim_Ctrl.isTouch = true;
+            //collision.transform.position = this.transform.position;
+            //콜리더 당겨오기 구현 필요
+        }
     }
 
 

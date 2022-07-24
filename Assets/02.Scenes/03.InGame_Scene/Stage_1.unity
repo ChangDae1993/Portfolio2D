@@ -2982,6 +2982,8 @@ MonoBehaviour:
   aim_Img: {fileID: 1184273068}
   aim_shoot: 0
   hook_Target_Pos: {x: 0, y: 0, z: 0}
+  start_Pos: {fileID: 1276235425}
+  isTouch: 0
 --- !u!114 &2108793980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3153,7 +3155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4851263791415958975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.23, y: -2.31, z: 0}
+  m_LocalPosition: {x: 2.68, y: -3.12, z: 0}
   m_LocalScale: {x: -2.8, y: 3.3, z: 1}
   m_Children:
   - {fileID: 1938592593}

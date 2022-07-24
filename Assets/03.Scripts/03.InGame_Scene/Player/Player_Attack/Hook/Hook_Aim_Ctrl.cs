@@ -13,7 +13,7 @@ public class Hook_Aim_Ctrl : MonoBehaviour
 
     //hook 변수
     public Vector3 hook_Target_Pos;
-    private Vector2 start_Pos;
+    public Transform start_Pos;
     public bool isTouch;
     private Player_Walk p_Walk;
 
@@ -33,7 +33,6 @@ public class Hook_Aim_Ctrl : MonoBehaviour
 
     private void UpdateFunc()
     {
-        start_Pos = new Vector2(this.transform.position.x + 1.0f, this.transform.position.y + 1.0f);
 
         if (Input.GetKey(KeyCode.LeftControl))
         {
@@ -70,7 +69,7 @@ public class Hook_Aim_Ctrl : MonoBehaviour
                 //Prefab.Instantiate(GameObject)....etc;
                 GameObject hook_prefab = (GameObject)Instantiate(Resources.Load("Prefab/hook")) as GameObject;
                 hook_prefab.transform.parent = GameObject.FindGameObjectWithTag("Player").transform;
-                hook_prefab.transform.position = start_Pos;
+                hook_prefab.transform.position = start_Pos.position;
                 //Vector3.Lerp 이용해서 날리기??
                 //player에서 hook까지 Line Renderer 생성
                 Debug.Log("Shoot");
