@@ -22,7 +22,7 @@ public class Camera_Ctrlr : MonoBehaviour
     {
         if (target.gameObject != null)
         {
-            targetPosition.Set(target.transform.position.x + 2, target.transform.position.y + 3, this.transform.position.z);
+            targetPosition.Set(target.transform.position.x + 3, target.transform.position.y + 3, this.transform.position.z);
             this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
     }

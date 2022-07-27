@@ -137,7 +137,7 @@ public class Goblin_Controller : Enemy
     {
         //은범이가 알려준 아이디어
         Vector2 playervec = player.transform.position - this.transform.position;
-        Debug.Log(playervec.x);
+        //Debug.Log(playervec.x);
 
         if(playervec.x < 0)
         {
@@ -156,7 +156,7 @@ public class Goblin_Controller : Enemy
     protected override void M_Attack()
     {
         animator.SetBool("IsAttack", true);
-        Debug.Log("Attack");
+        //Debug.Log("Attack");
     }
 
     protected override void M_AttackFunc()
@@ -168,7 +168,6 @@ public class Goblin_Controller : Enemy
         foreach(Collider2D collider in hitPlayer)
         {
             P_TakeDam.P_TakeDmage();
-
         }
     }
 
