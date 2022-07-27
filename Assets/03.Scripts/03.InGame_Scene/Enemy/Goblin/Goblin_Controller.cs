@@ -180,7 +180,7 @@ public class Goblin_Controller : Enemy
         Gizmos.DrawWireSphere(attack_Point.position, e_att_Range);
     }
 
-    protected override void M_Hit()
+    public override void M_Hit()
     {
         animator.SetTrigger("E_TakeDamage");
         //hp°ª ±ð±â

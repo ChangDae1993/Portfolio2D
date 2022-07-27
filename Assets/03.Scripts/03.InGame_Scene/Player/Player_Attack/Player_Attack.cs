@@ -66,7 +66,7 @@ public class Player_Attack : MonoBehaviour
         //Damage Enemy
         foreach(Collider2D enemy in hitEnemies)
         {
-            //enemy_Hp.TakeDamage(attackDamage);
+            enemy.GetComponent<Enemy>().M_Hit();
             Debug.Log("Hit");
         }
     }
