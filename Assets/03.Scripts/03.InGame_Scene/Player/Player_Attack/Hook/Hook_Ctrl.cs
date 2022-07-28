@@ -20,7 +20,7 @@ public class Hook_Ctrl : MonoBehaviour
     private void StartFunc()
     {
         aim_Ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<Hook_Aim_Ctrl>();
-        hook_speed = 15.0f;
+        hook_speed = 10.0f;
         hook_backSpeed = 7.0f;
         player_Pos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         hook_back_Dist = 0.0f;
@@ -31,7 +31,6 @@ public class Hook_Ctrl : MonoBehaviour
         //startPos = player_Pos.position;
         startPos = new Vector2(player_Pos.position.x, player_Pos.position.y + 0.7f);
         aim_Ctrl.isTouch = false;
-
     }
 
     private void Update() => UpdateFunc();
@@ -50,6 +49,8 @@ public class Hook_Ctrl : MonoBehaviour
         {
             Hook_Return();
         }
+
+        
     }
 
     private void Hook_Release()
@@ -78,12 +79,9 @@ public class Hook_Ctrl : MonoBehaviour
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             aim_Ctrl.isTouch = true;
-            //collision.transform.position = this.transform.position;
+
             //콜리더 당겨오기 구현 필요
-            if (aim_Ctrl.isTouch == true)
-            {
-                collision.transform.position = this.transform.position;
-            }
+            //collision.transform.position = this.transform.position;
         }
     }
 
