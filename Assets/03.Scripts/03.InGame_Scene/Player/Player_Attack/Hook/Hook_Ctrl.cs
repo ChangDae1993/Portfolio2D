@@ -11,22 +11,37 @@ public class Hook_Ctrl : MonoBehaviour
     //private float target_Dist;
     private Transform player_Pos;
     private float hook_back_Dist;
+    private LineRenderer line_Renderer;
+    Vector2 startPos;
+    Vector2 shootPos;
 
     private void Start() => StartFunc();
 
     private void StartFunc()
     {
         aim_Ctrl = GameObject.FindGameObjectWithTag("Player").GetComponent<Hook_Aim_Ctrl>();
-        hook_speed = 10.0f;
-        hook_backSpeed = 10.0f;
+        hook_speed = 15.0f;
+        hook_backSpeed = 7.0f;
         player_Pos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         hook_back_Dist = 0.0f;
+
+        line_Renderer = GetComponent<LineRenderer>();
+        line_Renderer.startWidth = 0.2f;
+        line_Renderer.endWidth = 0.2f;
+        //startPos = player_Pos.position;
+        startPos = new Vector2(player_Pos.position.x, player_Pos.position.y + 0.7f);
+        aim_Ctrl.isTouch = false;
+
     }
 
     private void Update() => UpdateFunc();
 
     private void UpdateFunc()
     {
+        shootPos = this.transform.position;
+        line_Renderer.SetPosition(0, startPos);
+        line_Renderer.SetPosition(1, shootPos);
+
         if(aim_Ctrl.isTouch == false)
         {
             Hook_Release();
@@ -57,6 +72,7 @@ public class Hook_Ctrl : MonoBehaviour
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("PLAYER"))
         {
+            aim_Ctrl.isTouch = false;
             Destroy(this.gameObject);
         }
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
@@ -64,8 +80,11 @@ public class Hook_Ctrl : MonoBehaviour
             aim_Ctrl.isTouch = true;
             //collision.transform.position = this.transform.position;
             //콜리더 당겨오기 구현 필요
+            if (aim_Ctrl.isTouch == true)
+            {
+                collision.transform.position = this.transform.position;
+            }
         }
     }
-
 
 }

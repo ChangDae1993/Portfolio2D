@@ -58,6 +58,9 @@ public class Hook_Aim_Ctrl : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if (isTouch == true)
+                    return;
+
                 isTouch = false;
                 aim_shoot = true;
                 P_State.p_Attack_state = PlayerAttackState.player_hook_shoot;
