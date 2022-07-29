@@ -14,6 +14,7 @@ public class Hook_Ctrl : MonoBehaviour
     private LineRenderer line_Renderer;
     Vector2 startPos;
     Vector2 shootPos;
+    private GameObject enemy;
 
     private void Start() => StartFunc();
 
@@ -31,6 +32,9 @@ public class Hook_Ctrl : MonoBehaviour
         //startPos = player_Pos.position;
         startPos = new Vector2(player_Pos.position.x, player_Pos.position.y + 0.7f);
         aim_Ctrl.isTouch = false;
+
+        enemy = null;
+
     }
 
     private void Update() => UpdateFunc();
@@ -50,6 +54,12 @@ public class Hook_Ctrl : MonoBehaviour
             Hook_Return();
         }
 
+        if(aim_Ctrl.isTouch == true && enemy != null)
+        {
+            enemy.transform.position = this.transform.position;
+        }
+
+        //에너미 의 거리랑 플레이어 거리가 얼마 이상이면 isTouch false로 바꾸고 놓치기
         
     }
 
@@ -80,8 +90,10 @@ public class Hook_Ctrl : MonoBehaviour
         {
             aim_Ctrl.isTouch = true;
 
+            enemy = collision.gameObject;
+
             //콜리더 당겨오기 구현 필요
-            //collision.transform.position = this.transform.position;
+            collision.transform.position = this.transform.position;
         }
     }
 
