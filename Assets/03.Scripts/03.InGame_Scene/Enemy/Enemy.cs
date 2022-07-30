@@ -77,7 +77,7 @@ public abstract class Enemy : MonoBehaviour
     protected abstract void M_Retreat();
 
     //ÇÇ°Ý
-    public abstract void M_Hit();
+    public abstract void M_Hit(int dmg);
 
     //»ç¸Á
     protected abstract void M_Death();
