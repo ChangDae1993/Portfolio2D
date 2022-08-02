@@ -71,7 +71,7 @@ public class Hook_Ctrl : MonoBehaviour
 
     private void Hook_Return()
     {
-        Debug.Log("back");
+        //Debug.Log("back");
         this.transform.position = Vector3.Lerp(this.transform.position, player_Pos.position, Time.deltaTime * hook_backSpeed);
     }
 
