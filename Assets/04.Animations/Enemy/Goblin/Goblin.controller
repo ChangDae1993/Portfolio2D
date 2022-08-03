@@ -142,7 +142,7 @@ AnimatorStateMachine:
     m_Position: {x: 590, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -866360682487302784}
-    m_Position: {x: 740, y: -160, z: 0}
+    m_Position: {x: 890, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -291532563230638909}
     m_Position: {x: 370, y: -120, z: 0}
@@ -171,7 +171,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Goblin_Hit
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7266203972301919528}
