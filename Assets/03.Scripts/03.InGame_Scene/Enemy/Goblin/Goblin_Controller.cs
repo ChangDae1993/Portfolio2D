@@ -46,6 +46,9 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Patrol()
     {
+        if (E_State.e_State == EnemyState.enemy_Death)
+            return;
+
         //m_Patrol_Time = Random.Range(0.0f, 5.0f);
         //Debug.Log(m_Patrol_Time);
         //if(E_State.e_State == EnemyState.enemy_StopChase)
@@ -107,6 +110,9 @@ public class Goblin_Controller : Enemy
     //플레이어와 거리 체크하는 함수
     protected override void M_ChaseDist()
     {
+        if (E_State.e_State == EnemyState.enemy_Death)
+            return;
+
         //Debug.Log(chaseDist);
         if (chaseDist <= 7.0f)
         {
@@ -135,11 +141,13 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Chase()
     {
+        if (E_State.e_State == EnemyState.enemy_Death)
+            return;
+
         //은범이가 알려준 아이디어
         Vector2 playervec = player.transform.position - this.transform.position;
         //Debug.Log(playervec.x);
-
-        if(playervec.x < 0)
+        if (playervec.x < 0)
         {
             this.transform.localEulerAngles = new Vector3(0, 0, 0);
         }
@@ -155,6 +163,7 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Attack()
     {
+        E_State.e_State = EnemyState.enemy_Attack;
         animator.SetBool("IsAttack", true);
         //Debug.Log("Attack");
     }
@@ -181,8 +190,17 @@ public class Goblin_Controller : Enemy
 
     public override void M_Hit(int dmg)
     {
+        E_State.e_State = EnemyState.enemy_Hit;
+        Debug.Log(CurHp);
         animator.SetTrigger("E_TakeDamage");
         //hp값 깎기
+
+        if(CurHp <= 0.0f)
+        {
+            E_State.e_State = EnemyState.enemy_Death;
+            animator.SetTrigger("DieTrigger");
+            this.gameObject.layer = 11;
+        }
         CurHp -= dmg;
     }
     protected override void M_Retreat()

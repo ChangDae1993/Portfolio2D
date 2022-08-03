@@ -10,7 +10,6 @@ public class Hook_Ctrl : MonoBehaviour
     //private Vector3 target_Vec;
     //private float target_Dist;
     private Transform player_Pos;
-    private float hook_back_Dist;
     private LineRenderer line_Renderer;
     Vector2 startPos;
     Vector2 shootPos;
@@ -24,7 +23,6 @@ public class Hook_Ctrl : MonoBehaviour
         hook_speed = 10.0f;
         hook_backSpeed = 7.0f;
         player_Pos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        hook_back_Dist = 0.0f;
 
         line_Renderer = GetComponent<LineRenderer>();
         line_Renderer.startWidth = 0.2f;
@@ -67,6 +65,20 @@ public class Hook_Ctrl : MonoBehaviour
     {
         //aim_Ctrl.hook_Target_Pos를 목적지로 본인 위치부터 hook_Target_Pos까지 이동
         this.transform.position = Vector3.Lerp(this.transform.position, aim_Ctrl.hook_Target_Pos, Time.deltaTime * hook_speed);
+
+
+        //은범이가 알려준 아이디어
+        Vector2 playervec = player_Pos.position - this.transform.position;
+        //Debug.Log(playervec.x);
+        if (playervec.x < 0)
+        {
+            this.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            this.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        //은범이가 알려준 아이디어
     }
 
     private void Hook_Return()

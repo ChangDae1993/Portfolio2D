@@ -75,7 +75,7 @@ public class Hook_Aim_Ctrl : MonoBehaviour
                 hook_prefab.transform.position = start_Pos.position;
                 //Vector3.Lerp 이용해서 날리기??
                 //player에서 hook까지 Line Renderer 생성
-                Debug.Log("Shoot");
+                //Debug.Log("Shoot");
                 if (aim_shoot == true)
                 {
                     aim_Img.gameObject.SetActive(false);
