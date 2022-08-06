@@ -19,6 +19,7 @@ public abstract class Enemy : MonoBehaviour
     //체력
     protected float MaxHp;
     protected float CurHp;
+    //체력 이미지는 각자 붙어있는 Canvas에서 public으로 연결 해두기
 
     //공격력
     protected float e_Att;
@@ -77,7 +78,7 @@ public abstract class Enemy : MonoBehaviour
     protected abstract void M_Retreat();
 
     //피격
-    public abstract void M_Hit(int dmg);
+    public abstract void M_Hit(float dmg);
 
     //사망
     protected abstract void M_Death();

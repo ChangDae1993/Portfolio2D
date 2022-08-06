@@ -47,6 +47,16 @@ public class Player_Attack : MonoBehaviour
 
     public void Sword_Attack(int a)
     {
+        //Detect Enemy
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+
+        //Damage Enemy
+        foreach(Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<Enemy>().M_Hit(10.0f);
+            //Debug.Log("Hit");
+        }
+
         if (a == 0)
         {
             animator.SetTrigger("Sword_Attack_1");
@@ -58,16 +68,6 @@ public class Player_Attack : MonoBehaviour
         if (a == 2)
         {
             animator.SetTrigger("Sword_Attack_3");
-        }
-
-        //Detect Enemy
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-
-        //Damage Enemy
-        foreach(Collider2D enemy in hitEnemies)
-        {
-            enemy.GetComponent<Enemy>().M_Hit(10);
-            //Debug.Log("Hit");
         }
     }
 

@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Goblin_Controller : Enemy
 {
+    public Image Hp_Img;
+
     protected override void InitData()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -176,7 +179,7 @@ public class Goblin_Controller : Enemy
 
         foreach(Collider2D collider in hitPlayer)
         {
-            P_TakeDam.P_TakeDmage(5.5f);
+            P_TakeDam.P_TakeDmage(10f);
         }
     }
 
@@ -188,20 +191,22 @@ public class Goblin_Controller : Enemy
         Gizmos.DrawWireSphere(attack_Point.position, e_att_Range);
     }
 
-    public override void M_Hit(int dmg)
+    public override void M_Hit(float dmg)
     {
         E_State.e_State = EnemyState.enemy_Hit;
+        //hp°ª ±ð±â
+        CurHp -= dmg;
+        Hp_Img.fillAmount = CurHp / MaxHp;
         Debug.Log(CurHp);
         animator.SetTrigger("E_TakeDamage");
-        //hp°ª ±ð±â
 
-        if(CurHp <= 0.0f)
+        if (CurHp <= 0.0f)
         {
             E_State.e_State = EnemyState.enemy_Death;
             animator.SetTrigger("DieTrigger");
             this.gameObject.layer = 11;
         }
-        CurHp -= dmg;
+
     }
     protected override void M_Retreat()
     {
