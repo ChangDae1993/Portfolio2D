@@ -176,7 +176,7 @@ public class Goblin_Controller : Enemy
 
         foreach(Collider2D collider in hitPlayer)
         {
-            P_TakeDam.P_TakeDmage();
+            P_TakeDam.P_TakeDmage(5.5f);
         }
     }
 
