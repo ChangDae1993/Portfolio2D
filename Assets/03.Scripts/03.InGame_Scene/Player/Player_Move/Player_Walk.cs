@@ -31,23 +31,32 @@ public class Player_Walk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (p_input.horizontal != 0)
+        if(P_State.p_state != PlayerState.player_die)
         {
-            P_State.p_state = PlayerState.player_move;
-            P_State.p_Move_state = PlayerMoveState.player_walk;
-            P_Move_Walk();
-            animator.SetBool("IsWalk", true);
-        }
-        else
-        {
-            P_State.p_state = PlayerState.player_idle;
-            P_State.p_Move_state = PlayerMoveState.player_noWalk;
-            animator.SetBool("IsWalk", false);
+            if (p_input.horizontal != 0)
+            {
+                P_State.p_state = PlayerState.player_move;
+                P_State.p_Move_state = PlayerMoveState.player_walk;
+                P_Move_Walk();
+                animator.SetBool("IsWalk", true);
+            }
+            else
+            {
+                P_State.p_state = PlayerState.player_idle;
+                P_State.p_Move_state = PlayerMoveState.player_noWalk;
+                animator.SetBool("IsWalk", false);
+            }
         }
     }
 
     private void P_Move_Walk()
     {
+        if (P_State.p_state == PlayerState.player_die)
+        {
+            move_speed = 0.0f;
+            return;
+        }
+
         if (p_input.horizontal < 0)
             key = -1;
 

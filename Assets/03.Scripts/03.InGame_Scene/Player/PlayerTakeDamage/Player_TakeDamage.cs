@@ -67,7 +67,6 @@ public class Player_TakeDamage : MonoBehaviour
             P_State.p_state = PlayerState.player_takeDamage;
             curHp -= dam;
             Hp_Img.fillAmount = curHp / maxHp;
-            P_State.p_state = PlayerState.player_takeDamage;
             animator.SetTrigger("TakeDamage");
             //Debug.Log(curHp);
         }

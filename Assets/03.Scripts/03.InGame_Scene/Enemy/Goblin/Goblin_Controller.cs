@@ -45,6 +45,7 @@ public class Goblin_Controller : Enemy
         M_ChaseDist();
         M_Patrol();
         //Debug.Log(patrol_Time);
+
     }
 
     protected override void M_Patrol()
@@ -123,8 +124,15 @@ public class Goblin_Controller : Enemy
 
             if (chaseDist <= e_Att_Range)
             {
-                //공격사거리 안에 들어오면 공격
-                M_Attack();
+                if (player.gameObject.layer == LayerMask.NameToLayer("Player_Die"))
+                {
+                    animator.SetBool("IsAttack", false);
+                }
+                else
+                {
+                    //공격사거리 안에 들어오면 공격
+                    M_Attack();
+                }
             }
             else
             {
@@ -166,9 +174,11 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Attack()
     {
+
         E_State.e_State = EnemyState.enemy_Attack;
         animator.SetBool("IsAttack", true);
         //Debug.Log("Attack");
+        Debug.Log(player.GetComponent<Player_State_Ctrlr>().p_state);
     }
 
     protected override void M_AttackFunc()
