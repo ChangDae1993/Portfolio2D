@@ -29,6 +29,9 @@ public class Player_Jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (Player_State.p_state == PlayerState.player_die)
+                return;
+
             if (isJumping == false)
             {
                 isJumping = true;

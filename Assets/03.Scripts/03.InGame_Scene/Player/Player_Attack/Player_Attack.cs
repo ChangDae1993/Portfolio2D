@@ -47,6 +47,9 @@ public class Player_Attack : MonoBehaviour
 
     public void Sword_Attack(int a)
     {
+        if (Player_State.p_state == PlayerState.player_die)
+            return;
+
         //Detect Enemy
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 

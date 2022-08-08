@@ -7,6 +7,7 @@ public class Player_TakeDamage : MonoBehaviour
 {
     private Player_State_Ctrlr P_State;
     private Animator animator;
+    private Player_Input P_Input;
 
     public Image Hp_Img;
     public Image Mp_Img;
@@ -20,6 +21,7 @@ public class Player_TakeDamage : MonoBehaviour
     {
         P_State = GetComponent<Player_State_Ctrlr>();
         animator = GetComponent<Animator>();
+        P_Input =GetComponent<Player_Input>();
         P_State.p_state = PlayerState.player_takeDamage;
         maxHp = 100.0f;
         curHp = maxHp;
@@ -75,6 +77,7 @@ public class Player_TakeDamage : MonoBehaviour
     {
         P_State.p_state = PlayerState.player_die;
         animator.SetTrigger("Death");
+        P_Input.enabled = false;
         //Debug.Log("DieFunc Here");
     }
 }

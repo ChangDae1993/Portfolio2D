@@ -10,7 +10,7 @@ public class Player_Walk : MonoBehaviour
     private Player_Block P_block;
     Animator animator;
 
-    public float move_speed = 3.5f;
+    public float move_speed;
 
     public int key = 0;
 
@@ -25,7 +25,7 @@ public class Player_Walk : MonoBehaviour
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
-        move_speed = 3.5f;
+        move_speed = 4.5f;
     }
 
     // Update is called once per frame
@@ -60,7 +60,7 @@ public class Player_Walk : MonoBehaviour
 
         if (P_State.p_Move_state != PlayerMoveState.player_noWalk && P_State.p_Defece_state == PlayerDefenceState.player_noShield)
         {
-            move_speed = 3.5f;
+            move_speed = 4.5f;
             if (key == 1)
                 this.transform.localEulerAngles = new Vector3(0, 0, 0);
             else if (key == -1)
