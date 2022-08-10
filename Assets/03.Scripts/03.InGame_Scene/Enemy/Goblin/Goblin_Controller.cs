@@ -174,6 +174,8 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Attack()
     {
+        if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+            animator.Play("Pd_Goblin_Idle");
 
         E_State.e_State = EnemyState.enemy_Attack;
         animator.SetBool("IsAttack", true);
