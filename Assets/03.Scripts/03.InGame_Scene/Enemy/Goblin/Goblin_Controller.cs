@@ -25,6 +25,8 @@ public class Goblin_Controller : Enemy
 
         chaseDist = 0.0f;
         isChase = false;
+
+        disTime = 2.0f;
     }
 
     private void Awake()
@@ -45,6 +47,14 @@ public class Goblin_Controller : Enemy
         M_ChaseDist();
         M_Patrol();
         //Debug.Log(patrol_Time);
+
+        if (E_State.e_State == EnemyState.enemy_Death)
+        {
+            disTime -= Time.deltaTime;
+
+            if (disTime <= 0.0f)
+                Destroy(this.gameObject);
+        }
 
     }
 
@@ -180,7 +190,7 @@ public class Goblin_Controller : Enemy
         E_State.e_State = EnemyState.enemy_Attack;
         animator.SetBool("IsAttack", true);
         //Debug.Log("Attack");
-        Debug.Log(player.GetComponent<Player_State_Ctrlr>().p_state);
+        //Debug.Log(player.GetComponent<Player_State_Ctrlr>().p_state);
     }
 
     protected override void M_AttackFunc()
@@ -191,7 +201,7 @@ public class Goblin_Controller : Enemy
 
         foreach(Collider2D collider in hitPlayer)
         {
-            P_TakeDam.P_TakeDmage(10f);
+            P_TakeDam.P_TakeDmage(3.0f);
         }
     }
 
@@ -209,14 +219,12 @@ public class Goblin_Controller : Enemy
         //hp°ª ±ð±â
         CurHp -= dmg;
         Hp_Img.fillAmount = CurHp / MaxHp;
-        Debug.Log(CurHp);
+        //Debug.Log(CurHp);
         animator.SetTrigger("E_TakeDamage");
 
         if (CurHp <= 0.0f)
         {
-            E_State.e_State = EnemyState.enemy_Death;
-            animator.SetTrigger("DieTrigger");
-            this.gameObject.layer = 11;
+            M_Death();
         }
 
     }
@@ -231,7 +239,9 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Death()
     {
-        throw new System.NotImplementedException();
+        E_State.e_State = EnemyState.enemy_Death;
+        animator.SetTrigger("DieTrigger");
+        this.gameObject.layer = 11;
     }
 
     protected override void M_Resurrection()

@@ -21,6 +21,9 @@ public abstract class Enemy : MonoBehaviour
     protected float CurHp;
     //체력 이미지는 각자 붙어있는 Canvas에서 public으로 연결 해두기
 
+    //사망 시 사라질 타이머
+    protected float disTime;
+
     //공격력
     protected float e_Att;
     //공격 상태로 넘어가는 거리
