@@ -59,6 +59,16 @@ public class Player_Jump : MonoBehaviour
                     isJumping = false;
                 }
             }
+
+            RaycastHit2D rayenem = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Enemy"));
+            if(rayenem.collider != null)
+            {
+                if(rayenem.distance < 0.5f)
+                {
+                    animator.SetBool("IsJump", false);
+                    isJumping = false;
+                }
+            }
         }
     }
 
