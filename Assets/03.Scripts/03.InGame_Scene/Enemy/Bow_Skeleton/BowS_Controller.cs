@@ -144,6 +144,27 @@ public class BowS_Controller : Enemy
             animator.SetBool("IsChase", false);
         }
     }
+    protected override void M_Chase()
+    {
+        if (E_State.e_State == EnemyState.enemy_Death)
+            return;
+
+        //은범이가 알려준 아이디어
+        Vector2 playervec = player.transform.position - this.transform.position;
+        //Debug.Log(playervec.x);
+        if (playervec.x < 0)
+        {
+            this.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            this.transform.localEulerAngles = new Vector3(0, 180, 0);
+        }
+        //은범이가 알려준 아이디어
+
+        //추적 하기
+        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, Time.deltaTime * 0.55f);
+    }
 
     public override void M_Hit(float dmg)
     {
@@ -161,10 +182,6 @@ public class BowS_Controller : Enemy
 
     }
 
-    protected override void M_Chase()
-    {
-
-    }
 
 
     protected override void M_Death()
