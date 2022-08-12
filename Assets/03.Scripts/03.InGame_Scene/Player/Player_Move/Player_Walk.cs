@@ -10,6 +10,7 @@ public class Player_Walk : MonoBehaviour
     private Player_Block P_block;
     Animator animator;
 
+    private GameObject startPos;
     public float move_speed;
 
     public int key = 0;
@@ -17,6 +18,7 @@ public class Player_Walk : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startPos = GameObject.Find("StartPos");
         P_State = GetComponent<Player_State_Ctrlr>();
         P_State.p_state = PlayerState.player_idle;
         P_State.p_Move_state = PlayerMoveState.player_noWalk;
@@ -26,6 +28,8 @@ public class Player_Walk : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
         move_speed = 4.5f;
+
+        this.transform.position = startPos.transform.position;
     }
 
     // Update is called once per frame
