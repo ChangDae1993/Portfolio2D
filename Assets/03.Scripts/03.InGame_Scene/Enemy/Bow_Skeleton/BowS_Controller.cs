@@ -173,7 +173,10 @@ public class BowS_Controller : Enemy
             Vector2 targetPos = new Vector2(player.transform.position.x + 8.0f, player.transform.position.y);
             //추적 하기
             this.transform.position = Vector3.Lerp(this.transform.position, targetPos, Time.deltaTime * 0.65f);
-
+            if (playervec.x < 0.0f)
+                this.transform.localEulerAngles = new Vector3(0, 180, 0);
+            else
+                this.transform.localEulerAngles = new Vector3(0, 0, 0);
             if (retreatTimer <= 0.0f)
             {
                 isRetreat = true;
@@ -229,7 +232,9 @@ public class BowS_Controller : Enemy
 
     protected override void M_Death()
     {
-
+        E_State.e_State = EnemyState.enemy_Death;
+        animator.SetTrigger("DieTrigger");
+        this.gameObject.layer = 11;
     }
 
     protected override void M_Resurrection()
