@@ -33,7 +33,7 @@ public class BowS_Controller : Enemy
             if (disTime <= 0.0f)
                 Destroy(this.gameObject);
         }
-
+        Debug.Log(retreatTimer);
     }
     protected override void InitData()
     {
@@ -47,7 +47,7 @@ public class BowS_Controller : Enemy
         CurHp = MaxHp;
         e_move_Speed = 1.0f;
         e_Att = 4.0f;           //(임시)
-        e_Att_Range = 1.3f;
+        e_Att_Range = 10.0f;
         e_att_Range = 0.1f;
         right = Random.Range(0, 2);
 
@@ -55,6 +55,9 @@ public class BowS_Controller : Enemy
         isChase = false;
 
         disTime = 2.0f;
+
+        isRetreat = false;
+        retreatTimer = -1.0f;
     }
 
     protected override void M_Patrol()
@@ -113,7 +116,7 @@ public class BowS_Controller : Enemy
             return;
 
         //Debug.Log(chaseDist);
-        if (chaseDist <= 7.0f)
+        if (chaseDist <= 15.0f)
         {
             E_State.e_State = EnemyState.enemy_Chase;
 
@@ -133,7 +136,6 @@ public class BowS_Controller : Enemy
             {
                 animator.SetBool("IsAttack", false);
             }
-            animator.SetBool("IsChase", true);
             M_Chase();
             isChase = true;
         }
@@ -141,7 +143,7 @@ public class BowS_Controller : Enemy
         {
             isChase = false;
             E_State.e_State = EnemyState.enemy_Idle;
-            animator.SetBool("IsChase", false);
+            animator.SetBool("IsAlert", false);
         }
     }
     protected override void M_Chase()
@@ -149,10 +151,12 @@ public class BowS_Controller : Enemy
         if (E_State.e_State == EnemyState.enemy_Death)
             return;
 
+        animator.SetBool("IsAlert", true);
+
         //은범이가 알려준 아이디어
         Vector2 playervec = player.transform.position - this.transform.position;
         //Debug.Log(playervec.x);
-        if (playervec.x < 0)
+        if (playervec.x < 0.0f)
         {
             this.transform.localEulerAngles = new Vector3(0, 0, 0);
         }
@@ -162,19 +166,58 @@ public class BowS_Controller : Enemy
         }
         //은범이가 알려준 아이디어
 
-        //추적 하기
-        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, Time.deltaTime * 0.55f);
+        //1번 후퇴하기 기능
+        if (retreatTimer >= 0.0f)
+        {
+            retreatTimer -= Time.deltaTime;
+            Vector2 targetPos = new Vector2(player.transform.position.x + 8.0f, player.transform.position.y);
+            //추적 하기
+            this.transform.position = Vector3.Lerp(this.transform.position, targetPos, Time.deltaTime * 0.65f);
+
+            if (retreatTimer <= 0.0f)
+            {
+                isRetreat = true;
+            }
+        }
+        //1번 후퇴하기 기능
+    }
+
+    protected override void M_Attack()
+    {
+        //if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+        //    animator.Play("Pd_Goblin_Idle");
+        E_State.e_State = EnemyState.enemy_Attack;
+        animator.SetBool("IsAttack", true);
+        //Debug.Log("Shoot");
+
+    //화살 생성하기
+
+        //타이머 맞춰서 화살 생성하기
+
+        //타이머 맞춰서 화살 생성하기
+
+    //화살 생성하기
+
     }
 
     public override void M_Hit(float dmg)
     {
+        E_State.e_State = EnemyState.enemy_Hit;
+        //hp값 깎기
+        CurHp -= dmg;
+        Hp_Img.fillAmount = CurHp / MaxHp;
+        //Debug.Log(CurHp);
+        animator.SetTrigger("B_TakeDamage");
 
-    }
+        if (CurHp <= MaxHp * 0.5f && isRetreat == false)
+        {
+            retreatTimer = 1.0f;
+        }
 
-
-    protected override void M_Attack()
-    {
-
+        if (CurHp <= 0.0f)
+        {
+            M_Death();
+        }
     }
 
     protected override void M_AttackFunc()

@@ -56,6 +56,11 @@ public abstract class Enemy : MonoBehaviour
     //이동속도
     protected float e_move_Speed;
 
+    //1번 후퇴하기
+    protected bool isRetreat;
+    //후퇴 후 돌아올 타이머
+    protected float retreatTimer;
+
 
 
     //Awake에서 찾아두기

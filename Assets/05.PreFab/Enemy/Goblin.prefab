@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 1663294903941012520}
   - component: {fileID: 1663294903941012523}
   m_Layer: 6
-  m_Name: Enemy_Canvas
+  m_Name: Goblin_Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
