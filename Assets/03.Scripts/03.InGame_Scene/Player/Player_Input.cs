@@ -16,6 +16,21 @@ public class Player_Input : MonoBehaviour
     // 이런식으로 변수 추가해서 Input class 만들기
     public bool fire { get; private set; }
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        var obj = FindObjectsOfType<Player_Input>();
+        if (obj.Length == 1)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    //출처: https://wergia.tistory.com/191 [베르의 프로그래밍 노트:티스토리]
+    }
+
     void Start()
     {
         Player_State = GetComponent<Player_State_Ctrlr>();
