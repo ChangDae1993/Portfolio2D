@@ -676,6 +676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd072c565417bc4f8e61026a6a0fcad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPos: {fileID: 1787537329}
 --- !u!4 &562392409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7675134906276319931, guid: 94452a8f2fdb64f4c9d58cd3a21a0f10, type: 3}
@@ -3538,11 +3539,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 953559518834644566, guid: 74e66d1eeb094a04582f53170e9fb34a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.46
+      value: -8.1
       objectReference: {fileID: 0}
     - target: {fileID: 953559518834644566, guid: 74e66d1eeb094a04582f53170e9fb34a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.11
+      value: -2.98
       objectReference: {fileID: 0}
     - target: {fileID: 953559518834644566, guid: 74e66d1eeb094a04582f53170e9fb34a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3582,6 +3583,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74e66d1eeb094a04582f53170e9fb34a, type: 3}
+--- !u!4 &1787537329 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 953559518834644566, guid: 74e66d1eeb094a04582f53170e9fb34a, type: 3}
+  m_PrefabInstance: {fileID: 1787537328}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1844280423
 PrefabInstance:
   m_ObjectHideFlags: 0

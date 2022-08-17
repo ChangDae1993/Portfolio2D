@@ -28,8 +28,6 @@ public class Player_Walk : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
         move_speed = 4.5f;
-
-        this.transform.position = startPos.transform.position;
     }
 
     // Update is called once per frame
