@@ -7,6 +7,12 @@ public class BowS_Controller : Enemy
 {
     public Image Hp_Img;
 
+    //화살용 OBJ
+    private GameObject arrowObj;
+
+    //화살 발사 위치
+    public Transform firePos;
+
     private void Awake()
     {
         InitData();
@@ -33,7 +39,7 @@ public class BowS_Controller : Enemy
             if (disTime <= 0.0f)
                 Destroy(this.gameObject);
         }
-        Debug.Log(retreatTimer);
+        //Debug.Log(retreatTimer);
     }
     protected override void InitData()
     {
@@ -192,16 +198,20 @@ public class BowS_Controller : Enemy
         E_State.e_State = EnemyState.enemy_Attack;
         animator.SetBool("IsAttack", true);
         //Debug.Log("Shoot");
-
-    //화살 생성하기
-
-        //타이머 맞춰서 화살 생성하기
-
-        //타이머 맞춰서 화살 생성하기
-
-    //화살 생성하기
-
     }
+
+//화살 생성하기
+    
+    private void arrowRelease()
+    {
+        arrowObj = Resources.Load("Prefab/E_Arrow") as GameObject;
+        //타이머 맞춰서 화살 생성하기
+        GameObject Arrow = Instantiate(arrowObj, transform.position, transform.rotation) as GameObject;
+        Arrow.transform.position = firePos.position;
+        //타이머 맞춰서 화살 생성하기
+    }
+
+    //화살 생성하기
 
     public override void M_Hit(float dmg)
     {
