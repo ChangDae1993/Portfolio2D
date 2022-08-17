@@ -193,8 +193,8 @@ public class BowS_Controller : Enemy
 
     protected override void M_Attack()
     {
-        //if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
-        //    animator.Play("Pd_Goblin_Idle");
+        if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+            animator.Play("Pd_Bow_Idle");
         E_State.e_State = EnemyState.enemy_Attack;
         animator.SetBool("IsAttack", true);
         //Debug.Log("Shoot");
