@@ -8,6 +8,8 @@ public class Lobby_Mgr : MonoBehaviour
 {
     public Image fadeIn;
 
+    public Button startBtn;
+
     private bool isIn;
 
     private void Start() => StartFunc();
@@ -16,6 +18,9 @@ public class Lobby_Mgr : MonoBehaviour
     {
         fadeIn.gameObject.SetActive(true);
         isIn = true;
+
+        if (startBtn != null)
+            startBtn.onClick.AddListener(StartBtnFunc);
 
     }
 
@@ -29,5 +34,10 @@ public class Lobby_Mgr : MonoBehaviour
 
         if (fadeIn.fillAmount <= 0.0f)
             fadeIn.gameObject.SetActive(false);
+    }
+
+    public void StartBtnFunc()
+    {
+        SceneManager.LoadScene("Stage_1");
     }
 }
