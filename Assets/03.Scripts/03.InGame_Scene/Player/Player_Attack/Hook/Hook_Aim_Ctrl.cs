@@ -34,6 +34,7 @@ public class Hook_Aim_Ctrl : MonoBehaviour
         aim_shoot = false;
         isTouch = false;
         isCool = false;
+        coolImg.gameObject.SetActive(false);
     }
 
     private void Update() => UpdateFunc();
@@ -92,10 +93,12 @@ public class Hook_Aim_Ctrl : MonoBehaviour
 
         if (isCool)
         {
+            coolImg.gameObject.SetActive(true);
             coolImg.fillAmount -= Time.deltaTime*0.25f;
             if(coolImg.fillAmount <= 0.0f)
             {
                 coolImg.fillAmount = 1.0f;
+                coolImg.gameObject.SetActive(false);
                 isCool = false;
             }
         }

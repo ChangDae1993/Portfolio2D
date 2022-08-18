@@ -146,7 +146,7 @@ MonoBehaviour:
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
-  m_FillClockwise: 1
+  m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
@@ -1510,6 +1510,8 @@ MonoBehaviour:
   start_Pos: {fileID: 7601861507936486547}
   isTouch: 0
   coolImg: {fileID: 7042101232482252115}
+  isCool: 0
+  coolTimer: 0
 --- !u!114 &7601861508232212044
 MonoBehaviour:
   m_ObjectHideFlags: 0
