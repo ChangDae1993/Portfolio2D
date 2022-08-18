@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Roll : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Player_Roll : MonoBehaviour
 
     private float roll_Cool;
 
+    public Image coolImg;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -32,6 +35,8 @@ public class Player_Roll : MonoBehaviour
 
         P_State.p_state = PlayerState.player_move;
         P_State.p_Move_state = PlayerMoveState.player_walk;
+
+        coolImg.gameObject.SetActive(false);
     }
 
     private void Update() => UpdateFunc();
@@ -60,6 +65,7 @@ public class Player_Roll : MonoBehaviour
             roll_speed = p_Walk.move_speed;
             roll_time -= Time.deltaTime;
             roll_Cool -= Time.deltaTime;
+
             animator.SetBool("IsDash", false);
             isDash = false;
         }
@@ -69,9 +75,13 @@ public class Player_Roll : MonoBehaviour
             P_State.p_Move_state = PlayerMoveState.player_roll;
             P_Move_Roll();
             this.gameObject.layer = 3;
+            coolImg.gameObject.SetActive(true);
         }
         else
+        {
             this.gameObject.layer = 7;
+            coolImg.gameObject.SetActive(false);
+        }
     }
 
     private void P_Move_Roll()
@@ -79,5 +89,6 @@ public class Player_Roll : MonoBehaviour
         Vector2 p_vector = new Vector2(p_input.horizontal, 0);
         Vector2 p_dash = p_vector * roll_speed * Time.deltaTime;
         rigid.position += p_dash;
+
     }
 }
