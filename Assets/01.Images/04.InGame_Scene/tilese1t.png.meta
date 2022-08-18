@@ -1,7 +1,232 @@
 fileFormatVersion: 2
 guid: 000b6726cc6242740abf24d2bcd3a39e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1320648733395166832
+    second: tilese1t_0
+  - first:
+      213: 2772633366170321597
+    second: tilese1t_1
+  - first:
+      213: -9121971939542637524
+    second: tilese1t_2
+  - first:
+      213: 2806725948369787836
+    second: tilese1t_3
+  - first:
+      213: 6693107674430402807
+    second: tilese1t_4
+  - first:
+      213: 1582799736130793424
+    second: tilese1t_5
+  - first:
+      213: 3632254128436088303
+    second: tilese1t_6
+  - first:
+      213: 6882461851406709331
+    second: tilese1t_7
+  - first:
+      213: -2825695646396754572
+    second: tilese1t_8
+  - first:
+      213: -7755856472567441015
+    second: tilese1t_9
+  - first:
+      213: 8083009462544996369
+    second: tilese1t_10
+  - first:
+      213: -5871863082507839489
+    second: tilese1t_11
+  - first:
+      213: 662814711096614748
+    second: tilese1t_12
+  - first:
+      213: -4647243388523394312
+    second: tilese1t_13
+  - first:
+      213: -2560427323927252488
+    second: tilese1t_14
+  - first:
+      213: -5146355813495612349
+    second: tilese1t_15
+  - first:
+      213: -200113266279851287
+    second: tilese1t_16
+  - first:
+      213: 8809758933939555887
+    second: tilese1t_17
+  - first:
+      213: 2292601055440065521
+    second: tilese1t_18
+  - first:
+      213: 4277097211473738826
+    second: tilese1t_19
+  - first:
+      213: -2943132374656386826
+    second: tilese1t_20
+  - first:
+      213: 659660907145410820
+    second: tilese1t_21
+  - first:
+      213: -2609696092944350236
+    second: tilese1t_22
+  - first:
+      213: -3196630046577899045
+    second: tilese1t_23
+  - first:
+      213: -4239819070510477210
+    second: tilese1t_24
+  - first:
+      213: -569324622293476279
+    second: tilese1t_25
+  - first:
+      213: -7068661889595542839
+    second: tilese1t_26
+  - first:
+      213: 7816524295476637077
+    second: tilese1t_27
+  - first:
+      213: -5284326727833160404
+    second: tilese1t_28
+  - first:
+      213: 8779602817123781850
+    second: tilese1t_29
+  - first:
+      213: 6323233696541624443
+    second: tilese1t_30
+  - first:
+      213: 6218810699034064719
+    second: tilese1t_31
+  - first:
+      213: -3315068061378710410
+    second: tilese1t_32
+  - first:
+      213: 1610557137923342050
+    second: tilese1t_33
+  - first:
+      213: -522853715295440726
+    second: tilese1t_34
+  - first:
+      213: -5936511642125700568
+    second: tilese1t_35
+  - first:
+      213: -8917901171317547539
+    second: tilese1t_36
+  - first:
+      213: 1349009209412591045
+    second: tilese1t_37
+  - first:
+      213: 4003797878635582735
+    second: tilese1t_38
+  - first:
+      213: 291617530312412947
+    second: tilese1t_39
+  - first:
+      213: -2626656160944295241
+    second: tilese1t_40
+  - first:
+      213: 4403556109335905280
+    second: tilese1t_41
+  - first:
+      213: 3301042919281880859
+    second: tilese1t_42
+  - first:
+      213: -4194618411766699490
+    second: tilese1t_43
+  - first:
+      213: -2206060731425795982
+    second: tilese1t_44
+  - first:
+      213: -3093293745796957564
+    second: tilese1t_45
+  - first:
+      213: 8227863401061946079
+    second: tilese1t_46
+  - first:
+      213: -3415337525013911821
+    second: tilese1t_47
+  - first:
+      213: -5194939182353158106
+    second: tilese1t_48
+  - first:
+      213: 6398213943411857276
+    second: tilese1t_49
+  - first:
+      213: 5619922618789176293
+    second: tilese1t_50
+  - first:
+      213: -7156368692821543187
+    second: tilese1t_51
+  - first:
+      213: 5193948843642841506
+    second: tilese1t_52
+  - first:
+      213: 1232921751607170730
+    second: tilese1t_53
+  - first:
+      213: 7835659397838142284
+    second: tilese1t_54
+  - first:
+      213: 3086476691452297233
+    second: tilese1t_55
+  - first:
+      213: -4246792162569735035
+    second: tilese1t_56
+  - first:
+      213: 6567406905839470835
+    second: tilese1t_57
+  - first:
+      213: -2335913769630685037
+    second: tilese1t_58
+  - first:
+      213: -2261858433194543846
+    second: tilese1t_59
+  - first:
+      213: 8216299672820008758
+    second: tilese1t_60
+  - first:
+      213: 8110470913923647802
+    second: tilese1t_61
+  - first:
+      213: 3156194845119453603
+    second: tilese1t_62
+  - first:
+      213: 1607489808861187401
+    second: tilese1t_63
+  - first:
+      213: 4202588087225893341
+    second: tilese1t_64
+  - first:
+      213: -1442684386845287644
+    second: tilese1t_65
+  - first:
+      213: 3965285901811414850
+    second: tilese1t_66
+  - first:
+      213: 2299560675133238809
+    second: tilese1t_67
+  - first:
+      213: 5608952424577896004
+    second: tilese1t_68
+  - first:
+      213: 5083584133009658251
+    second: tilese1t_69
+  - first:
+      213: -2523863819638862255
+    second: tilese1t_70
+  - first:
+      213: -5713810045770579783
+    second: tilese1t_71
+  - first:
+      213: 2127265647104877817
+    second: tilese1t_72
+  - first:
+      213: -8007549661315075418
+    second: tilese1t_73
+  - first:
+      213: -1563318370651950425
+    second: tilese1t_74
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +266,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +300,1632 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tilese1t_0
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 1084
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076a613a603e35210800000000000000
+      internalID: 1320648733395166832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_1
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1084
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db24af24b5f5a7620800000000000000
+      internalID: 2772633366170321597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_2
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 1084
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24ea7ce9de386180800000000000000
+      internalID: -9121971939542637524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_3
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 1084
+        width: 64
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbd37e116e73f620800000000000000
+      internalID: 2806725948369787836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_4
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 956
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f07dd1e7f1b2ec50800000000000000
+      internalID: 6693107674430402807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_5
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 956
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df68a659fb37f510800000000000000
+      internalID: 1582799736130793424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_6
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 956
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed0163a2eb586230800000000000000
+      internalID: 3632254128436088303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_7
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 956
+        width: 64
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3523649c69a638f50800000000000000
+      internalID: 6882461851406709331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_8
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 828
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4755721e7cc19c8d0800000000000000
+      internalID: -2825695646396754572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_9
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 828
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98914b761a9ad5490800000000000000
+      internalID: -7755856472567441015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_10
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 828
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1189d13d74e9c2070800000000000000
+      internalID: 8083009462544996369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_11
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 828
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7d36d03a3f28ea0800000000000000
+      internalID: -5871863082507839489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_12
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 828
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f11dec77ac23900800000000000000
+      internalID: 662814711096614748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_13
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 828
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fac742a2cca18fb0800000000000000
+      internalID: -4647243388523394312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_14
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1bc142ae8877cd0800000000000000
+      internalID: -2560427323927252488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_15
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cd3d877a87498b0800000000000000
+      internalID: -5146355813495612349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_16
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eadb886b0e093df0800000000000000
+      internalID: -200113266279851287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_17
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e8a46031d824a70800000000000000
+      internalID: 8809758933939555887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_18
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f3d0316384f0df10800000000000000
+      internalID: 2292601055440065521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_19
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cb4b7b04d4b5b30800000000000000
+      internalID: 4277097211473738826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_20
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f877a9d2b4e727d0800000000000000
+      internalID: -2943132374656386826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_21
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4093d9a9916972900800000000000000
+      internalID: 659660907145410820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_22
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3c350fa3f78cbd0800000000000000
+      internalID: -2609696092944350236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_23
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 700
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9426bb8e943a3d0800000000000000
+      internalID: -3196630046577899045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_24
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660db46d4032925c0800000000000000
+      internalID: -4239819070510477210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_25
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c505eb54a5918f0800000000000000
+      internalID: -569324622293476279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_26
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2f059767117ed90800000000000000
+      internalID: -7068661889595542839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_27
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d681ade6fd97c60800000000000000
+      internalID: 7816524295476637077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_28
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25f66ea6dc4aa6b0800000000000000
+      internalID: -5284326727833160404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_29
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc8eafee3a67d970800000000000000
+      internalID: 8779602817123781850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_30
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78c42a8b83a0c750800000000000000
+      internalID: 6323233696541624443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_31
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47f251d167ad4650800000000000000
+      internalID: 6218810699034064719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_32
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674774389238ef1d0800000000000000
+      internalID: -3315068061378710410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_33
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 572
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eef3601f29d95610800000000000000
+      internalID: 1610557137923342050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_34
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0725ee0537eb8f0800000000000000
+      internalID: -522853715295440726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_35
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822702e4d164d9da0800000000000000
+      internalID: -5936511642125700568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_36
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dedd39d32204d3480800000000000000
+      internalID: -8917901171317547539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_37
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd94c58ab4a8b210800000000000000
+      internalID: 1349009209412591045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_38
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05598425f8509730800000000000000
+      internalID: 4003797878635582735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_39
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f4c8849980c0400800000000000000
+      internalID: 291617530312412947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_40
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2f2d3632e3c8bd0800000000000000
+      internalID: -2626656160944295241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_41
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 004c77d43f29c1d30800000000000000
+      internalID: 4403556109335905280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_42
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f6d10ab09afcd20800000000000000
+      internalID: 3301042919281880859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_43
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 444
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a255e47c8b9c5c0800000000000000
+      internalID: -4194618411766699490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_44
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2705d66f37f7261e0800000000000000
+      internalID: -2206060731425795982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_45
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ab5d72ab96215d0800000000000000
+      internalID: -3093293745796957564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_46
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd21cb09b2e3f2270800000000000000
+      internalID: 8227863401061946079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_47
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6eb71cd984a90d0800000000000000
+      internalID: -3415337525013911821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_48
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620f41e665ed7e7b0800000000000000
+      internalID: -5194939182353158106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_49
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77d30eaea50bc850800000000000000
+      internalID: 6398213943411857276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_50
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3ac1e98d9fdfd40800000000000000
+      internalID: 5619922618789176293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_51
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de635a607987fac90800000000000000
+      internalID: -7156368692821543187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_52
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9e1ee54fc941840800000000000000
+      internalID: 5193948843642841506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_53
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 316
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6d5600dc73c1110800000000000000
+      internalID: 1232921751607170730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_54
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bf71d05baddbc60800000000000000
+      internalID: 7835659397838142284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_55
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1108981b23e55da20800000000000000
+      internalID: 3086476691452297233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_56
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5843e13570d5015c0800000000000000
+      internalID: -4246792162569735035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_57
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8420609cd142b50800000000000000
+      internalID: 6567406905839470835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_58
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398283f7dca259fd0800000000000000
+      internalID: -2335913769630685037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_59
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15b7352db34c90e0800000000000000
+      internalID: -2261858433194543846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_60
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63748964509260270800000000000000
+      internalID: 8216299672820008758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_61
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a398e89335e2e8070800000000000000
+      internalID: 8110470913923647802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_62
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a993494d7e0dcb20800000000000000
+      internalID: 3156194845119453603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_63
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 188
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94d4b3dd673fe4610800000000000000
+      internalID: 1607489808861187401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_64
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 124
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1436c5997925a30800000000000000
+      internalID: 4202588087225893341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_65
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b951f913e8afbe0800000000000000
+      internalID: -1442684386845287644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_66
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247755ac486870730800000000000000
+      internalID: 3965285901811414850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_67
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e26cc104ea9ef10800000000000000
+      internalID: 2299560675133238809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_68
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e080d338007dd40800000000000000
+      internalID: 5608952424577896004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_69
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b815ad1c5d48c8640800000000000000
+      internalID: 5083584133009658251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_70
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e07f06a3f69fcd0800000000000000
+      internalID: -2523863819638862255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_71
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b049c3590874b0b0800000000000000
+      internalID: -5713810045770579783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_72
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4e396d5d0958d10800000000000000
+      internalID: 2127265647104877817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_73
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2f30442087fd090800000000000000
+      internalID: -8007549661315075418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilese1t_74
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 60
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2b276893afd4ae0800000000000000
+      internalID: -1563318370651950425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
