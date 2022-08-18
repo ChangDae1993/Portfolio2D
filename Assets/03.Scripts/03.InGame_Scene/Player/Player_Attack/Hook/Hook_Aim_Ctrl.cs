@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
+using UnityEngine.UI;
 
 public class Hook_Aim_Ctrl : MonoBehaviour
 {
@@ -12,10 +14,14 @@ public class Hook_Aim_Ctrl : MonoBehaviour
     public bool aim_shoot;
 
     //hook º¯¼ö
-    public Vector3 hook_Target_Pos;
-    public Transform start_Pos;
+    [HideInInspector] public Vector3 hook_Target_Pos;
+    [HideInInspector] public Transform start_Pos;
     public bool isTouch;
     private Player_Walk p_Walk;
+
+    public Image coolImg;
+    public bool isCool;
+    public float coolTimer;
 
     private void Start() => StartFunc();
 
@@ -27,6 +33,7 @@ public class Hook_Aim_Ctrl : MonoBehaviour
         P_State.p_Attack_state = PlayerAttackState.player_noAttack;
         aim_shoot = false;
         isTouch = false;
+        isCool = false;
     }
 
     private void Update() => UpdateFunc();
@@ -56,11 +63,11 @@ public class Hook_Aim_Ctrl : MonoBehaviour
 
         if (P_State.p_Attack_state == PlayerAttackState.player_hook_aim)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && coolImg.fillAmount == 1.0f)
             {
                 if (isTouch == true)
                     return;
-
+                isCool = true;
                 isTouch = false;
                 aim_shoot = true;
                 P_State.p_Attack_state = PlayerAttackState.player_hook_shoot;
@@ -82,6 +89,17 @@ public class Hook_Aim_Ctrl : MonoBehaviour
                 }
             }
         }
+
+        if (isCool)
+        {
+            coolImg.fillAmount -= Time.deltaTime*0.25f;
+            if(coolImg.fillAmount <= 0.0f)
+            {
+                coolImg.fillAmount = 1.0f;
+                isCool = false;
+            }
+        }
+
 
     }
 }

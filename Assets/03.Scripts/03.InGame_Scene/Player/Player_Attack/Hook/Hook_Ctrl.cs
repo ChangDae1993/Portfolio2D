@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hook_Ctrl : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Hook_Ctrl : MonoBehaviour
     Vector2 startPos;
     Vector2 shootPos;
     private GameObject enemy;
+
 
     private void Start() => StartFunc();
 
@@ -32,7 +34,6 @@ public class Hook_Ctrl : MonoBehaviour
         aim_Ctrl.isTouch = false;
 
         enemy = null;
-
     }
 
     private void Update() => UpdateFunc();
@@ -46,13 +47,16 @@ public class Hook_Ctrl : MonoBehaviour
         if(aim_Ctrl.isTouch == false)
         {
             Hook_Release();
+            //aim_Ctrl.isCool = false;
         }
         else
         {
             Hook_Return();
         }
 
-        if(aim_Ctrl.isTouch == true && enemy != null)
+
+
+        if (aim_Ctrl.isTouch == true && enemy != null)
         {
             enemy.transform.position = this.transform.position;
         }
