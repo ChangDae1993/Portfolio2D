@@ -35,8 +35,6 @@ public class Player_Roll : MonoBehaviour
 
         P_State.p_state = PlayerState.player_move;
         P_State.p_Move_state = PlayerMoveState.player_walk;
-
-        coolImg.gameObject.SetActive(false);
     }
 
     private void Update() => UpdateFunc();
@@ -58,6 +56,8 @@ public class Player_Roll : MonoBehaviour
             roll_time = 0.4f;
             roll_Cool = 2.0f;
             animator.SetBool("IsDash", true);
+            coolImg.gameObject.SetActive(true);
+            coolImg.fillAmount = 1.0f;
         }
         else
         {
@@ -65,7 +65,7 @@ public class Player_Roll : MonoBehaviour
             roll_speed = p_Walk.move_speed;
             roll_time -= Time.deltaTime;
             roll_Cool -= Time.deltaTime;
-
+            coolImg.fillAmount -= Time.deltaTime*0.5f;
             animator.SetBool("IsDash", false);
             isDash = false;
         }
@@ -75,12 +75,10 @@ public class Player_Roll : MonoBehaviour
             P_State.p_Move_state = PlayerMoveState.player_roll;
             P_Move_Roll();
             this.gameObject.layer = 3;
-            coolImg.gameObject.SetActive(true);
         }
         else
         {
             this.gameObject.layer = 7;
-            coolImg.gameObject.SetActive(false);
         }
     }
 
@@ -89,6 +87,5 @@ public class Player_Roll : MonoBehaviour
         Vector2 p_vector = new Vector2(p_input.horizontal, 0);
         Vector2 p_dash = p_vector * roll_speed * Time.deltaTime;
         rigid.position += p_dash;
-
     }
 }
