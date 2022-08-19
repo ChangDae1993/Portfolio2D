@@ -13,7 +13,9 @@ public enum PlayerState
     player_talk = 5,
     player_map = 6,
     player_takeDamage = 7,
-    player_Shield = 8
+    player_Shield = 8,
+    player_skill1,
+    player_skill2
 }
 
 public enum PlayerMoveState
