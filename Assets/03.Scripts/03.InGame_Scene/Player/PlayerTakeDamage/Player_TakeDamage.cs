@@ -61,12 +61,28 @@ public class Player_TakeDamage : MonoBehaviour
             P_State.p_Defece_state = PlayerDefenceState.player_ShieldActive;
             animator.SetTrigger("ShieldActive");
             P_State.p_Defece_state = PlayerDefenceState.player_onShield;
+
+            int block = Random.Range(0, 3);
+
+            if(block == 0)
+            {
+                SoundMgr.Instance.PlayEffSound("block_1", 1.0f);
+            }
+            else if(block == 1)
+            {
+                SoundMgr.Instance.PlayEffSound("block_2", 1.0f);
+            }
+            else if (block == 2)
+            {
+                SoundMgr.Instance.PlayEffSound("block_3", 1.0f);
+            }
         }
         else
         {
             P_State.p_state = PlayerState.player_takeDamage;
             curHp -= dam;
             Hp_Img.fillAmount = curHp / maxHp;
+            SoundMgr.Instance.PlayEffSound("Player_Hit", 0.6f);
             animator.SetTrigger("TakeDamage");
             //Debug.Log(curHp);
         }

@@ -34,6 +34,7 @@ public class Player_Jump : MonoBehaviour
 
             if (isJumping == false)
             {
+                SoundMgr.Instance.PlayEffSound("Player_Jump", 0.8f);
                 isJumping = true;
                 P_Move_Jump();
             }

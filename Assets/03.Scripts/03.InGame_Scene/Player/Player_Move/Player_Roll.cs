@@ -51,7 +51,7 @@ public class Player_Roll : MonoBehaviour
             {
                 return;
             }
-
+            SoundMgr.Instance.PlayEffSound("Player_Roll", 0.8f);
             isDash = true;
             roll_time = 0.4f;
             roll_Cool = 2.0f;

@@ -50,6 +50,22 @@ public class Player_Attack : MonoBehaviour
         if (Player_State.p_state == PlayerState.player_die)
             return;
 
+        if (a == 0)
+        {
+            animator.SetTrigger("Sword_Attack_1");
+            SoundMgr.Instance.PlayEffSound("SwordAtt_1", 0.5f);
+        }
+        if (a == 1)
+        {
+            animator.SetTrigger("Sword_Attack_2");
+            SoundMgr.Instance.PlayEffSound("SwordAtt_2", 0.5f);
+        }
+        if (a == 2)
+        {
+            animator.SetTrigger("Sword_Attack_3");
+            SoundMgr.Instance.PlayEffSound("SwordAtt_3", 0.5f);
+        }
+
         //Detect Enemy
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
@@ -58,20 +74,21 @@ public class Player_Attack : MonoBehaviour
         {
             enemy.GetComponent<Enemy>().M_Hit(10.0f);
             //Debug.Log("Hit");
+            int att = Random.Range(0, 3);
+            if (att == 0)
+            {
+                SoundMgr.Instance.PlayEffSound("SwordMon_1", 1.0f);
+            }
+            else if (att == 1)
+            {
+                SoundMgr.Instance.PlayEffSound("SwordMon_2", 1.0f);
+            }
+            else
+            {
+                SoundMgr.Instance.PlayEffSound("SwordMon_3", 1.0f);
+            }
         }
 
-        if (a == 0)
-        {
-            animator.SetTrigger("Sword_Attack_1");
-        }
-        if (a == 1)
-        {
-            animator.SetTrigger("Sword_Attack_2");
-        }
-        if (a == 2)
-        {
-            animator.SetTrigger("Sword_Attack_3");
-        }
     }
 
     private void OnDrawGizmosSelected()
