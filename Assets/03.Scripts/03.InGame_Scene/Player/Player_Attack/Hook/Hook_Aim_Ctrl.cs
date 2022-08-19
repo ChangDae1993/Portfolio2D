@@ -66,6 +66,8 @@ public class Hook_Aim_Ctrl : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && coolImg.fillAmount == 1.0f)
             {
+                SoundMgr.Instance.PlayEffSound("hook_release", 0.6f);
+
                 if (isTouch == true)
                     return;
                 isCool = true;

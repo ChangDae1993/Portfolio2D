@@ -30,7 +30,7 @@ public class Player_Block : MonoBehaviour
             Player_State.p_state = PlayerState.player_Shield;
             Player_State.p_Defece_state = PlayerDefenceState.player_onShield;
             def_area.gameObject.SetActive(true);
-            SoundMgr.Instance.PlayEffSound("shield_on", 1.0f);
+            SoundMgr.Instance.PlayEffSound("shield_on", 0.5f);
             Shield_scale = this.transform.localScale.x;
         }
 
@@ -38,7 +38,7 @@ public class Player_Block : MonoBehaviour
         {
             Player_State.p_state = PlayerState.player_idle;
             Player_State.p_Defece_state = PlayerDefenceState.player_noShield;
-            SoundMgr.Instance.PlayEffSound("shield_off", 1.0f);
+            SoundMgr.Instance.PlayEffSound("shield_off", 0.4f);
             def_area.gameObject.SetActive(false);
         }
     }

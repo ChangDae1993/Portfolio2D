@@ -70,7 +70,6 @@ public class Hook_Ctrl : MonoBehaviour
         //aim_Ctrl.hook_Target_Pos를 목적지로 본인 위치부터 hook_Target_Pos까지 이동
         this.transform.position = Vector3.Lerp(this.transform.position, aim_Ctrl.hook_Target_Pos, Time.deltaTime * hook_speed);
 
-
         //은범이가 알려준 아이디어
         Vector2 playervec = player_Pos.position - this.transform.position;
         //Debug.Log(playervec.x);
@@ -105,7 +104,7 @@ public class Hook_Ctrl : MonoBehaviour
         else if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
             aim_Ctrl.isTouch = true;
-
+            SoundMgr.Instance.PlayEffSound("hook_hit", 1.0f);
             enemy = collision.gameObject;
 
             //콜리더 당겨오기 구현 필요
