@@ -15,8 +15,6 @@ public class Player_Walk : MonoBehaviour
 
     public int key = 0;
 
-    AudioSource audioSrc;
-
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +29,6 @@ public class Player_Walk : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
         move_speed = 4.5f;
-
-        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,16 +42,15 @@ public class Player_Walk : MonoBehaviour
                 P_State.p_Move_state = PlayerMoveState.player_walk;
                 P_Move_Walk();
                 animator.SetBool("IsWalk", true);
-                audioSrc.Play();
             }
             else
             {
                 P_State.p_state = PlayerState.player_idle;
                 P_State.p_Move_state = PlayerMoveState.player_noWalk;
                 animator.SetBool("IsWalk", false);
-                audioSrc.Stop();
             }
         }
+
     }
 
     private void P_Move_Walk()
