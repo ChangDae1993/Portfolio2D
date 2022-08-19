@@ -21,7 +21,7 @@ public class Stage2_Move_Map : Move_Map_Ctrl
     {
         if (FadeOut_Img.fillAmount == 1.0f)
         {
-            SceneManager.LoadScene("Lobby");
+            SceneManager.LoadScene("Stage_Boss");
         }
     }
 
