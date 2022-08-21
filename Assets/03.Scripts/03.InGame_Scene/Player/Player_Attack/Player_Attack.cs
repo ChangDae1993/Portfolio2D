@@ -19,6 +19,9 @@ public class Player_Attack : MonoBehaviour
 
     private float attackCool;
 
+    private Vector3 att_move;
+    private int key = 0;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -33,6 +36,7 @@ public class Player_Attack : MonoBehaviour
         attackDamage = 20;
 
 
+
         attackCool = 0.6f;
     }
 
@@ -42,7 +46,13 @@ public class Player_Attack : MonoBehaviour
     {
         attackCool -= Time.deltaTime;
 
-        if(attackCool < 0.0f)
+        if (this.transform.rotation.y < 0.0f)
+            key = -1;
+        else
+            key = 1;
+
+        att_move = new Vector3(0.5f * key, 0.0f, 0.0f);
+        if (attackCool < 0.0f)
         {
             if(Input.GetMouseButtonDown(0))
             {
@@ -53,6 +63,8 @@ public class Player_Attack : MonoBehaviour
                 Player_State.p_Attack_state = PlayerAttackState.player_Sword;
                 animator.SetTrigger("Sword_Attack_start");
                 attackCool = 0.6f;
+
+                this.transform.position += att_move;
             }
         }
     }
