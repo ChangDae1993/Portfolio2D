@@ -43,6 +43,7 @@ public class Lobby_Mgr : MonoBehaviour
 
     public Text skill2_tuto;
     public bool checkskill2;
+    Skill2 skill2;
 
 
 
@@ -65,6 +66,7 @@ public class Lobby_Mgr : MonoBehaviour
         tutoBG.gameObject.SetActive(false);
 
         PS = player.GetComponent<Player_State_Ctrlr>();
+        skill2 = player.GetComponent<Skill2>();
 
         checkTUto1 = false;
         checkTUto2 = false;
@@ -133,7 +135,13 @@ public class Lobby_Mgr : MonoBehaviour
             checkskill1 = true;
         }
 
-        if(Input.GetKeyUp(KeyCode.W))
+        //if (skill2.isCharge)
+        //{
+        //    skill2_tuto.gameObject.SetActive(false);
+        //    checkskill2 = true;
+        //}
+
+        if(Input.GetKeyDown(KeyCode.W))
         {
             skill2_tuto.gameObject.SetActive(false);
             checkskill2 = true;
@@ -160,5 +168,6 @@ public class Lobby_Mgr : MonoBehaviour
     {
         fadeOut.gameObject.SetActive(true);
         isOut = true;
+        SoundMgr.Instance.PlayGUISound("Click", 1.0f);
     }
 }
