@@ -57,9 +57,9 @@ public class Player_State_Ctrlr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        p_state = PlayerState.player_idle;
-        p_Move_state = PlayerMoveState.player_walk;
-        p_Attack_state = PlayerAttackState.player_noAttack;
-        p_Defece_state = PlayerDefenceState.player_noShield;
+        //p_state = PlayerState.player_idle;
+        //p_Move_state = PlayerMoveState.player_walk;
+        //p_Attack_state = PlayerAttackState.player_noAttack;
+        //p_Defece_state = PlayerDefenceState.player_noShield;
     }
 }

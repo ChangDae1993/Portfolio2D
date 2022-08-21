@@ -7,6 +7,7 @@ public class Player_Jump : MonoBehaviour
     private Rigidbody2D rigid;
     private Player_State_Ctrlr Player_State;
     Animator animator;
+    Player_Walk p_walk;
 
     private float jump_power = 7.0f;
 
@@ -18,6 +19,7 @@ public class Player_Jump : MonoBehaviour
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         Player_State = GetComponent<Player_State_Ctrlr>();
+        p_walk = GetComponent<Player_Walk>();
         jump_power = 7.0f;
         isJumping = false;
         Player_State.p_state = PlayerState.player_idle;
@@ -29,6 +31,7 @@ public class Player_Jump : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            p_walk.isMove = false;
             if (Player_State.p_state == PlayerState.player_die)
                 return;
 
@@ -37,6 +40,7 @@ public class Player_Jump : MonoBehaviour
                 SoundMgr.Instance.PlayEffSound("Player_Jump", 0.8f);
                 isJumping = true;
                 P_Move_Jump();
+
             }
             else
             {
@@ -75,6 +79,7 @@ public class Player_Jump : MonoBehaviour
 
     private void P_Move_Jump()
     {
+                        Player_State.p_Move_state = PlayerMoveState.player_jump;
         animator.SetBool("IsJump", true);
         rigid.AddForce(transform.up * jump_power, ForceMode2D.Impulse);
 

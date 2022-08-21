@@ -15,6 +15,9 @@ public class Player_Walk : MonoBehaviour
 
     public int key = 0;
 
+    [Header("===발자국 소리")]
+    AudioSource audioSrc;
+    public bool isMove = false;
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +25,15 @@ public class Player_Walk : MonoBehaviour
         startPos = GameObject.Find("StartPos");
         P_State = GetComponent<Player_State_Ctrlr>();
         P_State.p_state = PlayerState.player_idle;
-        P_State.p_Move_state = PlayerMoveState.player_noWalk;
+        //P_State.p_Move_state = PlayerMoveState.player_noWalk;
         P_State.p_Defece_state = PlayerDefenceState.player_noShield;
         P_block = GetComponent<Player_Block>();
         animator = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         p_input = GetComponent<Player_Input>();
         move_speed = 4.5f;
+
+        audioSrc = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,19 +47,30 @@ public class Player_Walk : MonoBehaviour
                 P_State.p_Move_state = PlayerMoveState.player_walk;
                 P_Move_Walk();
                 animator.SetBool("IsWalk", true);
+
             }
             else
             {
                 P_State.p_state = PlayerState.player_idle;
                 P_State.p_Move_state = PlayerMoveState.player_noWalk;
                 animator.SetBool("IsWalk", false);
+                isMove = false;
             }
         }
+
+        if (isMove && P_State.p_Move_state == PlayerMoveState.player_walk)
+        {
+            if (!audioSrc.isPlaying)
+                audioSrc.Play();
+        }
+        else if (!isMove && P_State.p_Move_state != PlayerMoveState.player_walk)
+            audioSrc.Stop();
 
     }
 
     private void P_Move_Walk()
     {
+
         if (P_State.p_state == PlayerState.player_die)
         {
             move_speed = 0.0f;
@@ -73,6 +89,8 @@ public class Player_Walk : MonoBehaviour
 
         if (P_State.p_Move_state != PlayerMoveState.player_noWalk && P_State.p_Defece_state == PlayerDefenceState.player_noShield)
         {
+            isMove = true;
+
             move_speed = 4.5f;
             if (key == 1)
                 this.transform.localEulerAngles = new Vector3(0, 0, 0);

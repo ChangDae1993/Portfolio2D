@@ -35,8 +35,6 @@ public class Player_Attack : MonoBehaviour
         Player_State.p_Attack_state = PlayerAttackState.player_noAttack;
         attackDamage = 20;
 
-
-
         attackCool = 0.6f;
     }
 
