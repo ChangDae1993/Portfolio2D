@@ -17,6 +17,8 @@ public class Player_Attack : MonoBehaviour
 
     public int attackDamage;
 
+    private float attackCool;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -29,19 +31,29 @@ public class Player_Attack : MonoBehaviour
         Player_State.p_state = PlayerState.player_attack;
         Player_State.p_Attack_state = PlayerAttackState.player_noAttack;
         attackDamage = 20;
+
+
+        attackCool = 0.6f;
     }
 
     private void Update() => UpdateFunc();
 
     private void UpdateFunc()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            if (Player_State.p_Attack_state == PlayerAttackState.player_hook_aim)
-                return;
+        attackCool -= Time.deltaTime;
 
-            Player_State.p_state = PlayerState.player_attack;
-            Player_State.p_Attack_state = PlayerAttackState.player_Sword;
+        if(attackCool < 0.0f)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                if (Player_State.p_Attack_state == PlayerAttackState.player_hook_aim)
+                    return;
+
+                Player_State.p_state = PlayerState.player_attack;
+                Player_State.p_Attack_state = PlayerAttackState.player_Sword;
+                animator.SetTrigger("Sword_Attack_start");
+                attackCool = 0.6f;
+            }
         }
     }
 

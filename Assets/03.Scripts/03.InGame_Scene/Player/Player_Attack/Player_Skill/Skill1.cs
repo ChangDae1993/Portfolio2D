@@ -36,7 +36,7 @@ public class Skill1 : MonoBehaviour
         {
             skill_Obj.gameObject.SetActive(true);
             sk1_coolImg.fillAmount -= Time.deltaTime * 0.5f;
-            pDam.curHp += 0.05f;
+            pDam.curHp += 0.01f;
 
             if (sk1_coolImg.fillAmount <= 0.0f)
             {

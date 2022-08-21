@@ -43,11 +43,6 @@ public class Player_Input : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            animator.SetTrigger("Sword_Attack_start");
-        }
-
         if(Input.GetMouseButton(1))
         {
             animator.SetBool("ShieldOn", true);
