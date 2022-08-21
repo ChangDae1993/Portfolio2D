@@ -176,9 +176,19 @@ public class BowS_Controller : Enemy
         if (retreatTimer >= 0.0f)
         {
             retreatTimer -= Time.deltaTime;
-            Vector2 targetPos = new Vector2(player.transform.position.x + 8.0f, player.transform.position.y);
-            //추적 하기
-            this.transform.position = Vector3.Lerp(this.transform.position, targetPos, Time.deltaTime * 0.65f);
+            if(player.transform.rotation.y < 0.0f)
+            {
+                Vector2 targetPos = new Vector2(player.transform.position.x - 8.0f, player.transform.position.y);
+                //추적 하기
+                this.transform.position = Vector3.Lerp(this.transform.position, targetPos, Time.deltaTime * 0.65f);
+            }
+            else
+            {
+                Vector2 targetPos = new Vector2(player.transform.position.x + 8.0f, player.transform.position.y);
+                //추적 하기
+                this.transform.position = Vector3.Lerp(this.transform.position, targetPos, Time.deltaTime * 0.65f);
+            }
+
             if (playervec.x < 0.0f)
                 this.transform.localEulerAngles = new Vector3(0, 180, 0);
             else
