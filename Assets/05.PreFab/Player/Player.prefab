@@ -375,7 +375,7 @@ MonoBehaviour:
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 0
-  m_FillClockwise: 1
+  m_FillClockwise: 0
   m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
@@ -1380,6 +1380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec59a6cd382f3634fa6e379a4c025c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sk1_coolImg: {fileID: 5753593797686174526}
 --- !u!114 &1908698684960083609
 MonoBehaviour:
   m_ObjectHideFlags: 0
