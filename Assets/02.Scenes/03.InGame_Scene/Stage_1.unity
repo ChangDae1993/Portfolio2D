@@ -5624,6 +5624,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1475555241134953132, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220911987692030062, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553547526816659019, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4553547526816659019, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794220218681620661, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: SizeModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794220218681620661, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794220218681620661, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794220218681620661, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015065980269912113, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: InitialModule.rotation3D
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7601861507140072474, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
       propertyPath: m_IsActive
       value: 0

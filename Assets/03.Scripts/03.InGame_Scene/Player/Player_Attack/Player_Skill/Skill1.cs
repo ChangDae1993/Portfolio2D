@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Skill1 : MonoBehaviour
 {
     public Image sk1_coolImg;
+    public GameObject skill_Obj;
     bool isHill;
     Animator anim;
 
@@ -18,6 +19,7 @@ public class Skill1 : MonoBehaviour
         isHill = false;
         pDam = GetComponent<Player_TakeDamage>();
         anim = GetComponent<Animator>();
+        skill_Obj.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class Skill1 : MonoBehaviour
 
         if (isHill)
         {
+            skill_Obj.gameObject.SetActive(true);
             sk1_coolImg.fillAmount -= Time.deltaTime * 0.5f;
             pDam.curHp += 0.05f;
 
@@ -49,6 +52,7 @@ public class Skill1 : MonoBehaviour
         }
         else
         {
+            skill_Obj.gameObject.SetActive(false);
             sk1_coolImg.gameObject.SetActive(false);
         }
 
