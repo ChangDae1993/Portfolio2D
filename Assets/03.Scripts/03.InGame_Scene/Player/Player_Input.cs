@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Input : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class Player_Input : MonoBehaviour
     public float vertical { get; private set; }
 
     Animator animator;
+
+    private bool configOn;
+    public Image Config_Panel;
+    public Button exitBtn;
 
 
     // 이런식으로 변수 추가해서 Input class 만들기
@@ -35,6 +40,10 @@ public class Player_Input : MonoBehaviour
     {
         Player_State = GetComponent<Player_State_Ctrlr>();
         animator = GetComponent<Animator>();
+        configOn = false;
+
+        if (exitBtn != null)
+            exitBtn.onClick.AddListener(exitFunc);
     }
 
     // Update is called once per frame
@@ -52,5 +61,26 @@ public class Player_Input : MonoBehaviour
         {
             animator.SetBool("ShieldOn", false);
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!configOn)
+            {
+                Config_Panel.gameObject.SetActive(true);
+                configOn = true;
+                Time.timeScale = 0.0f;
+            }
+            else
+            {
+                Config_Panel.gameObject.SetActive(false);
+                configOn = false;
+                Time.timeScale = 1.0f;
+            }
+        }
+    }
+
+    public void exitFunc()
+    {
+        Application.Quit();
     }
 }
