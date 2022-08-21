@@ -38,6 +38,11 @@ public class Lobby_Mgr : MonoBehaviour
     public Text hook_tuto;
     public bool checkTUto6;
 
+    public Text skill1_tuto;
+    public bool checkskill1;
+
+    public Text skill2_tuto;
+    public bool checkskill2;
 
 
 
@@ -67,6 +72,8 @@ public class Lobby_Mgr : MonoBehaviour
         checkTUto4 = false;
         checkTUto5 = false;
         checkTUto6 = false;
+        checkskill1 = false;
+        checkskill2 = false;
 
     }
 
@@ -120,7 +127,20 @@ public class Lobby_Mgr : MonoBehaviour
             checkTUto6 = true;
         }
 
-        if(checkTUto1 == true && checkTUto2 == true && checkTUto3 == true && checkTUto4 == true && checkTUto5 == true && checkTUto6 == true)
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            skill1_tuto.gameObject.SetActive(false);
+            checkskill1 = true;
+        }
+
+        if(Input.GetKeyUp(KeyCode.W))
+        {
+            skill2_tuto.gameObject.SetActive(false);
+            checkskill2 = true;
+        }
+
+
+        if (checkTUto1 && checkTUto2 && checkTUto3 && checkTUto4 && checkTUto5 && checkTUto6 && checkskill1 && checkskill2)
         {
             tutoBG.gameObject.SetActive(false);
             startBtn.gameObject.SetActive(true);
