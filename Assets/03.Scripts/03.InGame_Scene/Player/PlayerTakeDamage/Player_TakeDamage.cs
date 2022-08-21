@@ -8,6 +8,7 @@ public class Player_TakeDamage : MonoBehaviour
     private Player_State_Ctrlr P_State;
     private Animator animator;
     private Player_Input P_Input;
+    private Player_Block P_Block;
 
     public Image Hp_Img;
     public Image Mp_Img;
@@ -16,12 +17,15 @@ public class Player_TakeDamage : MonoBehaviour
     public float curHp;
 
     private float slowTimer;
+
+
     // Start is called before the first frame update
     void Start()
     {
         P_State = GetComponent<Player_State_Ctrlr>();
         animator = GetComponent<Animator>();
         P_Input =GetComponent<Player_Input>();
+        P_Block = GetComponent<Player_Block>();
         P_State.p_state = PlayerState.player_takeDamage;
         maxHp = 100.0f;
         curHp = maxHp;
@@ -61,6 +65,8 @@ public class Player_TakeDamage : MonoBehaviour
             P_State.p_Defece_state = PlayerDefenceState.player_ShieldActive;
             animator.SetTrigger("ShieldActive");
             P_State.p_Defece_state = PlayerDefenceState.player_onShield;
+
+            P_Block.shield_Dur.fillAmount -= 0.1f;
 
             int block = Random.Range(0, 3);
 

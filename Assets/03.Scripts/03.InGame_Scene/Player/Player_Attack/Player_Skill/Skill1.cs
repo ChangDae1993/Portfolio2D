@@ -27,6 +27,7 @@ public class Skill1 : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Q) && isHill == false)
         {
+            SoundMgr.Instance.PlayEffSound("Skill1", 1.0f);
             sk1_coolImg.gameObject.SetActive(true);
             sk1_coolImg.fillAmount = 1.0f;
             isHill=true;
@@ -36,7 +37,7 @@ public class Skill1 : MonoBehaviour
         {
             skill_Obj.gameObject.SetActive(true);
             sk1_coolImg.fillAmount -= Time.deltaTime * 0.5f;
-            pDam.curHp += 0.01f;
+            pDam.curHp += 0.05f;
 
             if (sk1_coolImg.fillAmount <= 0.0f)
             {
