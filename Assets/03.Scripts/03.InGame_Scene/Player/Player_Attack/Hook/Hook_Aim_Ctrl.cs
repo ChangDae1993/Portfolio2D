@@ -13,8 +13,6 @@ public class Hook_Aim_Ctrl : MonoBehaviour
     private Vector2 mouse_Pos;
     public bool aim_shoot;
 
-    public Camera cam;
-
     //hook º¯¼ö
     [HideInInspector] public Vector3 hook_Target_Pos;
     [HideInInspector] public Transform start_Pos;
@@ -37,7 +35,6 @@ public class Hook_Aim_Ctrl : MonoBehaviour
         isTouch = false;
         isCool = false;
         coolImg.gameObject.SetActive(false);
-        cam = Camera.main;
     }
 
     private void Update() => UpdateFunc();
@@ -53,7 +50,7 @@ public class Hook_Aim_Ctrl : MonoBehaviour
             P_State.p_Attack_state = PlayerAttackState.player_hook_aim;
             mouse_Pos = Input.mousePosition;
             aim_Img.gameObject.SetActive(true);
-            aim_Img.transform.position = cam.ScreenToWorldPoint(mouse_Pos);
+            aim_Img.transform.position = Camera.main.ScreenToWorldPoint(mouse_Pos);
             aim_Img.transform.position = new Vector3(aim_Img.transform.position.x, aim_Img.transform.position.y, 1.0f);
 
         }
