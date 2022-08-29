@@ -29,7 +29,7 @@ public class Player_TakeDamage : MonoBehaviour
         P_State.p_state = PlayerState.player_takeDamage;
         maxHp = 100.0f;
         curHp = maxHp;
-
+        this.gameObject.layer = 7;
         slowTimer = 2.0f;
     }
 
@@ -39,8 +39,6 @@ public class Player_TakeDamage : MonoBehaviour
         if (curHp <= 0.0f)
         {
             slowTimer -= Time.deltaTime;
-            this.gameObject.layer = 12;
-            P_Die();
             if (0.0f <= slowTimer)
             {
                 Time.timeScale = 0.5f;
@@ -48,11 +46,6 @@ public class Player_TakeDamage : MonoBehaviour
             else
                 Time.timeScale = 1.0f;
         }
-        //else
-        //{
-        //    this.gameObject.layer = 7;
-        //}
-
     }
 
     public void P_TakeDmage(float dam)
@@ -85,17 +78,32 @@ public class Player_TakeDamage : MonoBehaviour
         }
         else
         {
-            P_State.p_state = PlayerState.player_takeDamage;
-            curHp -= dam;
-            Hp_Img.fillAmount = curHp / maxHp;
-            SoundMgr.Instance.PlayEffSound("Player_Hit", 0.6f);
-            animator.SetTrigger("TakeDamage");
-            //Debug.Log(curHp);
+            if (P_State.p_Move_state == PlayerMoveState.player_roll)
+            {
+                return;
+            }
+
+            if (P_State.p_state != PlayerState.player_die)
+            {
+                P_State.p_state = PlayerState.player_takeDamage;
+                curHp -= dam;
+                Hp_Img.fillAmount = curHp / maxHp;
+                SoundMgr.Instance.PlayEffSound("Player_Hit", 0.6f);
+                animator.SetTrigger("TakeDamage");
+                //Debug.Log(curHp);
+            }
+            if (curHp <= 0.0f)
+            {
+                this.gameObject.layer = 12;
+                P_Die();
+            }
+
         }
     }
 
     public void P_Die()
     {
+        SoundMgr.Instance.PlayGUISound("Player_Die", 1.0f);
         P_State.p_state = PlayerState.player_die;
         animator.SetTrigger("Death");
         P_Input.enabled = false;
