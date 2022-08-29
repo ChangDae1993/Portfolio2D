@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 21744359}
   - component: {fileID: 21744358}
   m_Layer: 5
-  m_Name: Stage2_FadeOut_Img
+  m_Name: Stage3_FadeOut_Img
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5680c1a9719b046e0bc08d861902f606, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38dfa8c3b7cb9c34e8728c80c179319a, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7869,10 +7869,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1283033877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56db4b0bbcf9aef47950edfa732602c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3bae7b34f50c23243b0071b692efe7bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeOut_Img: {fileID: 21744359}
+  FadeOut_Img: {fileID: 0}
 --- !u!1 &1358187970
 GameObject:
   m_ObjectHideFlags: 0
