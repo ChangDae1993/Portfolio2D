@@ -9,6 +9,10 @@ public class Stage3_Boss_Ctrl : Enemy
 
     Vector2 targetPos = Vector2.zero;
 
+    private float skillPer;
+    private int skill;
+    [SerializeField] private bool isRevive;
+
     private void Awake()
     {
         InitData();
@@ -18,7 +22,9 @@ public class Stage3_Boss_Ctrl : Enemy
 
     private void StartFunc()
     {
-
+        skillPer = 40f;
+        skill = Random.Range(1, 101);
+        isRevive = false;
     }
 
     private void Update() => UpdateFunc();
@@ -176,11 +182,43 @@ public class Stage3_Boss_Ctrl : Enemy
 
     protected override void M_Attack()
     {
-        if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
-            animator.Play("Pd_Stage3Boss_Idle");
+        //Debug.Log(skill);
+        if (CurHp <= 600)
+        {
+            if (skill < skillPer)
+            {
+                if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                    animator.Play("Pd_Stage3Boss_Idle");
 
-        E_State.e_State = EnemyState.enemy_Attack;
-        animator.SetBool("IsAttack", true);
+                Debug.Log("skill");
+                E_State.e_State = EnemyState.enemy_Skill;
+                animator.SetBool("IsSkill", true);
+            }
+            else
+            {
+                Debug.Log("attack");
+                if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                    animator.Play("Pd_Stage3Boss_Idle");
+
+                E_State.e_State = EnemyState.enemy_Attack;
+                animator.SetBool("IsAttack", true);
+            }
+        }
+        else
+        {
+            if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                animator.Play("Pd_Stage3Boss_Idle");
+
+            E_State.e_State = EnemyState.enemy_Attack;
+            animator.SetBool("IsAttack", true);
+        }
+    }
+
+    private void M_SkillFunc()
+    {
+
+        skill = Random.Range(1, 101);
+        animator.SetBool("IsSkill", false);
     }
 
     protected override void M_AttackFunc()
@@ -188,7 +226,7 @@ public class Stage3_Boss_Ctrl : Enemy
         //플레이어의 TakeDamage를 가져와서
         //Animation 상에 Add Event에다가 구현 한다.
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attack_Point.position, e_att_Range, playerLayer);
-
+        skill = Random.Range(1, 101);
         foreach (Collider2D collider in hitPlayer)
         {
             P_TakeDam.P_TakeDmage(3.0f);
@@ -204,6 +242,9 @@ public class Stage3_Boss_Ctrl : Enemy
 
     public override void M_Hit(float dmg)
     {
+        if (E_State.e_State == EnemyState.enemy_Skill)
+            return;
+
         E_State.e_State = EnemyState.enemy_Hit;
         //hp값 깎기
         CurHp -= dmg;
@@ -220,7 +261,7 @@ public class Stage3_Boss_Ctrl : Enemy
     protected override void M_Death()
     {
         E_State.e_State = EnemyState.enemy_Death;
-        animator.SetTrigger("DieTrigger");
+        animator.SetTrigger("Boss_DieTrigger");
         this.gameObject.layer = 11;
     }
     protected override void M_Resurrection()

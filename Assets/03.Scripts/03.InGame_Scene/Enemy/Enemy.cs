@@ -18,7 +18,7 @@ public abstract class Enemy : MonoBehaviour
 
     //체력
     protected float MaxHp;
-    protected float CurHp;
+    [SerializeField] protected float CurHp;
     //체력 이미지는 각자 붙어있는 Canvas에서 public으로 연결 해두기
 
     //사망 시 사라질 타이머
