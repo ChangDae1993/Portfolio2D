@@ -3,37 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Goblin_Controller : Enemy
+public class Stage3_Boss_Ctrl : Enemy
 {
-    public Image Hp_Img;
+    //public Image Hp_Img;
 
     private void Awake()
     {
         InitData();
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start() => StartFunc();
+
+    private void StartFunc()
     {
-        E_State.e_State = EnemyState.enemy_Idle;
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update() => UpdateFunc();
+
+    private void UpdateFunc()
     {
-        chaseDist = Vector2.Distance(this.transform.position, player.transform.position);
-        M_ChaseDist();
         M_Patrol();
-        //Debug.Log(patrol_Time);
-
-        if (E_State.e_State == EnemyState.enemy_Death)
-        {
-            disTime -= Time.deltaTime;
-
-            if (disTime <= 0.0f)
-                Destroy(this.gameObject);
-        }
-
     }
 
     protected override void InitData()
@@ -44,20 +34,19 @@ public class Goblin_Controller : Enemy
         animator = GetComponent<Animator>();
         patrol_Time = Random.Range(1.0f, 3.0f);
 
-        MaxHp = 100;
+        MaxHp = 1000;
         CurHp = MaxHp;
-        e_move_Speed = 2.0f;
-        e_Att = 4.0f;           //(임시)
-        e_Att_Range = 1.3f;
-        e_att_Range = 0.1f;
+        e_move_Speed = 1.0f;
+        e_Att = 8.0f;           //(임시)
+        e_Att_Range = 2.0f;
+        e_att_Range = 0.5f;
         right = Random.Range(0, 2);
 
         chaseDist = 0.0f;
         isChase = false;
 
-        disTime = 2.0f;
+        disTime = 3.0f;
     }
-
 
     protected override void M_Patrol()
     {
@@ -70,7 +59,7 @@ public class Goblin_Controller : Enemy
             if (patrol_Time <= 0.0f)
             {
                 E_State.e_State = EnemyState.enemy_Patrol;
-                patrol_Time = Random.Range(1.0f, 3.0f);
+                patrol_Time = Random.Range(2.0f, 4.0f);
                 right = Random.Range(0, 2);
             }
         }
@@ -110,14 +99,13 @@ public class Goblin_Controller : Enemy
         }
     }
 
-    //플레이어와 거리 체크하는 함수
-    protected override void M_ChaseDist()
+    protected override void M_Chase()
     {
         if (E_State.e_State == EnemyState.enemy_Death)
             return;
 
         //Debug.Log(chaseDist);
-        if (chaseDist <= 7.0f)
+        if (chaseDist <= 8.0f)
         {
             E_State.e_State = EnemyState.enemy_Chase;
 
@@ -141,7 +129,7 @@ public class Goblin_Controller : Enemy
             M_Chase();
             isChase = true;
         }
-        else if(7.0f < chaseDist && isChase == true)
+        else if (7.0f < chaseDist && isChase == true)
         {
             isChase = false;
             E_State.e_State = EnemyState.enemy_Idle;
@@ -149,93 +137,40 @@ public class Goblin_Controller : Enemy
         }
     }
 
-    protected override void M_Chase()
+    protected override void M_ChaseDist()
     {
-        if (E_State.e_State == EnemyState.enemy_Death)
-            return;
-
-        //은범이가 알려준 아이디어
-        Vector2 playervec = player.transform.position - this.transform.position;
-        //Debug.Log(playervec.x);
-        if (playervec.x < 0)
-        {
-            this.transform.localEulerAngles = new Vector3(0, 0, 0);
-        }
-        else
-        {
-            this.transform.localEulerAngles = new Vector3(0, 180, 0);
-        }
-        //은범이가 알려준 아이디어
-
-        //추적 하기
-        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, Time.deltaTime * 0.55f);
+        throw new System.NotImplementedException();
     }
+
 
     protected override void M_Attack()
     {
-        if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
-            animator.Play("Pd_Goblin_Idle");
-
-        E_State.e_State = EnemyState.enemy_Attack;
-        animator.SetBool("IsAttack", true);
-        //Debug.Log("Attack");
-        //Debug.Log(player.GetComponent<Player_State_Ctrlr>().p_state);
+        throw new System.NotImplementedException();
     }
 
     protected override void M_AttackFunc()
     {
-        //플레이어의 TakeDamage를 가져와서
-        //Animation 상에 Add Event에다가 구현 한다.
-        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attack_Point.position, e_att_Range, playerLayer);
-
-        foreach(Collider2D collider in hitPlayer)
-        {
-            P_TakeDam.P_TakeDmage(3.0f);
-        }
-    }
-
-    private void OnDrawGizmosSelected()
-    {
-        if (attack_Point == null)
-            return;
-
-        Gizmos.DrawWireSphere(attack_Point.position, e_att_Range);
+        throw new System.NotImplementedException();
     }
 
     public override void M_Hit(float dmg)
     {
-        E_State.e_State = EnemyState.enemy_Hit;
-        //hp값 깎기
-        CurHp -= dmg;
-        Hp_Img.fillAmount = CurHp / MaxHp;
-        //Debug.Log(CurHp);
-        animator.SetTrigger("E_TakeDamage");
-
-        if (CurHp <= 0.0f)
-        {
-            M_Death();
-        }
-
-    }
-    protected override void M_Retreat()
-    {
-        if (CurHp < 20.0f)
-        {
-            
-        }
         throw new System.NotImplementedException();
-    }
-
-    protected override void M_Death()
-    {
-        E_State.e_State = EnemyState.enemy_Death;
-        animator.SetTrigger("DieTrigger");
-        this.gameObject.layer = 11;
     }
 
     protected override void M_Resurrection()
     {
         throw new System.NotImplementedException();
+    }
+
+    protected override void M_Death()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    protected override void M_Retreat()
+    {
+        Debug.Log("구현 안함");
     }
 
 }
