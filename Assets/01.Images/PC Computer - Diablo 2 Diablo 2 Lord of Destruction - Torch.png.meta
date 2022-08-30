@@ -1,0 +1,2112 @@
+fileFormatVersion: 2
+guid: e0366b21d9171bf4886d21c7070ad478
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2925722548661154149
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_1
+  - first:
+      213: -5812334269491534163
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_3
+  - first:
+      213: -1178394027452789100
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_7
+  - first:
+      213: 5153625161342169133
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_8
+  - first:
+      213: 7391028753737123471
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_9
+  - first:
+      213: -4341643705372137026
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_10
+  - first:
+      213: -1150126141758668389
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_11
+  - first:
+      213: -7462801420845938486
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_12
+  - first:
+      213: -3349047321796994546
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_13
+  - first:
+      213: 8295640639274052062
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_14
+  - first:
+      213: -3561424165427050363
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_15
+  - first:
+      213: 8529890009771727222
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_16
+  - first:
+      213: -1807749974711264488
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_17
+  - first:
+      213: 7083918313826068500
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_18
+  - first:
+      213: -1270158807444140869
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_19
+  - first:
+      213: -5329042960743424932
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_20
+  - first:
+      213: -3046984288525159635
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_21
+  - first:
+      213: 557586545092753146
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_22
+  - first:
+      213: -8263281267159497943
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_23
+  - first:
+      213: -7534332202738010610
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_24
+  - first:
+      213: 6242752209391165373
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_25
+  - first:
+      213: -4240864239526717835
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_26
+  - first:
+      213: 1427175680291001220
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_29
+  - first:
+      213: 7153109988867722477
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_30
+  - first:
+      213: -6195679278415348025
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_31
+  - first:
+      213: -1798952758193031808
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_32
+  - first:
+      213: 2363635465742128856
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_33
+  - first:
+      213: -607291493044208253
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_34
+  - first:
+      213: -2829245126729780443
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_35
+  - first:
+      213: 8183464777304916280
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_36
+  - first:
+      213: 3949983617496406638
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_37
+  - first:
+      213: -212115149482621349
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_38
+  - first:
+      213: 7640990329865189436
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_39
+  - first:
+      213: 7357539533247808876
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_40
+  - first:
+      213: -6264785882519071987
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_41
+  - first:
+      213: 8276794665086392655
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_42
+  - first:
+      213: 4238557629411429529
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_43
+  - first:
+      213: -2155602397093064107
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_44
+  - first:
+      213: -2633138667105740808
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_45
+  - first:
+      213: 6796140254890488288
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_46
+  - first:
+      213: -1286957045782069865
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_47
+  - first:
+      213: -8796650932279638181
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_48
+  - first:
+      213: -5220425364603869245
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_49
+  - first:
+      213: -3411114109835217425
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_50
+  - first:
+      213: 8285510676557607069
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_51
+  - first:
+      213: -7116032055326533449
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_52
+  - first:
+      213: 3486166737126290292
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_53
+  - first:
+      213: 7841136093142271681
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_54
+  - first:
+      213: 4186153509603397811
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_55
+  - first:
+      213: -808387159857491801
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_56
+  - first:
+      213: -2837522324929200397
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_57
+  - first:
+      213: 3337225563037893349
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_58
+  - first:
+      213: -1577285552627697955
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_59
+  - first:
+      213: -5530133096292992230
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_60
+  - first:
+      213: 5974555508777316440
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_61
+  - first:
+      213: 970801255960622435
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_62
+  - first:
+      213: -7453100533183908985
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_63
+  - first:
+      213: 3373521029148949322
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_64
+  - first:
+      213: 1292019995220120026
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_65
+  - first:
+      213: -1411310414446359138
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_66
+  - first:
+      213: -854578455746793159
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_67
+  - first:
+      213: -8861488951624316015
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_68
+  - first:
+      213: 538364917086762379
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_69
+  - first:
+      213: -679306997116098782
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_70
+  - first:
+      213: 9035240702381606800
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_71
+  - first:
+      213: -9084512436769260452
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_72
+  - first:
+      213: 5886156216431960715
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_73
+  - first:
+      213: -1373475115240343744
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_74
+  - first:
+      213: -8395991476028027496
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_75
+  - first:
+      213: -5446083962817110640
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_76
+  - first:
+      213: 5803134866297024594
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_77
+  - first:
+      213: -5072498380672442987
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_78
+  - first:
+      213: -5800834463983238457
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_79
+  - first:
+      213: -7319186250168360660
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_80
+  - first:
+      213: 3368704357906513935
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_81
+  - first:
+      213: -986418954642212069
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_82
+  - first:
+      213: -6608698047687684519
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_83
+  - first:
+      213: 3934834437074168520
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_84
+  - first:
+      213: -4289555413127871627
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_85
+  - first:
+      213: 7934876711192356317
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_86
+  - first:
+      213: 6342253723494618036
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_87
+  - first:
+      213: -4302819267379488255
+    second: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_88
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 287
+        width: 13
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e83b7d7deb567d0800000000000000
+      internalID: -2925722548661154149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 287
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6a027e6c0765fa0800000000000000
+      internalID: -5812334269491534163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 192
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e0c3c10e085afe0800000000000000
+      internalID: -1178394027452789100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 192
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20b05777ca558740800000000000000
+      internalID: 5153625161342169133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_9
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 192
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f86033ffd75329660800000000000000
+      internalID: 7391028753737123471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_10
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 192
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9abff8d026fb3c0800000000000000
+      internalID: -4341643705372137026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_11
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 192
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9185912e5ee900f0800000000000000
+      internalID: -1150126141758668389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_12
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 192
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac88239b5adce6890800000000000000
+      internalID: -7462801420845938486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_13
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 192
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a1150743bc581d0800000000000000
+      internalID: -3349047321796994546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_14
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 192
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed969309539002370800000000000000
+      internalID: 8295640639274052062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_15
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 192
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5888a3d3797439ec0800000000000000
+      internalID: -3561424165427050363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_16
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 192
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679d89545c1406670800000000000000
+      internalID: 8529890009771727222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 150
+        width: 33
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b1d92d9f499e6e0800000000000000
+      internalID: -1807749974711264488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_18
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 154
+        width: 26
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418ac799c222f4260800000000000000
+      internalID: 7083918313826068500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_19
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 156
+        width: 23
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbc45f15b4d7f5ee0800000000000000
+      internalID: -1270158807444140869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_20
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 158
+        width: 17
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c971469af6b06b0800000000000000
+      internalID: -5329042960743424932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_21
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 158
+        width: 19
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23f246eeefe6b5d0800000000000000
+      internalID: -3046984288525159635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_22
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 156
+        width: 17
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af67acf2202fcb700800000000000000
+      internalID: 557586545092753146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_23
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 156
+        width: 17
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92381dfd77de25d80800000000000000
+      internalID: -8263281267159497943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_24
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 154
+        width: 19
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06b30cb7cca07790800000000000000
+      internalID: -7534332202738010610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_25
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 153
+        width: 19
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf9b851f06b2a650800000000000000
+      internalID: 6242752209391165373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_26
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 149
+        width: 21
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5765a56717c6525c0800000000000000
+      internalID: -4240864239526717835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_29
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48352df38b85ec310800000000000000
+      internalID: 1427175680291001220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_30
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec42c5d2a3f44360800000000000000
+      internalID: 7153109988867722477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_31
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cefdcbb586840aa0800000000000000
+      internalID: -6195679278415348025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_32
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 085f1386ff5d807e0800000000000000
+      internalID: -1798952758193031808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_33
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6131adee15dc020800000000000000
+      internalID: 2363635465742128856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_34
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38dbbf9ca977297f0800000000000000
+      internalID: -607291493044208253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_35
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52334c61c808cb8d0800000000000000
+      internalID: -2829245126729780443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_36
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8314e2b6bd1819170800000000000000
+      internalID: 8183464777304916280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_37
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a5c751c2921d630800000000000000
+      internalID: 3949983617496406638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_38
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b560c97356a6e0df0800000000000000
+      internalID: -212115149482621349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_39
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c383fc7a8304a0a60800000000000000
+      internalID: 7640990329865189436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_40
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65012c393b3b1660800000000000000
+      internalID: 7357539533247808876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_41
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03919e9e620f09a0800000000000000
+      internalID: -6264785882519071987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_42
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49925345e41dd270800000000000000
+      internalID: 8276794665086392655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_43
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c071505b162da30800000000000000
+      internalID: 4238557629411429529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_44
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552994c6a03c512e0800000000000000
+      internalID: -2155602397093064107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_45
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f711de4556357bd0800000000000000
+      internalID: -2633138667105740808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_46
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1fa78ed8db05e50800000000000000
+      internalID: 6796140254890488288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_47
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d39fca26fc32ee0800000000000000
+      internalID: -1286957045782069865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_48
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b570d5075940ce580800000000000000
+      internalID: -8796650932279638181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_49
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7e8563ac25d87b0800000000000000
+      internalID: -5220425364603869245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_50
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5f2fa3ac949a0d0800000000000000
+      internalID: -3411114109835217425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_51
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d903ce2df0c0cf270800000000000000
+      internalID: 8285510676557607069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_52
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b818fb4c86ce3d90800000000000000
+      internalID: -7116032055326533449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_53
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473f13a4d2a516030800000000000000
+      internalID: 3486166737126290292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_54
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c64d3b8bbf41dc60800000000000000
+      internalID: 7841136093142271681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_55
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b05a231074381a30800000000000000
+      internalID: 4186153509603397811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_56
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a015bf392808c4f0800000000000000
+      internalID: -808387159857491801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_57
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3feba54ba781f98d0800000000000000
+      internalID: -2837522324929200397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_58
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 54
+        width: 9
+        height: 78
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e20a3cd7f4305e20800000000000000
+      internalID: 3337225563037893349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_59
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1
+        width: 18
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6354e852b5c1ae0800000000000000
+      internalID: -1577285552627697955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_60
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1
+        width: 17
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b33d2bf350143b0800000000000000
+      internalID: -5530133096292992230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_61
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1
+        width: 15
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8507687a492e9e250800000000000000
+      internalID: 5974555508777316440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_62
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 1
+        width: 16
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3653909499af87d00800000000000000
+      internalID: 970801255960622435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_63
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1
+        width: 15
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7837c44ad84419890800000000000000
+      internalID: -7453100533183908985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_64
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1
+        width: 15
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bbbb8908721de20800000000000000
+      internalID: 3373521029148949322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_65
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1
+        width: 15
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad11cc9175d2ee110800000000000000
+      internalID: 1292019995220120026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_66
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1
+        width: 17
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d8d1fc7a40a6ce0800000000000000
+      internalID: -1411310414446359138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_67
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1
+        width: 17
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931b2881c6de324f0800000000000000
+      internalID: -854578455746793159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_68
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1
+        width: 18
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b4269afbaa50580800000000000000
+      internalID: -8861488951624316015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_69
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1
+        width: 19
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b853d7a2a08a87700800000000000000
+      internalID: 538364917086762379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_70
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1
+        width: 19
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227257f92ed9296f0800000000000000
+      internalID: -679306997116098782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_71
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1
+        width: 18
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0974b9d4c8f936d70800000000000000
+      internalID: 9035240702381606800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_72
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1
+        width: 18
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5cffb012145de180800000000000000
+      internalID: -9084512436769260452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_73
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 1
+        width: 19
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8262e484e3dfa150800000000000000
+      internalID: 5886156216431960715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_74
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1
+        width: 19
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 047b240e8af60fce0800000000000000
+      internalID: -1373475115240343744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_75
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1
+        width: 18
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d44268c327b7b80800000000000000
+      internalID: -8395991476028027496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_76
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1
+        width: 19
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d955b8d7f9b64b0800000000000000
+      internalID: -5446083962817110640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_77
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1
+        width: 19
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25071512a60e88050800000000000000
+      internalID: 5803134866297024594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_78
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1
+        width: 19
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d5648199dda99b0800000000000000
+      internalID: -5072498380672442987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_79
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1
+        width: 20
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c28f650acb4f7fa0800000000000000
+      internalID: -5800834463983238457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_80
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1
+        width: 20
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21aac952e60d6a90800000000000000
+      internalID: -7319186250168360660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_81
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 1
+        width: 20
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00045ee3ca00ce20800000000000000
+      internalID: 3368704357906513935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_82
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 1
+        width: 18
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1bb6d0ef298f42f0800000000000000
+      internalID: -986418954642212069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_83
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1
+        width: 18
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e02c7d3203944a0800000000000000
+      internalID: -6608698047687684519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_84
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1
+        width: 16
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8caa7c7a2175b9630800000000000000
+      internalID: 3934834437074168520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_85
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1
+        width: 15
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573c82c24107874c0800000000000000
+      internalID: -4289555413127871627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_86
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1
+        width: 15
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5e32bf3585e1e60800000000000000
+      internalID: 7934876711192356317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_87
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1
+        width: 16
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b39b48a826340850800000000000000
+      internalID: 6342253723494618036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_88
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1
+        width: 14
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a93237ca05944c0800000000000000
+      internalID: -4302819267379488255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

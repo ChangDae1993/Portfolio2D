@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Stage3_Boss_Ctrl : Enemy
 {
-    //public Image Hp_Img;
+    public Image Hp_Img;
+
+    Vector2 targetPos = Vector2.zero;
 
     private void Awake()
     {
@@ -24,6 +26,7 @@ public class Stage3_Boss_Ctrl : Enemy
     private void UpdateFunc()
     {
         chaseDist = Vector2.Distance(this.transform.position, player.transform.position);
+        targetPos = new Vector2(player.transform.position.x + 3.0f, player.transform.position.y);
         M_ChaseDist();
         M_Patrol();
         //Debug.Log(patrol_Time);
@@ -48,9 +51,9 @@ public class Stage3_Boss_Ctrl : Enemy
         MaxHp = 1000;
         CurHp = MaxHp;
         e_move_Speed = 1.0f;
-        e_Att = 8.0f;           //(임시)
-        e_Att_Range = 2.0f;
-        e_att_Range = 0.5f;
+        e_Att = 15.0f;           //(임시)
+        e_Att_Range = 20.0f;
+        //e_att_Range = 0.5f;
         right = Random.Range(0, 2);
 
         chaseDist = 0.0f;
@@ -129,7 +132,7 @@ public class Stage3_Boss_Ctrl : Enemy
         //은범이가 알려준 아이디어
 
         //추적 하기
-        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, Time.deltaTime * 0.55f);
+        this.transform.position = Vector3.Lerp(this.transform.position, targetPos, Time.deltaTime * 0.55f);
     }
 
     protected override void M_ChaseDist()
@@ -173,25 +176,54 @@ public class Stage3_Boss_Ctrl : Enemy
 
     protected override void M_Attack()
     {
-        throw new System.NotImplementedException();
+        if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+            animator.Play("Pd_Stage3Boss_Idle");
+
+        E_State.e_State = EnemyState.enemy_Attack;
+        animator.SetBool("IsAttack", true);
     }
 
     protected override void M_AttackFunc()
     {
-        throw new System.NotImplementedException();
+        //플레이어의 TakeDamage를 가져와서
+        //Animation 상에 Add Event에다가 구현 한다.
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attack_Point.position, e_att_Range, playerLayer);
+
+        foreach (Collider2D collider in hitPlayer)
+        {
+            P_TakeDam.P_TakeDmage(3.0f);
+        }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        if (attack_Point == null)
+            return;
+
+        Gizmos.DrawWireSphere(attack_Point.position, e_att_Range);
     }
 
     public override void M_Hit(float dmg)
     {
-        throw new System.NotImplementedException();
-    }
+        E_State.e_State = EnemyState.enemy_Hit;
+        //hp값 깎기
+        CurHp -= dmg;
+        Hp_Img.fillAmount = CurHp / MaxHp;
+        //Debug.Log(CurHp);
+        animator.SetTrigger("B_TakeDamage");
 
-    protected override void M_Resurrection()
-    {
-        throw new System.NotImplementedException();
+        if (CurHp <= 0.0f)
+        {
+            M_Death();
+        }
     }
 
     protected override void M_Death()
+    {
+        E_State.e_State = EnemyState.enemy_Death;
+        animator.SetTrigger("DieTrigger");
+        this.gameObject.layer = 11;
+    }
+    protected override void M_Resurrection()
     {
         throw new System.NotImplementedException();
     }
