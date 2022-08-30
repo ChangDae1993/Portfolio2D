@@ -23,7 +23,18 @@ public class Stage3_Boss_Ctrl : Enemy
 
     private void UpdateFunc()
     {
+        chaseDist = Vector2.Distance(this.transform.position, player.transform.position);
+        M_ChaseDist();
         M_Patrol();
+        //Debug.Log(patrol_Time);
+
+        if (E_State.e_State == EnemyState.enemy_Death)
+        {
+            disTime -= Time.deltaTime;
+
+            if (disTime <= 0.0f)
+                Destroy(this.gameObject);
+        }
     }
 
     protected override void InitData()
@@ -104,6 +115,28 @@ public class Stage3_Boss_Ctrl : Enemy
         if (E_State.e_State == EnemyState.enemy_Death)
             return;
 
+        //은범이가 알려준 아이디어
+        Vector2 playervec = player.transform.position - this.transform.position;
+        //Debug.Log(playervec.x);
+        if (playervec.x < 0)
+        {
+            this.transform.localEulerAngles = new Vector3(0, 0, 0);
+        }
+        else
+        {
+            this.transform.localEulerAngles = new Vector3(0, 180, 0);
+        }
+        //은범이가 알려준 아이디어
+
+        //추적 하기
+        this.transform.position = Vector3.Lerp(this.transform.position, player.transform.position, Time.deltaTime * 0.55f);
+    }
+
+    protected override void M_ChaseDist()
+    {
+        if (E_State.e_State == EnemyState.enemy_Death)
+            return;
+
         //Debug.Log(chaseDist);
         if (chaseDist <= 8.0f)
         {
@@ -135,11 +168,6 @@ public class Stage3_Boss_Ctrl : Enemy
             E_State.e_State = EnemyState.enemy_Idle;
             animator.SetBool("IsChase", false);
         }
-    }
-
-    protected override void M_ChaseDist()
-    {
-        throw new System.NotImplementedException();
     }
 
 
