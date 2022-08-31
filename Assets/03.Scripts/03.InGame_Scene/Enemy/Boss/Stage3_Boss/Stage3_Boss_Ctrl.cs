@@ -189,8 +189,6 @@ public class Stage3_Boss_Ctrl : Enemy
             {
                 if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
                     animator.Play("Pd_Stage3Boss_Idle");
-
-                Debug.Log("skill");
                 E_State.e_State = EnemyState.enemy_Skill;
                 animator.SetBool("IsSkill", true);
             }
@@ -214,11 +212,14 @@ public class Stage3_Boss_Ctrl : Enemy
         }
     }
 
-    private void M_SkillFunc()
+    public void M_SkillFunc()
     {
+        Debug.Log("skill");
 
-        skill = Random.Range(1, 101);
+        GameObject skill1 = (GameObject)Instantiate(Resources.Load("Prefab/Stage3_Boss_Skill1")) as GameObject;
+        skill1.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.3f, player.transform.position.z);
         animator.SetBool("IsSkill", false);
+        skill = Random.Range(1, 101);
     }
 
     protected override void M_AttackFunc()
