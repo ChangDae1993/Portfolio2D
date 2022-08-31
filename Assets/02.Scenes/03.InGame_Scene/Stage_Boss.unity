@@ -1176,8 +1176,8 @@ MonoBehaviour:
   Hp_Img: {fileID: 1035791830}
   Hp_Txt: {fileID: 538937742}
   isRevive: 0
-  skillActiveHp: 0
-  resurTime: 5
+  skill1ActiveHp: 0
+  skill2ActiveHp: 0
 --- !u!114 &498385455
 MonoBehaviour:
   m_ObjectHideFlags: 0

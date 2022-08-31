@@ -10,11 +10,12 @@ public class Stage3_Boss_Ctrl : Enemy
 
     Vector2 targetPos = Vector2.zero;
 
-    private float skillPer;
+    private float skill1Per;
+    private float skill2Per;
     private int skill;
     [SerializeField] private bool isRevive;
-    [SerializeField] private int skillActiveHp; 
-    [SerializeField] float resurTime = 5.0f;
+    [SerializeField] private int skill1ActiveHp;
+    [SerializeField] private int skill2ActiveHp; 
 
     private void Awake()
     {
@@ -25,10 +26,12 @@ public class Stage3_Boss_Ctrl : Enemy
 
     private void StartFunc()
     {
-        skillPer = 40f;
+        skill1Per = 40f;
+        skill2Per = 5f;
         skill = Random.Range(1, 101);
         isRevive = false;
-        skillActiveHp = 350;
+        skill1ActiveHp = 350;
+        skill2ActiveHp = 600;
     }
 
     private void Update() => UpdateFunc();
@@ -193,20 +196,30 @@ public class Stage3_Boss_Ctrl : Enemy
 
         if (CurHp <= 0.0f)
             return;
-
-        //Debug.Log(skill);
-        if (CurHp <= skillActiveHp)
+        if(!isRevive)
         {
-            if (skill < skillPer)
+            //Debug.Log(skill);
+            if (CurHp <= skill1ActiveHp)
             {
-                if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
-                    animator.Play("Pd_Stage3Boss_Idle");
-                E_State.e_State = EnemyState.enemy_Skill;
-                animator.SetBool("IsSkill", true);
+                if (skill < skill1Per)
+                {
+                    if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                        animator.Play("Pd_Stage3Boss_Idle");
+                    E_State.e_State = EnemyState.enemy_Skill;
+                    animator.SetBool("IsSkill", true);
+                }
+                else
+                {
+                    //Debug.Log("attack");
+                    if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                        animator.Play("Pd_Stage3Boss_Idle");
+
+                    E_State.e_State = EnemyState.enemy_Attack;
+                    animator.SetBool("IsAttack", true);
+                }
             }
             else
             {
-                //Debug.Log("attack");
                 if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
                     animator.Play("Pd_Stage3Boss_Idle");
 
@@ -216,15 +229,56 @@ public class Stage3_Boss_Ctrl : Enemy
         }
         else
         {
-            if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
-                animator.Play("Pd_Stage3Boss_Idle");
+            if (CurHp <= skill2ActiveHp)
+            {
+                if (skill < skill2Per )
+                {
+                    Debug.Log("skill2");
+                }
+                else
+                {
+                    if (skill < skill1Per && skill2Per < skill)
+                    {
+                        if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                            animator.Play("Pd_Stage3Boss_Idle");
+                        E_State.e_State = EnemyState.enemy_Skill;
+                        animator.SetBool("IsSkill", true);
+                    }
+                    else
+                    {
+                        //Debug.Log("attack");
+                        if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                            animator.Play("Pd_Stage3Boss_Idle");
 
-            E_State.e_State = EnemyState.enemy_Attack;
-            animator.SetBool("IsAttack", true);
+                        E_State.e_State = EnemyState.enemy_Attack;
+                        animator.SetBool("IsAttack", true);
+                    }
+                }
+            }
+            else
+            {
+                if (skill < skill1Per)
+                {
+                    if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                        animator.Play("Pd_Stage3Boss_Idle");
+                    E_State.e_State = EnemyState.enemy_Skill;
+                    animator.SetBool("IsSkill", true);
+                }
+                else
+                {
+                    //Debug.Log("attack");
+                    if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                        animator.Play("Pd_Stage3Boss_Idle");
+
+                    E_State.e_State = EnemyState.enemy_Attack;
+                    animator.SetBool("IsAttack", true);
+                }
+            }
         }
+
     }
 
-    public void M_SkillFunc()
+    public void M_Skill1Func()
     {
         //Debug.Log("skill");
         GameObject skill1 = (GameObject)Instantiate(Resources.Load("Prefab/Stage3_Boss_Skill1")) as GameObject;
