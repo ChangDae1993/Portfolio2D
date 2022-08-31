@@ -6,12 +6,15 @@ using UnityEngine.UI;
 public class Stage3_Boss_Ctrl : Enemy
 {
     public Image Hp_Img;
+    public Text Hp_Txt;
 
     Vector2 targetPos = Vector2.zero;
 
     private float skillPer;
     private int skill;
     [SerializeField] private bool isRevive;
+    [SerializeField] private int skillActiveHp; 
+    [SerializeField] float resurTime = 5.0f;
 
     private void Awake()
     {
@@ -25,12 +28,14 @@ public class Stage3_Boss_Ctrl : Enemy
         skillPer = 40f;
         skill = Random.Range(1, 101);
         isRevive = false;
+        skillActiveHp = 350;
     }
 
     private void Update() => UpdateFunc();
 
     private void UpdateFunc()
     {
+        Hp_Txt.text = CurHp.ToString() + "/" + MaxHp.ToString();
         chaseDist = Vector2.Distance(this.transform.position, player.transform.position);
         targetPos = new Vector2(player.transform.position.x + 3.0f, player.transform.position.y);
         M_ChaseDist();
@@ -54,7 +59,7 @@ public class Stage3_Boss_Ctrl : Enemy
         animator = GetComponent<Animator>();
         patrol_Time = Random.Range(1.0f, 3.0f);
 
-        MaxHp = 1000;
+        MaxHp = 600;
         CurHp = MaxHp;
         e_move_Speed = 1.0f;
         e_Att = 15.0f;           //(임시)
@@ -183,7 +188,7 @@ public class Stage3_Boss_Ctrl : Enemy
     protected override void M_Attack()
     {
         //Debug.Log(skill);
-        if (CurHp <= 600)
+        if (CurHp <= skillActiveHp)
         {
             if (skill < skillPer)
             {
@@ -194,7 +199,7 @@ public class Stage3_Boss_Ctrl : Enemy
             }
             else
             {
-                Debug.Log("attack");
+                //Debug.Log("attack");
                 if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
                     animator.Play("Pd_Stage3Boss_Idle");
 
@@ -214,8 +219,7 @@ public class Stage3_Boss_Ctrl : Enemy
 
     public void M_SkillFunc()
     {
-        Debug.Log("skill");
-
+        //Debug.Log("skill");
         GameObject skill1 = (GameObject)Instantiate(Resources.Load("Prefab/Stage3_Boss_Skill1")) as GameObject;
         skill1.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.3f, player.transform.position.z);
         animator.SetBool("IsSkill", false);
@@ -261,9 +265,29 @@ public class Stage3_Boss_Ctrl : Enemy
 
     protected override void M_Death()
     {
-        E_State.e_State = EnemyState.enemy_Death;
-        animator.SetTrigger("Boss_DieTrigger");
-        this.gameObject.layer = 11;
+        if(!isRevive)
+        {
+            E_State.e_State = EnemyState.enemy_Resurrection;
+            Debug.Log("부활");
+            animator.SetBool("IsRevive",true);
+
+            resurTime -= Time.deltaTime;
+            if(resurTime <= 0.0f)
+            {
+                E_State.e_State = EnemyState.enemy_Idle;
+                animator.SetBool("IsRevive", false);
+                MaxHp = 1000;
+                CurHp = MaxHp;
+                isRevive = true;
+            }
+        }
+        else
+        {
+            E_State.e_State = EnemyState.enemy_Death;
+            animator.SetTrigger("Boss_DieTrigger");
+            this.gameObject.layer = 11;
+        }
+
     }
     protected override void M_Resurrection()
     {
