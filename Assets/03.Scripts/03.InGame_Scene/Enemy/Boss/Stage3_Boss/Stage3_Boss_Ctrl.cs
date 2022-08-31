@@ -328,7 +328,6 @@ public class Stage3_Boss_Ctrl : Enemy
             {
                 M_Death();
             }
-
         }
     }
 
