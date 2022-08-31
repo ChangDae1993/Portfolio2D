@@ -36,6 +36,7 @@ public class Stage3_Boss_Ctrl : Enemy
     private void UpdateFunc()
     {
         Hp_Txt.text = CurHp.ToString() + "/" + MaxHp.ToString();
+        Hp_Img.fillAmount = CurHp / MaxHp;
         chaseDist = Vector2.Distance(this.transform.position, player.transform.position);
         targetPos = new Vector2(player.transform.position.x + 3.0f, player.transform.position.y);
         M_ChaseDist();
@@ -187,6 +188,12 @@ public class Stage3_Boss_Ctrl : Enemy
 
     protected override void M_Attack()
     {
+        if (E_State.e_State == EnemyState.enemy_Resurrection || E_State.e_State == EnemyState.enemy_Death)
+            return;
+
+        if (CurHp <= 0.0f)
+            return;
+
         //Debug.Log(skill);
         if (CurHp <= skillActiveHp)
         {
@@ -253,45 +260,46 @@ public class Stage3_Boss_Ctrl : Enemy
         E_State.e_State = EnemyState.enemy_Hit;
         //hp값 깎기
         CurHp -= dmg;
-        Hp_Img.fillAmount = CurHp / MaxHp;
+
         //Debug.Log(CurHp);
         animator.SetTrigger("B_TakeDamage");
 
         if (CurHp <= 0.0f)
         {
-            M_Death();
+            if(!isRevive)
+            {
+                M_Resurrection();
+            }
+            else
+            {
+                M_Death();
+            }
+
         }
     }
 
     protected override void M_Death()
     {
-        if(!isRevive)
-        {
-            E_State.e_State = EnemyState.enemy_Resurrection;
-            Debug.Log("부활");
-            animator.SetBool("IsRevive",true);
-
-            resurTime -= Time.deltaTime;
-            if(resurTime <= 0.0f)
-            {
-                E_State.e_State = EnemyState.enemy_Idle;
-                animator.SetBool("IsRevive", false);
-                MaxHp = 1000;
-                CurHp = MaxHp;
-                isRevive = true;
-            }
-        }
-        else
-        {
-            E_State.e_State = EnemyState.enemy_Death;
-            animator.SetTrigger("Boss_DieTrigger");
-            this.gameObject.layer = 11;
-        }
-
+        E_State.e_State = EnemyState.enemy_Death;
+        animator.SetTrigger("Boss_DieTrigger");
+        this.gameObject.layer = 11;
     }
+
     protected override void M_Resurrection()
     {
-        throw new System.NotImplementedException();
+        E_State.e_State = EnemyState.enemy_Resurrection;
+        Debug.Log("부활");
+        animator.SetBool("IsRevive", true);
+
+    }
+
+    public void Revive()
+    {
+        E_State.e_State = EnemyState.enemy_Idle;
+        animator.SetBool("IsRevive", false);
+        MaxHp = 1000;
+        CurHp = MaxHp;
+        isRevive = true;
     }
 
     protected override void M_Retreat()
