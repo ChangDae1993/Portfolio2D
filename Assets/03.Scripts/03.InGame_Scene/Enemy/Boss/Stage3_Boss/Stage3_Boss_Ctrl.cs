@@ -16,7 +16,7 @@ public class Stage3_Boss_Ctrl : Enemy
     private int skill;
     [SerializeField] private bool isRevive;
     [SerializeField] private int skill1ActiveHp;
-    [SerializeField] private int skill2ActiveHp; 
+    [SerializeField] private int skill2ActiveHp;
 
     private void Awake()
     {

@@ -7,11 +7,14 @@ public class Stage3Boss_Trigger : MonoBehaviour
     public GameObject fire;
     public GameObject Boss;
 
+    [SerializeField] private bool bossAreaIn;
+
     private Camera Cam;
     private Camera_Ctrlr camCtrl;
 
     private Vector2 bossCamCenter;
     private Vector2 bossCamSize;
+    private float CamSize;
 
     private void Start() => StartFunc();
 
@@ -23,19 +26,30 @@ public class Stage3Boss_Trigger : MonoBehaviour
         camCtrl = Cam.GetComponent<Camera_Ctrlr>();
         bossCamCenter = new Vector2(40.7f, 2.5f);
         bossCamSize = new Vector2(14.7f, 7);
+        CamSize = 6.5f;
+
+        bossAreaIn = false;
     }
 
     private void Update() => UpdateFunc();
 
     private void UpdateFunc()
     {
-        
+        if(bossAreaIn)
+        {
+            Cam.orthographicSize += Time.deltaTime;
+            if(Cam.orthographicSize >= 6.5f)
+            {
+                Cam.orthographicSize = 6.5f;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("PLAYER"))
         {
+            bossAreaIn = true;
             fire.gameObject.SetActive(true);
             Boss.gameObject.SetActive(true);
             camCtrl.center = bossCamCenter;
