@@ -312,7 +312,7 @@ public class Stage3_Boss_Ctrl : Enemy
     {
         //플레이어의 TakeDamage를 가져와서
         //Animation 상에 Add Event에다가 구현 한다.
-        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attack_Point.position, e_att_Range, playerLayer);
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attack_Point.position, e_Att_Range, playerLayer);
         skill = Random.Range(1, 101);
         foreach (Collider2D collider in hitPlayer)
         {
@@ -324,7 +324,7 @@ public class Stage3_Boss_Ctrl : Enemy
         if (attack_Point == null)
             return;
 
-        Gizmos.DrawWireSphere(attack_Point.position, e_att_Range);
+        Gizmos.DrawCube(attack_Point.position, new Vector3(3.0f, 1.0f, 0.0f)/*e_Att_Range*/); ;
     }
 
     public override void M_Hit(float dmg)
