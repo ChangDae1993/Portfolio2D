@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Stage3_Boss_Ctrl : Enemy
 {
     public Image Hp_Img;
+    public Image Hp2_Img;
     public Text Hp_Txt;
 
     Vector2 targetPos = Vector2.zero;
@@ -39,7 +40,14 @@ public class Stage3_Boss_Ctrl : Enemy
     private void UpdateFunc()
     {
         Hp_Txt.text = CurHp.ToString() + "/" + MaxHp.ToString();
-        Hp_Img.fillAmount = CurHp / MaxHp;
+        if(!isRevive)
+        {
+            Hp_Img.fillAmount = CurHp / MaxHp;
+        }
+        else
+        {
+            Hp2_Img.fillAmount = CurHp / MaxHp;
+        }
         chaseDist = Vector2.Distance(this.transform.position, player.transform.position);
         targetPos = new Vector2(player.transform.position.x + 3.0f, player.transform.position.y);
         M_ChaseDist();
