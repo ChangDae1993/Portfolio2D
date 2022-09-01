@@ -17,6 +17,7 @@ public class Stage3_Boss_Ctrl : Enemy
     [SerializeField] private bool isRevive;
     [SerializeField] private int skill1ActiveHp;
     [SerializeField] private int skill2ActiveHp;
+    [SerializeField] private bool isSkill2;
 
     private void Awake()
     {
@@ -33,6 +34,7 @@ public class Stage3_Boss_Ctrl : Enemy
         isRevive = false;
         skill1ActiveHp = 350;
         skill2ActiveHp = 600;
+        isSkill2 = false;
     }
 
     private void Update() => UpdateFunc();
@@ -303,9 +305,16 @@ public class Stage3_Boss_Ctrl : Enemy
 
     public void M_Skill2Func()
     {
-        Debug.Log("Skill2");
-        GameObject skill2 = (GameObject)Instantiate(Resources.Load("Prefab/Goblin")) as GameObject;
-        skill2.transform.position = new Vector3(this.transform.position.x + 1.0f, this.transform.position.y, this.transform.position.z);
+        isSkill2 = true;
+        if (isSkill2)
+        {
+            Debug.Log("Skill2");
+            GameObject skill2 = (GameObject)Instantiate(Resources.Load("Prefab/Goblin")) as GameObject;
+            skill2.transform.position = new Vector3(this.transform.position.x + 1.0f, this.transform.position.y, this.transform.position.z);
+            isSkill2 = false;
+            skill = Random.Range(1, 101);
+        }
+
     }
 
     protected override void M_AttackFunc()
