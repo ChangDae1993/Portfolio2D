@@ -16,6 +16,9 @@ public class Stage3Boss_Trigger : MonoBehaviour
     private Vector2 bossCamSize;
     private float CamSize;
 
+    public Enemy boss;
+    [SerializeField] private Enemy_State_Ctrlr boss_State;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
@@ -29,10 +32,15 @@ public class Stage3Boss_Trigger : MonoBehaviour
         CamSize = 6.5f;
 
         bossAreaIn = false;
+
+        if(boss != null)
+        {
+            boss_State = boss.GetComponent<Enemy_State_Ctrlr>();
+        }
+
     }
 
     private void Update() => UpdateFunc();
-
     private void UpdateFunc()
     {
         if(bossAreaIn)
@@ -42,6 +50,19 @@ public class Stage3Boss_Trigger : MonoBehaviour
             {
                 Cam.orthographicSize = 6.5f;
             }
+        }
+        else
+        {
+            Cam.orthographicSize -= Time.deltaTime;
+            if (Cam.orthographicSize <= 6.0f)
+            {
+                Cam.orthographicSize = 6.0f;
+            }
+        }
+
+        if(boss_State.e_State == EnemyState.enemy_Death)
+        {
+            bossAreaIn = false;
         }
     }
 

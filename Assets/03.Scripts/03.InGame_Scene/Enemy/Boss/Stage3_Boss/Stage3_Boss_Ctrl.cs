@@ -364,6 +364,7 @@ public class Stage3_Boss_Ctrl : Enemy
         E_State.e_State = EnemyState.enemy_Resurrection;
         Debug.Log("∫Œ»∞");
         animator.SetBool("IsRevive", true);
+        this.gameObject.layer = 13;
 
     }
 
@@ -374,6 +375,7 @@ public class Stage3_Boss_Ctrl : Enemy
         MaxHp = 1000;
         CurHp = MaxHp;
         isRevive = true;
+        this.gameObject.layer = 6;
     }
 
     protected override void M_Retreat()

@@ -20,7 +20,7 @@ TagManager:
   - HOOK_AIM
   - Enemy_Die
   - Player_Die
-  - 
+  - Boss_Revive
   - 
   - 
   - 

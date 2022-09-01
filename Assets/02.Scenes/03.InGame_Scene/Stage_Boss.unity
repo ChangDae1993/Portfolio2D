@@ -8752,6 +8752,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fire: {fileID: 1791281360}
   Boss: {fileID: 498385448}
+  bossAreaIn: 0
+  boss: {fileID: 498385454}
+  boss_State: {fileID: 498385455}
 --- !u!1 &1358187970
 GameObject:
   m_ObjectHideFlags: 0
@@ -9700,7 +9703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 953559518834644566, guid: 74e66d1eeb094a04582f53170e9fb34a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.45
+      value: 22.25
       objectReference: {fileID: 0}
     - target: {fileID: 953559518834644566, guid: 74e66d1eeb094a04582f53170e9fb34a, type: 3}
       propertyPath: m_LocalPosition.y
