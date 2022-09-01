@@ -10,9 +10,9 @@ public class Camera_Ctrlr : MonoBehaviour
     Vector3 cameraPosition;
 
     [SerializeField]
-    Vector2 center;
+    public Vector2 center;
     [SerializeField]
-    Vector2 mapSize;
+    public Vector2 mapSize;
 
     [SerializeField]
     float cameraMoveSpeed;
