@@ -241,7 +241,9 @@ public class Stage3_Boss_Ctrl : Enemy
             {
                 if (skill < skill2Per )
                 {
-                    Debug.Log("skill2");
+                    M_Skill2Func();
+                    //Resources.Load해서 고블린만 생성하기 한번에 한마리씩만
+                    //animator.SetBool("IsSKill2", true);
                 }
                 else
                 {
@@ -249,8 +251,12 @@ public class Stage3_Boss_Ctrl : Enemy
                     {
                         if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
                             animator.Play("Pd_Stage3Boss_Idle");
-                        E_State.e_State = EnemyState.enemy_Skill;
-                        animator.SetBool("IsSkill", true);
+
+                        if (player.GetComponent<Player_State_Ctrlr>().p_state != PlayerState.player_die)
+                        {
+                            E_State.e_State = EnemyState.enemy_Skill;
+                            animator.SetBool("IsSkill", true);
+                        }
                     }
                     else
                     {
@@ -293,6 +299,13 @@ public class Stage3_Boss_Ctrl : Enemy
         skill1.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.3f, player.transform.position.z);
         animator.SetBool("IsSkill", false);
         skill = Random.Range(1, 101);
+    }
+
+    public void M_Skill2Func()
+    {
+        Debug.Log("Skill2");
+        GameObject skill2 = (GameObject)Instantiate(Resources.Load("Prefab/Goblin")) as GameObject;
+        skill2.transform.position = new Vector3(this.transform.position.x + 1.0f, this.transform.position.y, this.transform.position.z);
     }
 
     protected override void M_AttackFunc()

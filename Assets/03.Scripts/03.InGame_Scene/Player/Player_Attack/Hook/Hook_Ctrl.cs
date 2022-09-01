@@ -82,12 +82,16 @@ public class Hook_Ctrl : MonoBehaviour
             this.transform.localEulerAngles = new Vector3(0, 0, 0);
         }
         //은범이가 알려준 아이디어
+
+        //날아갈 때 플레이어와 일정 거리 이상으로 벌어지면 자동으로 돌아오도록 바꾸기
     }
 
     private void Hook_Return()
     {
         //Debug.Log("back");
         this.transform.position = Vector3.Lerp(this.transform.position, player_Pos.position, Time.deltaTime * hook_backSpeed);
+
+        //돌아올 때, 플레이어와 거리가 일정 이하이면 사라지게 바꾸기
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

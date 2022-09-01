@@ -27,6 +27,8 @@ public class Skill1 : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Q) && isHill == false)
         {
+            //물약 개수 정해서 해당 개수가 0 이면 return하도록 만들기
+            //GlobalData를 만들어서 물약 개수 관리 및 경험치 계수 관리??
             SoundMgr.Instance.PlayEffSound("Skill1", 1.0f);
             sk1_coolImg.gameObject.SetActive(true);
             sk1_coolImg.fillAmount = 1.0f;
