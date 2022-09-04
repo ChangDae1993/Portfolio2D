@@ -21,6 +21,7 @@ public class Stage1_Move_Map : Move_Map_Ctrl
     {
         if (FadeOut_Img.fillAmount == 1.0f)
         {
+            GlobalData.stage_Progress++;
             SceneManager.LoadScene("Stage_2");
         }
     }

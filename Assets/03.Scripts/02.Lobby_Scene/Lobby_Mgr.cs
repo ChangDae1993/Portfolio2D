@@ -166,6 +166,7 @@ public class Lobby_Mgr : MonoBehaviour
 
     public void StartBtnFunc()
     {
+        GlobalData.stage_Progress++;
         fadeOut.gameObject.SetActive(true);
         isOut = true;
         SoundMgr.Instance.PlayGUISound("Click", 1.0f);

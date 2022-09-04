@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player_TakeDamage : MonoBehaviour
@@ -36,6 +38,15 @@ public class Player_TakeDamage : MonoBehaviour
         curHp = maxHp;
         this.gameObject.layer = 7;
         slowTimer = 2.0f;
+
+        GameOver_Panel.gameObject.SetActive(false);
+        PlayerOver_Panel.gameObject.SetActive(false);
+
+        if (ReplayBtn != null)
+            ReplayBtn.onClick.AddListener(ReplayFunc);
+
+        if (ExitBtn != null)
+            ExitBtn.onClick.AddListener(ExitFunc);
     }
 
     // Update is called once per frame
@@ -113,5 +124,44 @@ public class Player_TakeDamage : MonoBehaviour
         animator.SetTrigger("Death");
         P_Input.enabled = false;
         //Debug.Log("DieFunc Here");
+
+        GameOver_Panel.gameObject.SetActive(true);
+
+        //panel 키기
+        //panel 서서히 등장
+        //panel 다 켜지면 Die_BG도 서서히 등장
+        //코루틴 사용?
+        StartCoroutine(DieImgFuncCo());
+
+        //replay_Btn클릭시 게임 진행도에 따라서 새로운 씬 로딩
+        //물약개수 초기화 해주기
+    }
+
+    IEnumerator DieImgFuncCo()
+    {
+        float PanelfadeInAlpha = 0.0f;
+        while(PanelfadeInAlpha <= 1.0f)
+        {
+            PanelfadeInAlpha += Time.deltaTime * 4.0f;
+            yield return new WaitForSeconds(0.1f);
+            GameOver_Panel.color = new Color(0, 0, 0, PanelfadeInAlpha);
+            if(PanelfadeInAlpha >= 1.0f)
+            {
+                PlayerOver_Panel.gameObject.SetActive(true);
+                GlobalData.hpPotionNum = 10;
+                break;
+            }
+        }
+    }
+
+    public void ReplayFunc()
+    {
+        Debug.Log("replay this Scene");
+        SceneManager.LoadScene("Stage_" + GlobalData.stage_Progress.ToString());
+    }
+
+    public void ExitFunc()
+    {
+        Application.Quit();
     }
 }
