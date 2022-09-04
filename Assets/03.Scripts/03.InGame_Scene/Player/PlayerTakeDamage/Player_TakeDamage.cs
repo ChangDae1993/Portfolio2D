@@ -10,6 +10,11 @@ public class Player_TakeDamage : MonoBehaviour
     private Player_Input P_Input;
     private Player_Block P_Block;
 
+    public Image GameOver_Panel;
+    public Image PlayerOver_Panel;
+    public Button ReplayBtn;
+    public Button ExitBtn;
+
     public Image Hp_Img;
     public Image Mp_Img;
 

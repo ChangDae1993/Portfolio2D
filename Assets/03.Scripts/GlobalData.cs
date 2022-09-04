@@ -8,6 +8,8 @@ public class GlobalData : MonoBehaviour
 
     public static float playerExp;
 
+    public static int stage_Progress = 0;
+
 
     private void Start() => StartFunc();
     private void StartFunc()
