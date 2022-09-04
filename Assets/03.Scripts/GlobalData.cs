@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GlobalData : MonoBehaviour
 {
-
-    public static int hpPotionNum;
+    public static int hpPotionNum = 10;
 
     public static float playerExp;
 

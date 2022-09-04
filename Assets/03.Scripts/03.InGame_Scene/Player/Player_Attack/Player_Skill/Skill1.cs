@@ -9,6 +9,7 @@ public class Skill1 : MonoBehaviour
     public Image sk1_coolImg;
     public GameObject skill_Obj;
     bool isHill;
+    public Text skill1Num;
     Animator anim;
 
     Player_TakeDamage pDam;
@@ -20,19 +21,30 @@ public class Skill1 : MonoBehaviour
         pDam = GetComponent<Player_TakeDamage>();
         anim = GetComponent<Animator>();
         skill_Obj.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q) && isHill == false)
+        skill1Num.text = GlobalData.hpPotionNum.ToString();
+        if (Input.GetKeyDown(KeyCode.Q) && isHill == false)
         {
-            //물약 개수 정해서 해당 개수가 0 이면 return하도록 만들기
-            //GlobalData를 만들어서 물약 개수 관리 및 경험치 계수 관리??
-            SoundMgr.Instance.PlayEffSound("Skill1", 1.0f);
-            sk1_coolImg.gameObject.SetActive(true);
-            sk1_coolImg.fillAmount = 1.0f;
-            isHill=true;
+            if (0 < GlobalData.hpPotionNum && pDam.curHp < 100)
+            {
+                //물약 개수 정해서 해당 개수가 0 이면 return하도록 만들기
+                //GlobalData를 만들어서 물약 개수 관리 및 경험치 계수 관리??
+                SoundMgr.Instance.PlayEffSound("Skill1", 1.0f);
+                sk1_coolImg.gameObject.SetActive(true);
+                sk1_coolImg.fillAmount = 1.0f;
+                isHill = true;
+                GlobalData.hpPotionNum--;
+            }
+            else
+            {
+                Debug.Log("물약 없음 or 체력 꽉참");
+            }
+
         }
 
         if (isHill)

@@ -169,5 +169,6 @@ public class Lobby_Mgr : MonoBehaviour
         fadeOut.gameObject.SetActive(true);
         isOut = true;
         SoundMgr.Instance.PlayGUISound("Click", 1.0f);
+        GlobalData.hpPotionNum = 10;
     }
 }
