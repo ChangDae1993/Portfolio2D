@@ -156,11 +156,11 @@ public class Player_TakeDamage : MonoBehaviour
 
     public void ReplayFunc()
     {
-        GameOver_Panel.gameObject.SetActive(false);
-        PlayerOver_Panel.gameObject.SetActive(false);
+        //GameOver_Panel.gameObject.SetActive(false);
+        //PlayerOver_Panel.gameObject.SetActive(false);
         Debug.Log("replay this Scene");
         //SceneManager.LoadScene("Stage_" + GlobalData.stage_Progress.ToString());
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ExitFunc()
