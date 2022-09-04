@@ -2512,14 +2512,98 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2442708308747923924, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_Text
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442708308747923924, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+    - target: {fileID: 2442708308747923924, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442708308747923924, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442708308747923924, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442708308747923924, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2442708308747923924, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474907063529738347, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2474907063529738347, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cf1462bc694c3c249831ad8ac5293aa2, type: 3}
     - target: {fileID: 2474907063529738347, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_Text
+      value: Replay
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+    - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488317985965109703, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151596880447821224, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151596880447821224, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cf1462bc694c3c249831ad8ac5293aa2, type: 3}
     - target: {fileID: 5753593797686174526, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
       propertyPath: m_FillAmount
       value: 1
@@ -2535,6 +2619,10 @@ PrefabInstance:
     - target: {fileID: 7195988411009154432, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
       propertyPath: m_Camera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7216876111476736213, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7601861508232212034, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
       propertyPath: m_SortingOrder
