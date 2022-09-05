@@ -43,6 +43,7 @@ public class Goblin_Controller : Enemy
         E_State = GetComponent<Enemy_State_Ctrlr>();
         animator = GetComponent<Animator>();
         patrol_Time = Random.Range(1.0f, 3.0f);
+        pS = player.GetComponent<Player_State_Ctrlr>();
 
         MaxHp = 100;
         CurHp = MaxHp;
@@ -173,7 +174,7 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Attack()
     {
-        if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+        if (pS.p_state == PlayerState.player_die)
             animator.Play("Pd_Goblin_Idle");
 
         E_State.e_State = EnemyState.enemy_Attack;

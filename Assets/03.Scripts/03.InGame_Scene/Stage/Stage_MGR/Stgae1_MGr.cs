@@ -16,6 +16,7 @@ public class Stgae1_MGr : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         player.transform.position = startPos.position;
+        GlobalData.hpPotionNum = 10;
     }
 
     // Update is called once per frame

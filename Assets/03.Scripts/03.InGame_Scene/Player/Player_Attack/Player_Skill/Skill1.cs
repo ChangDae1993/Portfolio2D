@@ -21,15 +21,16 @@ public class Skill1 : MonoBehaviour
         pDam = GetComponent<Player_TakeDamage>();
         anim = GetComponent<Animator>();
         skill_Obj.gameObject.SetActive(false);
-
+        skill1Num.text = GlobalData.hpPotionNum.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        skill1Num.text = GlobalData.hpPotionNum.ToString();
+
         if (Input.GetKeyDown(KeyCode.Q) && isHill == false)
         {
+
             if (0 < GlobalData.hpPotionNum && pDam.curHp < 100)
             {
                 //물약 개수 정해서 해당 개수가 0 이면 return하도록 만들기
@@ -40,15 +41,12 @@ public class Skill1 : MonoBehaviour
                 isHill = true;
                 GlobalData.hpPotionNum--;
             }
-            else
-            {
-                Debug.Log("물약 없음 or 체력 꽉참");
-            }
 
         }
 
         if (isHill)
         {
+            skill1Num.text = GlobalData.hpPotionNum.ToString();
             skill_Obj.gameObject.SetActive(true);
             sk1_coolImg.fillAmount -= Time.deltaTime * 0.5f;
             pDam.curHp += 0.1f;

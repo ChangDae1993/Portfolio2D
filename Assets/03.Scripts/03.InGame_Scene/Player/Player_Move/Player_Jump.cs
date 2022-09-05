@@ -13,6 +13,8 @@ public class Player_Jump : MonoBehaviour
 
     public bool isJumping;
 
+    RaycastHit2D rayHit;
+    RaycastHit2D rayenem;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,8 @@ public class Player_Jump : MonoBehaviour
         isJumping = false;
         Player_State.p_state = PlayerState.player_idle;
         Player_State.p_Move_state = PlayerMoveState.player_jump;
+        rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("PLATFORM"));
+        rayenem = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Enemy"));
     }
 
     // Update is called once per frame
@@ -54,8 +58,8 @@ public class Player_Jump : MonoBehaviour
         // Lending Platform
         if (rigid.velocity.y <= 0)
         {
-            Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0)); //에디터 상에서만 레이를 그려준다
-            RaycastHit2D rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("PLATFORM"));
+            //Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0)); //에디터 상에서만 레이를 그려준다
+
             if (rayHit.collider != null) // 바닥 감지를 위해서 레이저를 쏜다! 
             {
                 if (rayHit.distance < 0.5f)
@@ -65,10 +69,10 @@ public class Player_Jump : MonoBehaviour
                 }
             }
 
-            RaycastHit2D rayenem = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Enemy"));
-            if(rayenem.collider != null)
+
+            if (rayenem.collider != null)
             {
-                if(rayenem.distance < 0.5f)
+                if (rayenem.distance < 0.5f)
                 {
                     animator.SetBool("IsJump", false);
                     isJumping = false;
@@ -79,9 +83,8 @@ public class Player_Jump : MonoBehaviour
 
     private void P_Move_Jump()
     {
-                        Player_State.p_Move_state = PlayerMoveState.player_jump;
+        Player_State.p_Move_state = PlayerMoveState.player_jump;
         animator.SetBool("IsJump", true);
         rigid.AddForce(transform.up * jump_power, ForceMode2D.Impulse);
-
     }
 }

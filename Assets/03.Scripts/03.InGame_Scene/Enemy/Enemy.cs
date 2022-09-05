@@ -10,6 +10,7 @@ public abstract class Enemy : MonoBehaviour
 
     //플레이어 TakeDamage호출
     protected Player_TakeDamage P_TakeDam;
+    protected Player_State_Ctrlr pS;
 
     protected Enemy_State_Ctrlr E_State;
 

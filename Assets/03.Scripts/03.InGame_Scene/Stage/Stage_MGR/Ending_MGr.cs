@@ -11,7 +11,7 @@ public class Ending_MGr : MonoBehaviour
 
     private void StartFunc()
     {
-        SoundMgr.Instance.PlayBGM("Ending_BGM", 0.5f);
+        SoundMgr.Instance.PlayBGM("Ending_BGM", 0.3f);
         player = GameObject.FindGameObjectWithTag("Player");
         Destroy(player.gameObject);
     }

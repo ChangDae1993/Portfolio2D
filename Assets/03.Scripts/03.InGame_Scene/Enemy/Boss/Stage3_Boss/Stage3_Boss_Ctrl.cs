@@ -94,6 +94,7 @@ public class Stage3_Boss_Ctrl : Enemy
         E_State = GetComponent<Enemy_State_Ctrlr>();
         animator = GetComponent<Animator>();
         patrol_Time = Random.Range(1.0f, 3.0f);
+        pS = player.GetComponent<Player_State_Ctrlr>();
 
         MaxHp = 600;
         CurHp = MaxHp;
@@ -235,7 +236,7 @@ public class Stage3_Boss_Ctrl : Enemy
             {
                 if (skill < skill1Per)
                 {
-                    if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                    if (pS.p_state == PlayerState.player_die)
                         animator.Play("Pd_Stage3Boss_Idle");
                     E_State.e_State = EnemyState.enemy_Skill;
                     animator.SetBool("IsSkill", true);
@@ -243,7 +244,7 @@ public class Stage3_Boss_Ctrl : Enemy
                 else
                 {
                     //Debug.Log("attack");
-                    if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                    if (pS.p_state == PlayerState.player_die)
                         animator.Play("Pd_Stage3Boss_Idle");
 
                     E_State.e_State = EnemyState.enemy_Attack;
@@ -252,7 +253,7 @@ public class Stage3_Boss_Ctrl : Enemy
             }
             else
             {
-                if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                if (pS.p_state == PlayerState.player_die)
                     animator.Play("Pd_Stage3Boss_Idle");
 
                 E_State.e_State = EnemyState.enemy_Attack;
@@ -273,10 +274,10 @@ public class Stage3_Boss_Ctrl : Enemy
                 {
                     if (skill < skill1Per && skill2Per < skill)
                     {
-                        if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                        if (pS.p_state == PlayerState.player_die)
                             animator.Play("Pd_Stage3Boss_Idle");
 
-                        if (player.GetComponent<Player_State_Ctrlr>().p_state != PlayerState.player_die)
+                        if (pS.p_state != PlayerState.player_die)
                         {
                             E_State.e_State = EnemyState.enemy_Skill;
                             animator.SetBool("IsSkill", true);
@@ -285,7 +286,7 @@ public class Stage3_Boss_Ctrl : Enemy
                     else
                     {
                         //Debug.Log("attack");
-                        if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                        if (pS.p_state == PlayerState.player_die)
                             animator.Play("Pd_Stage3Boss_Idle");
 
                         E_State.e_State = EnemyState.enemy_Attack;
@@ -297,7 +298,7 @@ public class Stage3_Boss_Ctrl : Enemy
             {
                 if (skill < skill1Per)
                 {
-                    if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                    if (pS.p_state == PlayerState.player_die)
                         animator.Play("Pd_Stage3Boss_Idle");
                     E_State.e_State = EnemyState.enemy_Skill;
                     animator.SetBool("IsSkill", true);
@@ -305,7 +306,7 @@ public class Stage3_Boss_Ctrl : Enemy
                 else
                 {
                     //Debug.Log("attack");
-                    if (player.GetComponent<Player_State_Ctrlr>().p_state == PlayerState.player_die)
+                    if (pS.p_state == PlayerState.player_die)
                         animator.Play("Pd_Stage3Boss_Idle");
 
                     E_State.e_State = EnemyState.enemy_Attack;
@@ -391,7 +392,7 @@ public class Stage3_Boss_Ctrl : Enemy
 
     protected override void M_Resurrection()
     {
-        SoundMgr.Instance.PlayEffSound("Boss_Revive", 1.0f);
+        SoundMgr.Instance.PlayEffSound("Boss_Revive", 0.7f);
         E_State.e_State = EnemyState.enemy_Resurrection;
         Debug.Log("∫Œ»∞");
         animator.SetBool("IsRevive", true);

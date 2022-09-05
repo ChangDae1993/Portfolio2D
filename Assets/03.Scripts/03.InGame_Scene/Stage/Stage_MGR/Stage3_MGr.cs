@@ -14,7 +14,7 @@ public class Stage3_MGr : MonoBehaviour
     {
         SoundMgr.Instance.PlayBGM("Stage3_BGM", 1.0f);
         player = GameObject.FindGameObjectWithTag("Player");
-
+        GlobalData.hpPotionNum = 16;
         player.transform.position = startPos.position;
     }
 
