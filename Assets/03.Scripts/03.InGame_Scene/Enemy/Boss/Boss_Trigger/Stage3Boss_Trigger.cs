@@ -14,7 +14,6 @@ public class Stage3Boss_Trigger : MonoBehaviour
 
     private Vector2 bossCamCenter;
     private Vector2 bossCamSize;
-    private float CamSize;
 
     public Enemy boss;
     [SerializeField] private Enemy_State_Ctrlr boss_State;
@@ -29,7 +28,6 @@ public class Stage3Boss_Trigger : MonoBehaviour
         camCtrl = Cam.GetComponent<Camera_Ctrlr>();
         bossCamCenter = new Vector2(40.7f, 2.5f);
         bossCamSize = new Vector2(14.7f, 7);
-        CamSize = 6.5f;
 
         bossAreaIn = false;
 

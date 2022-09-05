@@ -156,13 +156,18 @@ public class Player_TakeDamage : MonoBehaviour
 
     public void ReplayFunc()
     {
-        //씬을 다시 처음부터 로딩하는 법을 알아보자
-        //아니면 이걸 눌렀을 때 플레이어를 되살리고 모든걸 되돌리는 방법을 생각해보자
-        //GameOver_Panel.gameObject.SetActive(false);
-        //PlayerOver_Panel.gameObject.SetActive(false);
+        //이걸 눌렀을 때 플레이어를 되살리고 모든걸 되돌리는 방법을 생각해보자
+        GameOver_Panel.gameObject.SetActive(false);
+        PlayerOver_Panel.gameObject.SetActive(false);
         Debug.Log("replay this Scene");
         //SceneManager.LoadScene("Stage_" + GlobalData.stage_Progress.ToString());
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        curHp = maxHp;
+        P_State.p_state = PlayerState.player_idle;
+        P_Input.enabled = true;
+        animator.SetTrigger("Replay");
+        Hp_Img.fillAmount = 1.0f;
+        GlobalData.hpPotionNum = 10;
     }
 
     public void ExitFunc()

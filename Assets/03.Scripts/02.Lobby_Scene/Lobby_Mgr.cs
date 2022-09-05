@@ -45,6 +45,7 @@ public class Lobby_Mgr : MonoBehaviour
     public bool checkskill2;
     Skill2 skill2;
 
+    public Transform startPos;
 
 
     private void Start() => StartFunc();
@@ -52,6 +53,8 @@ public class Lobby_Mgr : MonoBehaviour
     private void StartFunc()
     {
         player = GameObject.Find("Player");
+
+        player.transform.position = startPos.position;
 
         fadeIn.gameObject.SetActive(true);
         fadeOut.gameObject.SetActive(false);
