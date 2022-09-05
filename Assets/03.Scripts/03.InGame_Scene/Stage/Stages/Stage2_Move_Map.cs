@@ -21,6 +21,7 @@ public class Stage2_Move_Map : Move_Map_Ctrl
     {
         if (FadeOut_Img.fillAmount == 1.0f)
         {
+            GlobalData.hpPotionNum = 16;
             GlobalData.stage_Progress++;
             SceneManager.LoadScene("Stage_Boss");
         }
@@ -36,6 +37,7 @@ public class Stage2_Move_Map : Move_Map_Ctrl
 
     protected override void MoveScene()
     {
+
         FadeOut_Img.gameObject.SetActive(true);
     }
 }

@@ -78,7 +78,7 @@ public class Stage3_Boss_Ctrl : Enemy
         e_move_Speed = 1.0f;
         e_Att = 15.0f;           //(임시)
         e_Att_Range = 20.0f;
-        //e_att_Range = 0.5f;
+        e_att_Range = 3.0f;
         right = Random.Range(0, 2);
 
         chaseDist = 0.0f;
@@ -324,11 +324,11 @@ public class Stage3_Boss_Ctrl : Enemy
     {
         //플레이어의 TakeDamage를 가져와서
         //Animation 상에 Add Event에다가 구현 한다.
-        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attack_Point.position, e_Att_Range, playerLayer);
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attack_Point.position, e_att_Range, playerLayer);
         skill = Random.Range(1, 101);
         foreach (Collider2D collider in hitPlayer)
         {
-            P_TakeDam.P_TakeDmage(3.0f);
+            P_TakeDam.P_TakeDmage(10.0f);
         }
     }
     private void OnDrawGizmosSelected()

@@ -162,7 +162,10 @@ public class Lobby_Mgr : MonoBehaviour
             fadeOut.fillAmount += Time.deltaTime * 0.5f;
 
             if(fadeOut.fillAmount == 1.0f)
+            {
                 SceneManager.LoadScene("Stage_1");
+                GlobalData.hpPotionNum = 10;
+            }
         }
 
     }
