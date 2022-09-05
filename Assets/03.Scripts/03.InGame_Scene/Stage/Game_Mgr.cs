@@ -12,6 +12,7 @@ public class Game_Mgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundMgr.Instance.PlayBGM("Stage2_BGM", 1.0f);
         player = GameObject.FindGameObjectWithTag("Player");
 
         player.transform.position = startPos.position;

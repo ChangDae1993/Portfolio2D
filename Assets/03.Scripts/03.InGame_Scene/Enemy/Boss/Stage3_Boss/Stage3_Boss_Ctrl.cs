@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Stage3_Boss_Ctrl : Enemy
@@ -61,7 +62,10 @@ public class Stage3_Boss_Ctrl : Enemy
             disTime -= Time.deltaTime;
 
             if (disTime <= 0.0f)
+            {
                 Destroy(this.gameObject);
+                SceneManager.LoadScene("Ending");
+            }
         }
     }
 
@@ -366,13 +370,6 @@ public class Stage3_Boss_Ctrl : Enemy
         }
     }
 
-    protected override void M_Death()
-    {
-        SoundMgr.Instance.PlayEffSound("Boss_Death", 1.0f);
-        E_State.e_State = EnemyState.enemy_Death;
-        animator.SetTrigger("Boss_DieTrigger");
-        this.gameObject.layer = 11;
-    }
 
     protected override void M_Resurrection()
     {
@@ -386,12 +383,20 @@ public class Stage3_Boss_Ctrl : Enemy
 
     public void Revive()
     {
+        SoundMgr.Instance.PlayBGM("Boss_Revive_BGM", 0.4f);
         E_State.e_State = EnemyState.enemy_Idle;
         animator.SetBool("IsRevive", false);
         MaxHp = 1000;
         CurHp = MaxHp;
         isRevive = true;
         this.gameObject.layer = 6;
+    }
+    protected override void M_Death()
+    {
+        SoundMgr.Instance.PlayEffSound("Boss_Death", 1.0f);
+        E_State.e_State = EnemyState.enemy_Death;
+        animator.SetTrigger("Boss_DieTrigger");
+        this.gameObject.layer = 11;
     }
 
     protected override void M_Retreat()
