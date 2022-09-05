@@ -188,7 +188,7 @@ public class Stage3_Boss_Ctrl : Enemy
             return;
 
         //Debug.Log(chaseDist);
-        if (chaseDist <= 8.0f)
+        if (chaseDist <= 30.0f)
         {
             E_State.e_State = EnemyState.enemy_Chase;
 
