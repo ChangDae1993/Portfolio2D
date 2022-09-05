@@ -68,6 +68,8 @@ public class Stage3Boss_Trigger : MonoBehaviour
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("PLAYER"))
         {
+            SoundMgr.Instance.PlayBGM("Boss_BGM", 1.0f);
+            SoundMgr.Instance.PlayEffSound("Boss_Trigger", 1.0f);
             bossAreaIn = true;
             fire.gameObject.SetActive(true);
             Boss.gameObject.SetActive(true);

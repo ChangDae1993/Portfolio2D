@@ -297,6 +297,7 @@ public class Stage3_Boss_Ctrl : Enemy
     public void M_Skill1Func()
     {
         //Debug.Log("skill");
+        SoundMgr.Instance.PlayEffSound("Boss_Skill1", 0.7f);
         GameObject skill1 = (GameObject)Instantiate(Resources.Load("Prefab/Stage3_Boss_Skill1")) as GameObject;
         skill1.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.2f, player.transform.position.z);
         animator.SetBool("IsSkill", false);
@@ -308,6 +309,7 @@ public class Stage3_Boss_Ctrl : Enemy
         isSkill2 = true;
         if (isSkill2)
         {
+            SoundMgr.Instance.PlayEffSound("Boss_Skill2", 0.7f);
             Debug.Log("Skill2");
             GameObject skill2 = (GameObject)Instantiate(Resources.Load("Prefab/Goblin")) as GameObject;
             skill2.transform.position = new Vector3(this.transform.position.x + 1.0f, this.transform.position.y, this.transform.position.z);
