@@ -334,7 +334,7 @@ public class Stage3_Boss_Ctrl : Enemy
         skill = Random.Range(1, 101);
         foreach (Collider2D collider in hitPlayer)
         {
-            P_TakeDam.P_TakeDmage(10.0f);
+            P_TakeDam.P_TakeDmage(7.0f);
         }
     }
     private void OnDrawGizmosSelected()

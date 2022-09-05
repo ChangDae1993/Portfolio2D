@@ -20,7 +20,7 @@ public class Title_Mgr : MonoBehaviour
         if (Start_Btn != null)
             Start_Btn.onClick.AddListener(StartBtnFunc);
 
-        SoundMgr.Instance.PlayBGM("Title", 0.1f);
+        SoundMgr.Instance.PlayBGM("Title", 0.5f);
     }
 
     private void Update() => UpdateFunc();
