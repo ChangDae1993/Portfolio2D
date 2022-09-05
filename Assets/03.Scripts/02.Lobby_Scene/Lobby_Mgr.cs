@@ -15,6 +15,8 @@ public class Lobby_Mgr : MonoBehaviour
 
 
     private GameObject player;
+    private Player_TakeDamage p_Dam;
+    private Skill1 p_skill1;
 
     private Player_State_Ctrlr PS;
 
@@ -53,7 +55,8 @@ public class Lobby_Mgr : MonoBehaviour
     private void StartFunc()
     {
         player = GameObject.Find("Player");
-
+        p_Dam = player.GetComponent<Player_TakeDamage>();
+        p_skill1 = player.GetComponent<Skill1>();
         player.transform.position = startPos.position;
 
         fadeIn.gameObject.SetActive(true);
@@ -178,5 +181,8 @@ public class Lobby_Mgr : MonoBehaviour
         isOut = true;
         SoundMgr.Instance.PlayGUISound("Click", 1.0f);
         GlobalData.hpPotionNum = 10;
+        p_skill1.skill1Num.text = GlobalData.hpPotionNum.ToString();
+        p_Dam.curHp = p_Dam.maxHp;
+        p_Dam.Hp_Img.fillAmount = 1.0f;
     }
 }
