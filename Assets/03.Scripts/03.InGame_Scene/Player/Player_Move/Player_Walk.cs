@@ -63,7 +63,7 @@ public class Player_Walk : MonoBehaviour
             if (!audioSrc.isPlaying)
                 audioSrc.Play();
         }
-        else if (!isMove && P_State.p_Move_state != PlayerMoveState.player_walk)
+        else if (!isMove && P_State.p_Move_state != PlayerMoveState.player_walk || P_State.p_state == PlayerState.player_die)
             audioSrc.Stop();
 
     }

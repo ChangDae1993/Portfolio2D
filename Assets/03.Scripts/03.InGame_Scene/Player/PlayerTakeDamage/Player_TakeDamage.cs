@@ -121,6 +121,9 @@ public class Player_TakeDamage : MonoBehaviour
     {
         SoundMgr.Instance.PlayGUISound("Player_Die", 1.0f);
         P_State.p_state = PlayerState.player_die;
+        P_State.p_Move_state = PlayerMoveState.player_noMove;
+        P_State.p_Attack_state = PlayerAttackState.player_noAttack;
+        P_State.p_Defece_state = PlayerDefenceState.player_noShield;
         animator.SetTrigger("Death");
         P_Input.enabled = false;
         //Debug.Log("DieFunc Here");

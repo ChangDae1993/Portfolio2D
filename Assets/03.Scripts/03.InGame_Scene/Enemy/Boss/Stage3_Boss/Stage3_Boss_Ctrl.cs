@@ -368,6 +368,7 @@ public class Stage3_Boss_Ctrl : Enemy
 
     protected override void M_Death()
     {
+        SoundMgr.Instance.PlayEffSound("Boss_Death", 1.0f);
         E_State.e_State = EnemyState.enemy_Death;
         animator.SetTrigger("Boss_DieTrigger");
         this.gameObject.layer = 11;
@@ -375,6 +376,7 @@ public class Stage3_Boss_Ctrl : Enemy
 
     protected override void M_Resurrection()
     {
+        SoundMgr.Instance.PlayEffSound("Boss_Revive", 1.0f);
         E_State.e_State = EnemyState.enemy_Resurrection;
         Debug.Log("∫Œ»∞");
         animator.SetBool("IsRevive", true);

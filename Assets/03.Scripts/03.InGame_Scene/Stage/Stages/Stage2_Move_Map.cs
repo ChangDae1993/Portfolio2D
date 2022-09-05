@@ -31,6 +31,7 @@ public class Stage2_Move_Map : Move_Map_Ctrl
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            SoundMgr.Instance.PlayGUISound("Scene_Move", 1.0f);
             MoveScene();
         }
     }

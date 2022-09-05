@@ -49,34 +49,38 @@ public class Player_Input : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-
-        if(Input.GetMouseButton(1))
+        if(Player_State.p_state != PlayerState.player_die)
         {
-            animator.SetBool("ShieldOn", true);
-        }
+            horizontal = Input.GetAxis("Horizontal");
+            vertical = Input.GetAxis("Vertical");
 
-        if(Input.GetMouseButtonUp(1))
-        {
-            animator.SetBool("ShieldOn", false);
-        }
-
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (!configOn)
+            if (Input.GetMouseButton(1))
             {
-                Config_Panel.gameObject.SetActive(true);
-                configOn = true;
-                Time.timeScale = 0.0f;
+                animator.SetBool("ShieldOn", true);
             }
-            else
+
+            if (Input.GetMouseButtonUp(1))
             {
-                Config_Panel.gameObject.SetActive(false);
-                configOn = false;
-                Time.timeScale = 1.0f;
+                animator.SetBool("ShieldOn", false);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (!configOn)
+                {
+                    Config_Panel.gameObject.SetActive(true);
+                    configOn = true;
+                    Time.timeScale = 0.0f;
+                }
+                else
+                {
+                    Config_Panel.gameObject.SetActive(false);
+                    configOn = false;
+                    Time.timeScale = 1.0f;
+                }
             }
         }
+
     }
 
     public void exitFunc()

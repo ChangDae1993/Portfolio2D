@@ -26,7 +26,8 @@ public enum PlayerMoveState
     player_fall = 3,
     player_climb = 4,
     player_noWalk = 5,
-    player_ShieldOn = 6
+    player_ShieldOn = 6,
+    player_noMove = 7
 }
 
 public enum PlayerAttackState

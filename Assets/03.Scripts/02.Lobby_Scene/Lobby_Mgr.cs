@@ -172,6 +172,7 @@ public class Lobby_Mgr : MonoBehaviour
 
     public void StartBtnFunc()
     {
+        SoundMgr.Instance.PlayEffSound("Scene_Move", 1.0f);
         GlobalData.stage_Progress++;
         fadeOut.gameObject.SetActive(true);
         isOut = true;
