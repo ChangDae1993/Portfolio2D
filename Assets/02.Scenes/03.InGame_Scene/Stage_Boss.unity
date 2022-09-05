@@ -1179,6 +1179,7 @@ MonoBehaviour:
   isRevive: 0
   skill1ActiveHp: 0
   skill2ActiveHp: 0
+  isSkill2: 0
 --- !u!114 &498385455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7859,10 +7860,10 @@ Transform:
   m_GameObject: {fileID: 908740212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.495, z: 0}
-  m_LocalScale: {x: 0.7, y: 1, z: 1}
+  m_LocalScale: {x: 3.5, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 1319583348}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &908740214
 SpriteRenderer:
@@ -7903,9 +7904,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 2257707443651097029, guid: f3431b64a116bf248a3f497144e67b13, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.74509805}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 0.24158427, g: 0.13246706, b: 0.5754717, a: 0.4117647}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8707,8 +8708,8 @@ Transform:
   m_LocalPosition: {x: 26.88, y: -2.61, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
-  - {fileID: 1791281361}
   - {fileID: 908740213}
+  - {fileID: 1791281361}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9782,7 +9783,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1319583348}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1791281362
 SpriteRenderer:
