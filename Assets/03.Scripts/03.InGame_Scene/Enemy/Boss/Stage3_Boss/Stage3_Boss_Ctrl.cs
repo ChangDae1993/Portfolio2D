@@ -10,6 +10,10 @@ public class Stage3_Boss_Ctrl : Enemy
     public Image Hp2_Img;
     public Text Hp_Txt;
 
+    private bool isDead;
+    public Image ending_FadeOut;
+    [SerializeField] private float endingAlpha;
+
     Vector2 targetPos = Vector2.zero;
 
     private float skill1Per;
@@ -36,6 +40,9 @@ public class Stage3_Boss_Ctrl : Enemy
         skill1ActiveHp = 350;
         skill2ActiveHp = 600;
         isSkill2 = false;
+        ending_FadeOut.color = new Color(0, 0, 0, 0);
+        endingAlpha = 0.0f;
+        isDead = false;
     }
 
     private void Update() => UpdateFunc();
@@ -63,9 +70,20 @@ public class Stage3_Boss_Ctrl : Enemy
 
             if (disTime <= 0.0f)
             {
-                Destroy(this.gameObject);
-                SceneManager.LoadScene("Ending");
+                isDead = true;
             }
+        }
+
+        if(isDead)
+        {
+            endingAlpha += Time.deltaTime * 0.3f;
+            ending_FadeOut.color = new Color(0, 0, 0, endingAlpha);
+
+        }
+
+        if(ending_FadeOut.color.a >= 1.0f)
+        {
+            SceneManager.LoadScene("Ending");
         }
     }
 
@@ -393,6 +411,7 @@ public class Stage3_Boss_Ctrl : Enemy
     }
     protected override void M_Death()
     {
+        SoundMgr.Instance.PlayBGM("Boss_Revive_BGM", 0.1f);
         SoundMgr.Instance.PlayEffSound("Boss_Death", 1.0f);
         E_State.e_State = EnemyState.enemy_Death;
         animator.SetTrigger("Boss_DieTrigger");
