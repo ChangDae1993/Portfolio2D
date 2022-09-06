@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,17 @@ public class Player_Input : MonoBehaviour
 
     private bool configOn;
     public Image Config_Panel;
+
+    public Button Cnxl_Btn;
+
+    //설정 관련UI
+    [Header("===Config===")]
     public Button exitBtn;
+    public Text MuteOn;
+    public Toggle SoundOnOff;
+    public Slider SoundVolume;
+    [SerializeField] private bool isMute;
+    
 
 
     // 이런식으로 변수 추가해서 Input class 만들기
@@ -44,12 +55,22 @@ public class Player_Input : MonoBehaviour
 
         if (exitBtn != null)
             exitBtn.onClick.AddListener(exitFunc);
+
+        if (Cnxl_Btn != null)
+            Cnxl_Btn.onClick.AddListener(CancelFunc);
+
+        if (SoundOnOff != null)
+            SoundOnOff.onValueChanged.AddListener(MuteFunc);
+
+        if (SoundVolume != null)
+            SoundVolume.onValueChanged.AddListener(VolumeFunc);
+        isMute = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Player_State.p_state != PlayerState.player_die)
+        if (Player_State.p_state != PlayerState.player_die)
         {
             horizontal = Input.GetAxis("Horizontal");
             vertical = Input.GetAxis("Vertical");
@@ -64,6 +85,7 @@ public class Player_Input : MonoBehaviour
                 animator.SetBool("ShieldOn", false);
             }
 
+            //설정창
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if (!configOn)
@@ -80,11 +102,41 @@ public class Player_Input : MonoBehaviour
                 }
             }
         }
-
     }
 
     public void exitFunc()
     {
         Application.Quit();
+    }
+
+    public void CancelFunc()
+    {
+        Config_Panel.gameObject.SetActive(false);
+        configOn = false;
+        Time.timeScale = 1.0f;
+    }
+
+    private void MuteFunc(bool arg0)
+    {
+        if (!arg0)
+        {
+            isMute = true;
+            SoundMgr.Instance.SoundOnOff(false);
+            MuteOn.text = "Sound Off";
+        }
+        else
+        {
+            isMute = false;
+            SoundMgr.Instance.SoundOnOff();
+            MuteOn.text = "Sound On";
+        }
+    }
+
+    public void VolumeFunc(float value)
+    {
+        if(SoundVolume !=  null)
+        {
+            SoundMgr.Instance.SoundVolume(value);
+        }
     }
 }
