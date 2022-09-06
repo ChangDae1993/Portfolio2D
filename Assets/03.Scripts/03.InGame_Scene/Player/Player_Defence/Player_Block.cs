@@ -26,6 +26,8 @@ public class Player_Block : MonoBehaviour
     public Image shield_Dur;
     public Image shield_Recharge;
 
+    [SerializeField] private bool shieldDash;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,8 @@ public class Player_Block : MonoBehaviour
         shield_Dur.gameObject.SetActive(false);
         shield_Recharge.gameObject.SetActive(false);
         shieldState = ShieldState.shieldOff;
+
+        shieldDash = false;
     }
 
     // Update is called once per frame
@@ -79,6 +83,7 @@ public class Player_Block : MonoBehaviour
             def_area.gameObject.SetActive(true);
             SoundMgr.Instance.PlayEffSound("shield_on", 0.5f);
             Shield_scale = this.transform.localScale.x;
+
         }
 
         if (Input.GetMouseButtonUp(1) && shieldState != ShieldState.shieldRecharge)
@@ -90,5 +95,18 @@ public class Player_Block : MonoBehaviour
             SoundMgr.Instance.PlayEffSound("shield_off", 0.4f);
             def_area.gameObject.SetActive(false);
         }
+
+        if (shieldState == ShieldState.shieldOn && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            ShieldDash();
+            shieldDash = true;
+        }
     }
+
+    #region Shield Dash
+    public void ShieldDash()
+    {
+        Debug.Log("Shield Dash");
+    }
+    #endregion
 }
