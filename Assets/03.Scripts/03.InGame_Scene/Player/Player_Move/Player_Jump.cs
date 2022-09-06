@@ -26,7 +26,6 @@ public class Player_Jump : MonoBehaviour
         isJumping = false;
         Player_State.p_state = PlayerState.player_idle;
         Player_State.p_Move_state = PlayerMoveState.player_jump;
-
     }
 
     // Update is called once per frame
@@ -54,12 +53,12 @@ public class Player_Jump : MonoBehaviour
 
     void FixedUpdate()
     {
+        rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("PLATFORM"));
+        rayenem = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Enemy"));
         // Lending Platform
         if (rigid.velocity.y <= 0)
         {
-            rayHit = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("PLATFORM"));
-            rayenem = Physics2D.Raycast(rigid.position, Vector3.down, 1, LayerMask.GetMask("Enemy"));
-            Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0)); //에디터 상에서만 레이를 그려준다
+            //Debug.DrawRay(rigid.position, Vector3.down, new Color(0, 1, 0)); //에디터 상에서만 레이를 그려준다
             if (rayHit.collider != null) // 바닥 감지를 위해서 레이저를 쏜다! 
             {
                 if (rayHit.distance < 0.5f)
@@ -68,7 +67,6 @@ public class Player_Jump : MonoBehaviour
                     isJumping = false;
                 }
             }
-
 
             if (rayenem.collider != null)
             {
