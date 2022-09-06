@@ -23,6 +23,7 @@ public class Stage3_Boss_Ctrl : Enemy
     [SerializeField] private int skill1ActiveHp;
     [SerializeField] private int skill2ActiveHp;
     [SerializeField] private bool isSkill2;
+    [SerializeField] private float deathVolume;
 
     private void Awake()
     {
@@ -43,6 +44,7 @@ public class Stage3_Boss_Ctrl : Enemy
         ending_FadeOut.color = new Color(0, 0, 0, 0);
         endingAlpha = 0.0f;
         isDead = false;
+        deathVolume = 1.0f;
     }
 
     private void Update() => UpdateFunc();
@@ -77,8 +79,10 @@ public class Stage3_Boss_Ctrl : Enemy
         if(isDead)
         {
             endingAlpha += Time.deltaTime * 0.3f;
+            deathVolume -= Time.deltaTime * 0.5f;
             ending_FadeOut.color = new Color(0, 0, 0, endingAlpha);
 
+            SoundMgr.Instance.SoundVolume(deathVolume);
         }
 
         if(ending_FadeOut.color.a >= 1.0f)
