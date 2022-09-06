@@ -1021,7 +1021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &498385449
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1177,6 +1177,7 @@ MonoBehaviour:
   Hp2_Img: {fileID: 1148717082}
   Hp_Txt: {fileID: 538937742}
   ending_FadeOut: {fileID: 1457814682}
+  endingAlpha: 0
   isRevive: 0
   skill1ActiveHp: 0
   skill2ActiveHp: 0

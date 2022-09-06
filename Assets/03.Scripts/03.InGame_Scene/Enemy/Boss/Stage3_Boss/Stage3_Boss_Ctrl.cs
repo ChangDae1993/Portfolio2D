@@ -337,8 +337,6 @@ public class Stage3_Boss_Ctrl : Enemy
             GameObject skill2 = (GameObject)Instantiate(Resources.Load("Prefab/Goblin")) as GameObject;
             skill2.transform.position = new Vector3(this.transform.position.x + 1.0f, this.transform.position.y, this.transform.position.z);
 
-            GameObject skill2_1 = (GameObject)Instantiate(Resources.Load("Prefab/Goblin")) as GameObject;
-            skill2_1.transform.position = new Vector3(this.transform.position.x - 3.0f, this.transform.position.y, this.transform.position.z);
             isSkill2 = false;
             skill = Random.Range(1, 101);
         }
