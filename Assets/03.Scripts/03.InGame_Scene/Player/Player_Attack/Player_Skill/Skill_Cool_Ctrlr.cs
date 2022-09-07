@@ -12,12 +12,15 @@ public class Skill_Cool_Ctrlr : MonoBehaviour
 
     private Player_Input p_Input;
 
+    public bool skill2Able;
+
     private void Start() => StartFunc();
 
     private void StartFunc()
     {
         s2_coolImg.gameObject.SetActive(false);
         p_Input = GetComponentInParent<Player_Input>();
+        skill2Able = true;
     }
 
     private void Update() => UpdateFunc();
@@ -27,10 +30,12 @@ public class Skill_Cool_Ctrlr : MonoBehaviour
         if(p_Input.skill2On)
         {
             s2_coolImg.gameObject.SetActive(true);
-            s2_coolImg.fillAmount -= Time.deltaTime;
+            skill2Able = false;
+            s2_coolImg.fillAmount -= Time.deltaTime * 0.5f;
 
             if(s2_coolImg.fillAmount <= 0.0f)
             {
+                skill2Able = true;
                 p_Input.skill2On = false;
                 s2_coolImg.fillAmount = 1.0f;
                 s2_coolImg.gameObject.SetActive(false);

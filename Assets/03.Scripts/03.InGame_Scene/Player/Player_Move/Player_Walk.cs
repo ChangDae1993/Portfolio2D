@@ -8,6 +8,7 @@ public class Player_Walk : MonoBehaviour
     private Player_Input p_input;
     private Player_State_Ctrlr P_State;
     private Player_Block P_block;
+    public Skill2 sk2;
     Animator animator;
 
     private GameObject startPos;
@@ -119,7 +120,7 @@ public class Player_Walk : MonoBehaviour
             }
             //Debug.Log("Shield On");
         }
-        else if(P_State.p_Defece_state == PlayerDefenceState.player_ShieldDash)
+        else if (sk2.shieldDash)
         {
             move_speed = 5.0f;
         }

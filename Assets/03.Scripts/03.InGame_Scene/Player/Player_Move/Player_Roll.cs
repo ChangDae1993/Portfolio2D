@@ -47,6 +47,9 @@ public class Player_Roll : MonoBehaviour
             if (P_State.p_Defece_state == PlayerDefenceState.player_onShield)
                 return;
 
+            if (P_State.p_Defece_state == PlayerDefenceState.player_ShieldDash)
+                return;
+
             if (P_State.p_Move_state == PlayerMoveState.player_jump)
             {
                 return;

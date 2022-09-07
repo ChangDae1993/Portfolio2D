@@ -352,6 +352,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168269148}
   m_CullTransparentMesh: 1
+--- !u!114 &217654968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5337374705752537273, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+  m_PrefabInstance: {fileID: 852941157}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a69ff7215beb254dbc4c7de6e911319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &348311424
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,7 +554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1663294904679654850, guid: 40b267edae9d4ac45b3611ec8bee1c92, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1663294904679654909, guid: 40b267edae9d4ac45b3611ec8bee1c92, type: 3}
       propertyPath: m_RootOrder
@@ -2760,6 +2771,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7601861508232212039, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
+      propertyPath: sk2
+      value: 
+      objectReference: {fileID: 217654968}
     - target: {fileID: 7601861508232212061, guid: 04a526ef6b8e2a34caded91696376dc6, type: 3}
       propertyPath: m_Name
       value: Player
