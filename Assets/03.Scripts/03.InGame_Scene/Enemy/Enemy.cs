@@ -62,6 +62,10 @@ public abstract class Enemy : MonoBehaviour
     //후퇴 후 돌아올 타이머
     protected float retreatTimer;
 
+    //스턴 체크
+    [SerializeField] protected bool isStun;
+    [SerializeField] protected float stunTimer;
+
 
 
     //Awake에서 찾아두기

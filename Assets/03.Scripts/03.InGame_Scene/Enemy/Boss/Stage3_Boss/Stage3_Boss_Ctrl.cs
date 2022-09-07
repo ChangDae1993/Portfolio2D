@@ -112,6 +112,8 @@ public class Stage3_Boss_Ctrl : Enemy
         isChase = false;
 
         disTime = 3.0f;
+
+        isStun = false;
     }
 
     protected override void M_Patrol()

@@ -13,6 +13,7 @@ public enum EnemyState
     enemy_Hit=6,
     enemy_Retreat=7,
     enemy_Resurrection=8,
+    enemy_Stun=9,
 }
 
 public class Enemy_State_Ctrlr : MonoBehaviour

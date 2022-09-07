@@ -65,6 +65,8 @@ public class BowS_Controller : Enemy
 
         isRetreat = false;
         retreatTimer = -1.0f;
+
+        isStun = false;
     }
 
     protected override void M_Patrol()
