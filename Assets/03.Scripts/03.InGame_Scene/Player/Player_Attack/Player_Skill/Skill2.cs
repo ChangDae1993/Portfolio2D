@@ -15,8 +15,8 @@ public class Skill2 : MonoBehaviour
 
 
     public bool shieldDash;
-    [SerializeField] private float sDashTimer;
     [SerializeField] private float sDashTime;
+    [SerializeField] private float sDashTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,7 @@ public class Skill2 : MonoBehaviour
         p_Block = GetComponentInParent<Player_Block>();
         p_Walk = GetComponentInParent<Player_Walk>();
         shieldDash = false;
-        sDashTime = 0.2f;
+        sDashTime = 0.3f;
         sDashTimer = sDashTime;
 
         sk_Cool = GameObject.Find("Skill_Cool_CTRLR").GetComponent<Skill_Cool_Ctrlr>();
@@ -46,10 +46,6 @@ public class Skill2 : MonoBehaviour
             sDashTimer -= Time.deltaTime;
             ShieldDash();
         }
-        else if(!shieldDash)
-        {
-
-        }
 
         if (sDashTimer < 0.0f)
         {
@@ -63,7 +59,6 @@ public class Skill2 : MonoBehaviour
     public void ShieldDash()
     {
         Debug.Log("Shield Dash");
-
     }
     #endregion
 
@@ -72,7 +67,18 @@ public class Skill2 : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy") && shieldDash)
         {
             sDashTimer = -1.0f;
-            //Debug.Log("Stun");
+            collision.gameObject.GetComponent<Enemy>().M_Stun();
+            shieldDash = false;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy") && shieldDash)
+        {
+            sDashTimer = -1.0f;
+            collision.gameObject.GetComponent<Enemy>().M_Stun();
+            shieldDash = false;
         }
     }
 }

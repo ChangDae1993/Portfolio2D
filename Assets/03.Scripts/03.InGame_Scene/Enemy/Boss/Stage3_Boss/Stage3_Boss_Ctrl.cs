@@ -390,7 +390,10 @@ public class Stage3_Boss_Ctrl : Enemy
             }
         }
     }
-
+    public override void M_Stun()
+    {
+        Debug.Log("Stun");
+    }
 
     protected override void M_Resurrection()
     {

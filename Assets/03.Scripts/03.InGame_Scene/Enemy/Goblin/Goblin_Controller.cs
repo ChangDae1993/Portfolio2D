@@ -220,10 +220,7 @@ public class Goblin_Controller : Enemy
     }
     protected override void M_Retreat()
     {
-        if (CurHp < 20.0f)
-        {
-            
-        }
+        //고블린은 구현 안함
         throw new System.NotImplementedException();
     }
 
@@ -239,4 +236,8 @@ public class Goblin_Controller : Enemy
         throw new System.NotImplementedException();
     }
 
+    public override void M_Stun()
+    {
+        Debug.Log("Stun");
+    }
 }

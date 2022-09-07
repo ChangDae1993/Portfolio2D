@@ -249,7 +249,10 @@ public class BowS_Controller : Enemy
 
     }
 
-
+    public override void M_Stun()
+    {
+        Debug.Log("Stun");
+    }
 
     protected override void M_Death()
     {

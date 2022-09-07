@@ -89,6 +89,9 @@ public abstract class Enemy : MonoBehaviour
     //피격
     public abstract void M_Hit(float dmg);
 
+    //스턴
+    public abstract void M_Stun();
+
     //사망
     protected abstract void M_Death();
 
