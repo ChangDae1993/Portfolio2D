@@ -45,9 +45,8 @@ public class Goblin_Controller : Enemy
             {
                 M_Death();
             }
-
-            //E_State.e_State = EnemyState.enemy_Idle;
             stunTimer = 3.0f;
+            E_State.e_State = EnemyState.enemy_Attack;
             animator.SetBool("IsStun", false);
         }
 

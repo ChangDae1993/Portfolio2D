@@ -19,12 +19,23 @@ public class Camera_Ctrlr : MonoBehaviour
     float height;
     float width;
 
+    public float ShakeAmout;
+    public float ShakeTime;
+
     void Start()
     {
         playerTransform = GameObject.Find("Player").GetComponent<Transform>();
 
         height = Camera.main.orthographicSize;
         width = height * Screen.width / Screen.height;
+
+        ShakeAmout = 0.03f;
+        ShakeTime = 1000000000.0f;
+    }
+
+    private void Update()
+    {
+
     }
 
     void FixedUpdate()
@@ -50,5 +61,19 @@ public class Camera_Ctrlr : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(center, mapSize * 2);
+    }
+
+    public void CamShake()
+    {
+        if (ShakeTime > 0.0f)
+        {
+            this.transform.position = Random.insideUnitSphere * ShakeAmout + transform.position;
+            ShakeTime -= Time.deltaTime;
+        }
+        else
+        {
+            ShakeTime = 0.0f;
+            transform.position = cameraPosition;
+        }
     }
 }

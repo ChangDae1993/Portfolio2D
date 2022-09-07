@@ -39,7 +39,6 @@ public class BowS_Controller : Enemy
             if (disTime <= 0.0f)
                 Destroy(this.gameObject);
         }
-        //Debug.Log(retreatTimer);
 
         if (isStun)
         {
@@ -53,6 +52,7 @@ public class BowS_Controller : Enemy
                 M_Death();
             }
             stunTimer = 3.0f;
+            E_State.e_State = EnemyState.enemy_Attack;
             animator.SetBool("IsStun", false);
         }
 

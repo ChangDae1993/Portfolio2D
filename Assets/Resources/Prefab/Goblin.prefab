@@ -371,11 +371,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b81f77533c63ba46bd6adc00004dce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CurHp: 0
+  disTime: 0
   e_att_Range: 0
   attack_Point: {fileID: 1663294905422186782}
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  isStun: 0
+  stunTimer: 0
   Hp_Img: {fileID: 1663294904562656050}
 --- !u!114 &1663294904679654849
 MonoBehaviour:

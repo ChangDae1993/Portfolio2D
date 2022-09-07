@@ -12,7 +12,7 @@ public class Skill2 : MonoBehaviour
     private Player_Block p_Block;
     private Player_Walk p_Walk;
     private Skill_Cool_Ctrlr sk_Cool;
-
+    private Camera_Ctrlr cam_Ctrl;
 
     public bool shieldDash;
     [SerializeField] private float sDashTime;
@@ -25,6 +25,7 @@ public class Skill2 : MonoBehaviour
         p_State = GetComponentInParent<Player_State_Ctrlr>();
         p_Block = GetComponentInParent<Player_Block>();
         p_Walk = GetComponentInParent<Player_Walk>();
+        cam_Ctrl = Camera.main.GetComponent<Camera_Ctrlr>();
         shieldDash = false;
         sDashTime = 0.1f;
         sDashTimer = sDashTime;
@@ -58,13 +59,14 @@ public class Skill2 : MonoBehaviour
     #region Shield Dash
     public void ShieldDash()
     {
+        cam_Ctrl.CamShake();
         //Debug.Log("Shield Dash");
     }
     #endregion
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy") && shieldDash)
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy") && shieldDash)
         {
             sDashTimer = -1.0f;
             collision.gameObject.GetComponent<Enemy>().M_Stun();
@@ -76,6 +78,7 @@ public class Skill2 : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy") && shieldDash)
         {
+
             sDashTimer = -1.0f;
             collision.gameObject.GetComponent<Enemy>().M_Stun();
             shieldDash = false;
