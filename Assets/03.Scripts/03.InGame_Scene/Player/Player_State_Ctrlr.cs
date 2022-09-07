@@ -44,7 +44,8 @@ public enum PlayerDefenceState
 {
     player_noShield = 0,
     player_onShield = 1,
-    player_ShieldActive =2
+    player_ShieldActive =2,
+    player_ShieldDash = 3
 }
 #endregion
 

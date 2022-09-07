@@ -19,6 +19,8 @@ public class Player_Input : MonoBehaviour
 
     public Button Cnxl_Btn;
 
+    public bool skill2On;
+
     //설정 관련UI
     [Header("===Config===")]
     public Button exitBtn;
@@ -65,6 +67,8 @@ public class Player_Input : MonoBehaviour
         if (SoundVolume != null)
             SoundVolume.onValueChanged.AddListener(VolumeFunc);
         isMute = false;
+
+        skill2On = false;
     }
 
     // Update is called once per frame
@@ -83,6 +87,12 @@ public class Player_Input : MonoBehaviour
             if (Input.GetMouseButtonUp(1))
             {
                 animator.SetBool("ShieldOn", false);
+            }
+
+            if(Input.GetMouseButton(1) && Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                Player_State.p_Defece_state = PlayerDefenceState.player_ShieldDash;
+                skill2On = true;
             }
 
             //설정창

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Skill1 : MonoBehaviour
 {
-    public Image sk1_coolImg;
+    private Image sk1_coolImg;
     public GameObject skill_Obj;
     bool isHill;
     public Text skill1Num;
@@ -17,6 +17,7 @@ public class Skill1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sk1_coolImg = GameObject.Find("Skill_Cool_CTRLR").GetComponent<Skill_Cool_Ctrlr>().s1_coolImg;
         isHill = false;
         pDam = GetComponent<Player_TakeDamage>();
         anim = GetComponent<Animator>();

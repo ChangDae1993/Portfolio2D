@@ -37,35 +37,9 @@ public class Player_Walk : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        //if(P_State.p_state != PlayerState.player_die)
-        //{
-        //    if (p_input.horizontal != 0)
-        //    {
-        //        P_State.p_state = PlayerState.player_move;
-        //        P_State.p_Move_state = PlayerMoveState.player_walk;
-        //        P_Move_Walk();
-        //        animator.SetBool("IsWalk", true);
-        //    }
-        //    else
-        //    {
-        //        P_State.p_state = PlayerState.player_idle;
-        //        P_State.p_Move_state = PlayerMoveState.player_noWalk;
-        //        animator.SetBool("IsWalk", false);
-        //        isMove = false;
-        //    }
-        //}
-
-        //if (isMove && P_State.p_Move_state == PlayerMoveState.player_walk)
-        //{
-        //    if (!audioSrc.isPlaying)
-        //        audioSrc.Play();
-        //}
-        //else if (!isMove && P_State.p_Move_state != PlayerMoveState.player_walk || P_State.p_state == PlayerState.player_die)
-        //    audioSrc.Stop();
-
-    }
+    //void Update()
+    //{
+    //}
 
     private void FixedUpdate()
     {
@@ -144,6 +118,10 @@ public class Player_Walk : MonoBehaviour
                 //Debug.Log("Shield left fix");
             }
             //Debug.Log("Shield On");
+        }
+        else if(P_State.p_Defece_state == PlayerDefenceState.player_ShieldDash)
+        {
+            move_speed = 5.0f;
         }
 
         //이동 제한
