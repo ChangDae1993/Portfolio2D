@@ -394,7 +394,7 @@ public class Stage3_Boss_Ctrl : Enemy
     }
     public override void M_Stun()
     {
-        Debug.Log("Stun");
+        //스턴 없음
     }
 
     protected override void M_Resurrection()

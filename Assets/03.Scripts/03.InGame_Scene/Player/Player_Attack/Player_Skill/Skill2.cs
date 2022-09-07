@@ -26,7 +26,7 @@ public class Skill2 : MonoBehaviour
         p_Block = GetComponentInParent<Player_Block>();
         p_Walk = GetComponentInParent<Player_Walk>();
         shieldDash = false;
-        sDashTime = 0.3f;
+        sDashTime = 0.1f;
         sDashTimer = sDashTime;
 
         sk_Cool = GameObject.Find("Skill_Cool_CTRLR").GetComponent<Skill_Cool_Ctrlr>();
@@ -58,7 +58,7 @@ public class Skill2 : MonoBehaviour
     #region Shield Dash
     public void ShieldDash()
     {
-        Debug.Log("Shield Dash");
+        //Debug.Log("Shield Dash");
     }
     #endregion
 

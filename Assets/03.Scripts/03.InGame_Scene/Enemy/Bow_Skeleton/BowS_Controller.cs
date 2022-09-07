@@ -40,7 +40,28 @@ public class BowS_Controller : Enemy
                 Destroy(this.gameObject);
         }
         //Debug.Log(retreatTimer);
+
+        if (isStun)
+        {
+            E_State.e_State = EnemyState.enemy_Stun;
+            stunTimer -= Time.deltaTime;
+        }
+        else
+        {
+            if (CurHp <= 0.0f)
+            {
+                M_Death();
+            }
+            stunTimer = 3.0f;
+            animator.SetBool("IsStun", false);
+        }
+
+        if (stunTimer <= 0.0f)
+        {
+            isStun = false;
+        }
     }
+
     protected override void InitData()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -67,10 +88,14 @@ public class BowS_Controller : Enemy
         retreatTimer = -1.0f;
 
         isStun = false;
+        stunTimer = 5.0f;
     }
 
     protected override void M_Patrol()
     {
+        if (E_State.e_State == EnemyState.enemy_Stun)
+            return;
+
         if (E_State.e_State == EnemyState.enemy_Death)
             return;
 
@@ -121,6 +146,9 @@ public class BowS_Controller : Enemy
     }
     protected override void M_ChaseDist()
     {
+        if (E_State.e_State == EnemyState.enemy_Stun)
+            return;
+
         if (E_State.e_State == EnemyState.enemy_Death)
             return;
 
@@ -157,6 +185,9 @@ public class BowS_Controller : Enemy
     }
     protected override void M_Chase()
     {
+        if (E_State.e_State == EnemyState.enemy_Stun)
+            return;
+
         if (E_State.e_State == EnemyState.enemy_Death)
             return;
 
@@ -253,7 +284,13 @@ public class BowS_Controller : Enemy
 
     public override void M_Stun()
     {
-        Debug.Log("Stun");
+        isStun = true;
+        if (isStun)
+        {
+            Debug.Log("Stun");
+            animator.SetBool("IsStun", true);
+        }
+
     }
 
     protected override void M_Death()

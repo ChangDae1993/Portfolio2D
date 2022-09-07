@@ -3991,6 +3991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Config_Panel: {fileID: 316184564936574333}
   Cnxl_Btn: {fileID: 2945153453441825899}
+  skill2On: 0
   exitBtn: {fileID: 4411704600916012442}
   MuteOn: {fileID: 946931166103446200}
   SoundOnOff: {fileID: 7965630173258235717}
@@ -4008,6 +4009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bba1968b0c4054ab34cc3bfb5ffceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sk2: {fileID: 5337374705752537273}
   move_speed: 5
   key: 0
   isMove: 0
@@ -4398,9 +4400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldDash: 0
-  sDashTimer: 0
   sDashTime: 0
-  isTest: 0
+  sDashTimer: 0
 --- !u!1 &7618549869332170419
 GameObject:
   m_ObjectHideFlags: 0
@@ -4447,6 +4448,7 @@ MonoBehaviour:
   s1_coolImg: {fileID: 5753593797686174526}
   s2_coolImg: {fileID: 7259412040855198702}
   sk2: {fileID: 5337374705752537273}
+  skill2Able: 0
 --- !u!1 &7891413689833668252
 GameObject:
   m_ObjectHideFlags: 0

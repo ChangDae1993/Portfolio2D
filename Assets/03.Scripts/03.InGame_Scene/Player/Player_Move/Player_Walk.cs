@@ -122,7 +122,7 @@ public class Player_Walk : MonoBehaviour
         }
         else if (sk2.shieldDash)
         {
-            move_speed = 5.0f;
+            move_speed = 15.0f;
         }
 
         //이동 제한
