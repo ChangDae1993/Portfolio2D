@@ -34,9 +34,11 @@ public class Goblin_Controller : Enemy
                 Destroy(this.gameObject);
         }
 
-        if(isStun)
+        if (isStun)
         {
-            E_State.e_State = EnemyState.enemy_Stun;
+            Debug.Log("Stun");
+            animator.SetBool("IsStun", true);
+            E_State.e_StunState = EnemyStunState.enemy_Stun;
             stunTimer -= Time.deltaTime;
         }
         else
@@ -46,7 +48,6 @@ public class Goblin_Controller : Enemy
                 M_Death();
             }
             stunTimer = 3.0f;
-            E_State.e_State = EnemyState.enemy_Attack;
             animator.SetBool("IsStun", false);
         }
 
@@ -86,7 +87,7 @@ public class Goblin_Controller : Enemy
 
     protected override void M_Patrol()
     {
-        if (E_State.e_State == EnemyState.enemy_Stun)
+        if (E_State.e_StunState == EnemyStunState.enemy_Stun)
             return;
 
         if (E_State.e_State == EnemyState.enemy_Death)
@@ -139,7 +140,7 @@ public class Goblin_Controller : Enemy
     }
     protected override void M_Chase()
     {
-        if (E_State.e_State == EnemyState.enemy_Stun)
+        if (E_State.e_StunState == EnemyStunState.enemy_Stun)
             return;
 
         if (E_State.e_State == EnemyState.enemy_Death)
@@ -165,7 +166,7 @@ public class Goblin_Controller : Enemy
     //플레이어와 거리 체크하는 함수
     protected override void M_ChaseDist()
     {
-        if (E_State.e_State == EnemyState.enemy_Stun)
+        if (E_State.e_StunState == EnemyStunState.enemy_Stun)
             return;
 
         if (E_State.e_State == EnemyState.enemy_Death)
@@ -272,10 +273,6 @@ public class Goblin_Controller : Enemy
     public override void M_Stun()
     {
         isStun = true;
-        if(isStun)
-        {
-            Debug.Log("Stun");
-            animator.SetBool("IsStun", true);
-        }
+
     }
 }

@@ -42,7 +42,7 @@ public class BowS_Controller : Enemy
 
         if (isStun)
         {
-            E_State.e_State = EnemyState.enemy_Stun;
+            E_State.e_StunState = EnemyStunState.enemy_Stun;
             stunTimer -= Time.deltaTime;
         }
         else
@@ -52,7 +52,6 @@ public class BowS_Controller : Enemy
                 M_Death();
             }
             stunTimer = 3.0f;
-            E_State.e_State = EnemyState.enemy_Attack;
             animator.SetBool("IsStun", false);
         }
 
@@ -93,7 +92,7 @@ public class BowS_Controller : Enemy
 
     protected override void M_Patrol()
     {
-        if (E_State.e_State == EnemyState.enemy_Stun)
+        if (E_State.e_StunState == EnemyStunState.enemy_Stun)
             return;
 
         if (E_State.e_State == EnemyState.enemy_Death)
@@ -146,7 +145,7 @@ public class BowS_Controller : Enemy
     }
     protected override void M_ChaseDist()
     {
-        if (E_State.e_State == EnemyState.enemy_Stun)
+        if (E_State.e_StunState == EnemyStunState.enemy_Stun)
             return;
 
         if (E_State.e_State == EnemyState.enemy_Death)
@@ -185,7 +184,7 @@ public class BowS_Controller : Enemy
     }
     protected override void M_Chase()
     {
-        if (E_State.e_State == EnemyState.enemy_Stun)
+        if (E_State.e_StunState == EnemyStunState.enemy_Stun)
             return;
 
         if (E_State.e_State == EnemyState.enemy_Death)
