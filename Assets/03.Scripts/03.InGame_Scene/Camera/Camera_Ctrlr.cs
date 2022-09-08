@@ -29,7 +29,7 @@ public class Camera_Ctrlr : MonoBehaviour
         height = Camera.main.orthographicSize;
         width = height * Screen.width / Screen.height;
 
-        ShakeAmout = 0.03f;
+        ShakeAmout = 0.1f;
         ShakeTime = 1000000000.0f;
     }
 

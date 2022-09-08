@@ -60,6 +60,7 @@ public class Skill2 : MonoBehaviour
     public void ShieldDash()
     {
         cam_Ctrl.CamShake();
+        SoundMgr.Instance.PlayEffSound("Shield_Dash", 0.7f);
         //Debug.Log("Shield Dash");
     }
     #endregion
@@ -78,7 +79,7 @@ public class Skill2 : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy") && shieldDash)
         {
-
+            SoundMgr.Instance.PlayEffSound("Shield_Dash_Impact", 1.0f);
             sDashTimer = -1.0f;
             collision.gameObject.GetComponent<Enemy>().M_Stun();
             shieldDash = false;
