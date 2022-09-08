@@ -57,6 +57,7 @@ public class BowS_Controller : Enemy
 
         if (stunTimer <= 0.0f)
         {
+            E_State.e_StunState = EnemyStunState.enemy_noStun;
             isStun = false;
         }
     }
