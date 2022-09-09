@@ -12,7 +12,7 @@ public class Skill2 : MonoBehaviour
     private Player_Block p_Block;
     private Player_Walk p_Walk;
     private Skill_Cool_Ctrlr sk_Cool;
-    private Camera_Ctrlr cam_Ctrl;
+    [SerializeField] private Camera_Ctrlr cam_Ctrl;
 
     public bool shieldDash;
     [SerializeField] private float sDashTime;
@@ -25,9 +25,9 @@ public class Skill2 : MonoBehaviour
         p_State = GetComponentInParent<Player_State_Ctrlr>();
         p_Block = GetComponentInParent<Player_Block>();
         p_Walk = GetComponentInParent<Player_Walk>();
-        cam_Ctrl = Camera.main.GetComponent<Camera_Ctrlr>();
+
         shieldDash = false;
-        sDashTime = 0.1f;
+        sDashTime = 0.2f;
         sDashTimer = sDashTime;
 
         sk_Cool = GameObject.Find("Skill_Cool_CTRLR").GetComponent<Skill_Cool_Ctrlr>();
@@ -59,7 +59,7 @@ public class Skill2 : MonoBehaviour
     #region Shield Dash
     public void ShieldDash()
     {
-        cam_Ctrl.CamShake();
+        cam_Ctrl = Camera.main.GetComponent<Camera_Ctrlr>();
         SoundMgr.Instance.PlayEffSound("Shield_Dash", 0.7f);
         //Debug.Log("Shield Dash");
     }
@@ -69,6 +69,13 @@ public class Skill2 : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy") && shieldDash)
         {
+            if (cam_Ctrl != null)
+            {
+                cam_Ctrl.CamShake();
+            }
+
+            SoundMgr.Instance.PlayEffSound("Shield_Dash_Impact", 1.0f);
+
             sDashTimer = -1.0f;
             collision.gameObject.GetComponent<Enemy>().M_Stun();
             shieldDash = false;
@@ -77,8 +84,14 @@ public class Skill2 : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy") && shieldDash)
         {
+            if (cam_Ctrl != null)
+            {
+                cam_Ctrl.CamShake();
+            }
+
             SoundMgr.Instance.PlayEffSound("Shield_Dash_Impact", 1.0f);
             sDashTimer = -1.0f;
             collision.gameObject.GetComponent<Enemy>().M_Stun();
