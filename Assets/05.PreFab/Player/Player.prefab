@@ -4399,6 +4399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a69ff7215beb254dbc4c7de6e911319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam_Ctrl: {fileID: 0}
   shieldDash: 0
   sDashTime: 0
   sDashTimer: 0
