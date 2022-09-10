@@ -3877,7 +3877,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "hold 'W' - Charge attack\n(\uBBF8\uAD6C\uD604)"
+  m_Text: 'shield +dash
+
+    -Sheild dash'
 --- !u!222 &2065422190
 CanvasRenderer:
   m_ObjectHideFlags: 0

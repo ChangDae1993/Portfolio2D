@@ -339,7 +339,7 @@ public class Stage3_Boss_Ctrl : Enemy
         if (isSkill2)
         {
             SoundMgr.Instance.PlayEffSound("Boss_Skill2", 0.7f);
-            Debug.Log("Skill2");
+            //Debug.Log("Skill2");
             GameObject skill2 = (GameObject)Instantiate(Resources.Load("Prefab/Goblin")) as GameObject;
             skill2.transform.position = new Vector3(this.transform.position.x + 1.0f, this.transform.position.y, this.transform.position.z);
 
@@ -401,7 +401,7 @@ public class Stage3_Boss_Ctrl : Enemy
     {
         SoundMgr.Instance.PlayEffSound("Boss_Revive", 0.7f);
         E_State.e_State = EnemyState.enemy_Resurrection;
-        Debug.Log("부활");
+        //Debug.Log("부활");
         animator.SetBool("IsRevive", true);
         this.gameObject.layer = 13;
 
@@ -428,7 +428,7 @@ public class Stage3_Boss_Ctrl : Enemy
 
     protected override void M_Retreat()
     {
-        Debug.Log("구현 안함");
+        //Debug.Log("구현 안함");
     }
 
 }

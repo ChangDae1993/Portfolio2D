@@ -73,11 +73,12 @@ public class Skill2 : MonoBehaviour
             {
                 cam_Ctrl.CamShake();
             }
-
+            
             SoundMgr.Instance.PlayEffSound("Shield_Dash_Impact", 1.0f);
 
             sDashTimer = -1.0f;
             collision.gameObject.GetComponent<Enemy>().M_Stun();
+            collision.gameObject.GetComponent<Enemy>().M_Hit(10.0f);
             shieldDash = false;
         }
     }
@@ -95,6 +96,7 @@ public class Skill2 : MonoBehaviour
             SoundMgr.Instance.PlayEffSound("Shield_Dash_Impact", 1.0f);
             sDashTimer = -1.0f;
             collision.gameObject.GetComponent<Enemy>().M_Stun();
+            collision.gameObject.GetComponent<Enemy>().M_Hit(10.0f);
             shieldDash = false;
         }
     }

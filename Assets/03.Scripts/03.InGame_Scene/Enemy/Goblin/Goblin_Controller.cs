@@ -36,7 +36,7 @@ public class Goblin_Controller : Enemy
 
         if (isStun)
         {
-            Debug.Log("Stun");
+            //Debug.Log("Stun");
             animator.SetBool("IsStun", true);
             E_State.e_StunState = EnemyStunState.enemy_Stun;
             stunTimer -= Time.deltaTime;

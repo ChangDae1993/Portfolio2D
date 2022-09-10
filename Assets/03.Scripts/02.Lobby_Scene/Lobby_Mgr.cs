@@ -147,7 +147,7 @@ public class Lobby_Mgr : MonoBehaviour
         //    checkskill2 = true;
         //}
 
-        if(Input.GetKeyDown(KeyCode.W))
+        if (PS.p_Defece_state == PlayerDefenceState.player_ShieldDash)
         {
             skill2_tuto.gameObject.SetActive(false);
             checkskill2 = true;
