@@ -49,6 +49,9 @@ public class Lobby_Mgr : MonoBehaviour
 
     public Transform startPos;
 
+    public Button goblinGenBtn;
+    public Transform goblinGenPos;
+
 
     private void Start() => StartFunc();
 
@@ -82,6 +85,9 @@ public class Lobby_Mgr : MonoBehaviour
         checkTUto6 = false;
         checkskill1 = false;
         checkskill2 = false;
+
+        if (goblinGenBtn != null)
+            goblinGenBtn.onClick.AddListener(GoblinGenFunc);
 
     }
 
@@ -184,5 +190,11 @@ public class Lobby_Mgr : MonoBehaviour
         p_skill1.skill1Num.text = GlobalData.hpPotionNum.ToString();
         p_Dam.curHp = p_Dam.maxHp;
         p_Dam.Hp_Img.fillAmount = 1.0f;
+    }
+
+    public  void GoblinGenFunc()
+    {
+        GameObject skill2 = (GameObject)Instantiate(Resources.Load("Prefab/Goblin")) as GameObject;
+        skill2.transform.position = goblinGenPos.position;
     }
 }
