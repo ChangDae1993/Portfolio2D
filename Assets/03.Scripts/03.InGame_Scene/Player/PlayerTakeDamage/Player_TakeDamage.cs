@@ -171,6 +171,7 @@ public class Player_TakeDamage : MonoBehaviour
         animator.SetTrigger("Replay");
         Hp_Img.fillAmount = 1.0f;
         GlobalData.hpPotionNum = 10;
+        Time.timeScale = 1.0f;
     }
 
     public void ExitFunc()
