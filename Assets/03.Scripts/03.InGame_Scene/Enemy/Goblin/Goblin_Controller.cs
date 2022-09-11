@@ -274,6 +274,5 @@ public class Goblin_Controller : Enemy
     public override void M_Stun()
     {
         isStun = true;
-
     }
 }

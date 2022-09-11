@@ -33,10 +33,10 @@ public class Camera_Ctrlr : MonoBehaviour
         ShakeTime = 1000000000.0f;
     }
 
-    private void Update()
-    {
+    //private void Update()
+    //{
 
-    }
+    //}
 
     void FixedUpdate()
     {

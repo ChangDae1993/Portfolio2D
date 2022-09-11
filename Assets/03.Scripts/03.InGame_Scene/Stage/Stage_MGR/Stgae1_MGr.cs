@@ -20,14 +20,4 @@ public class Stgae1_MGr : MonoBehaviour
         GlobalData.hpPotionNum = 10;
         p_skill1.skill1Num.text = GlobalData.hpPotionNum.ToString();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-    }
 }

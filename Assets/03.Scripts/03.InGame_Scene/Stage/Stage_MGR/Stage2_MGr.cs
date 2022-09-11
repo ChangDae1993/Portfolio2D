@@ -20,14 +20,4 @@ public class Stage2_MGr : MonoBehaviour
         p_skill1.skill1Num.text = GlobalData.hpPotionNum.ToString();
         player.transform.position = startPos.position;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-    }
 }

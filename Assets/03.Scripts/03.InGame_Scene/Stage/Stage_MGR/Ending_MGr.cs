@@ -27,7 +27,7 @@ public class Ending_MGr : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("out");
+            //Debug.Log("out");
             Application.Quit();
         }
     }
