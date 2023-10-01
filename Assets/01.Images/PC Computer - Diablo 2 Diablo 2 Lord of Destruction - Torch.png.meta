@@ -270,6 +270,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -2104,6 +2105,89 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_81: 3368704357906513935
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_18: 7083918313826068500
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_52: -7116032055326533449
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_14: 8295640639274052062
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_50: -3411114109835217425
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_67: -854578455746793159
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_84: 3934834437074168520
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_3: -5812334269491534163
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_29: 1427175680291001220
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_46: 6796140254890488288
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_74: -1373475115240343744
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_41: -6264785882519071987
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_72: -9084512436769260452
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_31: -6195679278415348025
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_45: -2633138667105740808
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_80: -7319186250168360660
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_63: -7453100533183908985
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_56: -808387159857491801
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_30: 7153109988867722477
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_10: -4341643705372137026
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_44: -2155602397093064107
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_35: -2829245126729780443
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_85: -4289555413127871627
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_51: 8285510676557607069
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_38: -212115149482621349
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_7: -1178394027452789100
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_12: -7462801420845938486
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_42: 8276794665086392655
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_21: -3046984288525159635
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_39: 7640990329865189436
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_25: 6242752209391165373
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_33: 2363635465742128856
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_54: 7841136093142271681
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_64: 3373521029148949322
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_53: 3486166737126290292
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_62: 970801255960622435
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_43: 4238557629411429529
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_71: 9035240702381606800
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_66: -1411310414446359138
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_65: 1292019995220120026
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_83: -6608698047687684519
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_1: -2925722548661154149
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_19: -1270158807444140869
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_68: -8861488951624316015
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_26: -4240864239526717835
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_77: 5803134866297024594
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_70: -679306997116098782
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_79: -5800834463983238457
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_20: -5329042960743424932
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_87: 6342253723494618036
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_13: -3349047321796994546
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_58: 3337225563037893349
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_24: -7534332202738010610
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_76: -5446083962817110640
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_61: 5974555508777316440
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_48: -8796650932279638181
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_69: 538364917086762379
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_60: -5530133096292992230
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_47: -1286957045782069865
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_15: -3561424165427050363
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_17: -1807749974711264488
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_16: 8529890009771727222
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_8: 5153625161342169133
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_23: -8263281267159497943
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_32: -1798952758193031808
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_34: -607291493044208253
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_40: 7357539533247808876
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_55: 4186153509603397811
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_86: 7934876711192356317
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_88: -4302819267379488255
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_49: -5220425364603869245
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_11: -1150126141758668389
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_9: 7391028753737123471
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_57: -2837522324929200397
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_59: -1577285552627697955
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_75: -8395991476028027496
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_37: 3949983617496406638
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_73: 5886156216431960715
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_82: -986418954642212069
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_36: 8183464777304916280
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_22: 557586545092753146
+      PC Computer - Diablo 2 Diablo 2 Lord of Destruction - Torch_78: -5072498380672442987
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
