@@ -133,6 +133,8 @@ namespace DigitalRuby.RainMaker
                         //    }
                         //}
 
+                        Debug.Log("rain hit");
+
                         if (CollisionLifeTimeRain == 0.0f)
                         {
                             particles[i].remainingLifetime = 0.0f;
