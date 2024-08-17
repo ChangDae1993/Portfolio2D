@@ -11,7 +11,11 @@ public class Attack_State_Ctrl : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         int ran_att = Random.Range(0, 3);
-        p_Attack = animator.GetComponent<Player_Attack>();
+        if(animator.TryGetComponent(out Player_Attack pa))
+        {
+            p_Attack = pa;
+        }
+        //p_Attack = animator.GetComponent<Player_Attack>();
         p_Attack.Sword_Attack(ran_att);
     }
 
