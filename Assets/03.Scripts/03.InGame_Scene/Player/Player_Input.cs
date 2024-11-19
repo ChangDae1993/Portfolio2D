@@ -21,7 +21,7 @@ public class Player_Input : MonoBehaviour
 
     public bool skill2On;
 
-    //¼³Á¤ °ü·ÃUI
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½UI
     [Header("===Config===")]
     public Button exitBtn;
     public Text MuteOn;
@@ -31,7 +31,7 @@ public class Player_Input : MonoBehaviour
     
 
 
-    // ÀÌ·±½ÄÀ¸·Î º¯¼ö Ãß°¡ÇØ¼­ Input class ¸¸µé±â
+    // ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ø¼ï¿½ Input class ï¿½ï¿½ï¿½ï¿½ï¿½
     public bool fire { get; private set; }
     // Start is called before the first frame update
 
@@ -46,7 +46,7 @@ public class Player_Input : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    //ÃâÃ³: https://wergia.tistory.com/191 [º£¸£ÀÇ ÇÁ·Î±×·¡¹Ö ³ëÆ®:Æ¼½ºÅä¸®]
+    //ï¿½ï¿½Ã³: https://wergia.tistory.com/191 [ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®:Æ¼ï¿½ï¿½ï¿½ä¸®]
     }
 
     void Start()
@@ -95,7 +95,7 @@ public class Player_Input : MonoBehaviour
                 skill2On = true;
             }
 
-            //¼³Á¤Ã¢
+            //ï¿½ï¿½ï¿½ï¿½Ã¢
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 if (!configOn)

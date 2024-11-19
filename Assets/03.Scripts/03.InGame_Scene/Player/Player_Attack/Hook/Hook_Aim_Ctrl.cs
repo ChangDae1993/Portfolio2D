@@ -13,7 +13,7 @@ public class Hook_Aim_Ctrl : MonoBehaviour
     private Vector2 mouse_Pos;
     public bool aim_shoot;
 
-    //hook º¯¼ö
+    //hook ï¿½ï¿½ï¿½ï¿½
     [HideInInspector] public Vector3 hook_Target_Pos;
     [HideInInspector] public Transform start_Pos;
     public bool isTouch;
@@ -75,16 +75,16 @@ public class Hook_Aim_Ctrl : MonoBehaviour
                 aim_shoot = true;
                 P_State.p_Attack_state = PlayerAttackState.player_hook_shoot;
 
-                //¹öÆ° Å¬¸¯ ½Ã, aimÀÇ Æ÷Áö¼Ç ¹Þ¾ÆµÎ±â
+                //ï¿½ï¿½Æ° Å¬ï¿½ï¿½ ï¿½ï¿½, aimï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾ÆµÎ±ï¿½
                 hook_Target_Pos = aim_Img.transform.position;
 
-                //PrefabÀ¸·Î hook »ý¼º ÈÄ hooj_Target_Pos·Î ³¯¸®±â
+                //Prefabï¿½ï¿½ï¿½ï¿½ hook ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ hooj_Target_Posï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 //Prefab.Instantiate(GameObject)....etc;
                 GameObject hook_prefab = (GameObject)Instantiate(Resources.Load("Prefab/hook")) as GameObject;
                 hook_prefab.transform.parent = GameObject.FindGameObjectWithTag("Player").transform;
                 hook_prefab.transform.position = start_Pos.position;
-                //Vector3.Lerp ÀÌ¿ëÇØ¼­ ³¯¸®±â??
-                //player¿¡¼­ hook±îÁö Line Renderer »ý¼º
+                //Vector3.Lerp ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½??
+                //playerï¿½ï¿½ï¿½ï¿½ hookï¿½ï¿½ï¿½ï¿½ Line Renderer ï¿½ï¿½ï¿½ï¿½
                 //Debug.Log("Shoot");
                 if (aim_shoot == true)
                 {
